@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    <h1>
-      Alex's App
-    </h1>
+    return (
+      <h1>
+        Alexs App
+      </h1>
+    );
   }
 }
 

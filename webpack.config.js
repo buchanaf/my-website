@@ -1,5 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
+var postcssImport = require('postcss-import');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -15,6 +17,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     loaders: [
@@ -27,7 +30,19 @@ module.exports = {
           presets: ['es2015', 'stage-0', 'react'],
           plugins: ['transform-runtime']
         }
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader!postcss-loader"
       }
     ]
   },
+  postcss: function (webpack) {
+    return [
+      autoprefixer,
+      postcssImport({
+          addDependencyTo: webpack
+      }),
+    ];
+  }
 };
