@@ -1,34 +1,33 @@
 var path = require('path');
 var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-  	'webpack/hot/dev-server',
+    'babel-polyfill',
     'webpack-dev-server/client?http://localhost:3000',
-  	path.resolve(__dirname, 'client/src/index.js')
+    'webpack/hot/only-dev-server',
+    './client/src/index.js'
   ],
   output: {
-      path: path.resolve(__dirname, 'client/dist'),
-      filename: 'bundle.js',
+    path: path.resolve(__dirname, 'client/dist'),
+    filename: 'bundle.js',
   },
   plugins: [
-  	new HtmlWebpackPlugin(),
-  	new webpack.HotModuleReplacementPlugin()
+    new HtmlWebpackPlugin(),
   ],
-  loaders: [
-    {
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'client')
-    },
-    {
-      test: /\.css$/, // Only .css files
-      loader: "style-loader!css-loader!postcss-loader"
-    } 
-  ],
-  postcss: function () {
-    return [autoprefixer];
-  }
+  module: {
+    loaders: [
+      {
+        test: /\.js?$/,
+        exclude: path.resolve(__dirname, 'node_modules'),
+        loader: 'babel-loader',
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015', 'stage-0', 'react'],
+          plugins: ['transform-runtime']
+        }
+      }
+    ]
+  },
 };

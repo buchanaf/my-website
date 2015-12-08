@@ -1,5 +1,11 @@
-'use strict';
-var component = require('./components/test/test.js');
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, Link } from 'react-router';
 
+import Home from './views/home';
 
-document.body.appendChild(component());
+render((
+  <Router>
+    <Route path="/" component={Home} />
+  </Router>
+), document.body)
