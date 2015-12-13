@@ -6,3 +6,10 @@
 .header__list {
   float: right;
 }
+
+.header__link {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

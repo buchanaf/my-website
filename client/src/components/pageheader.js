@@ -10,16 +10,16 @@ export default class PageHeader extends Component {
     return (
       <header className="header">
         <ul className="header__list">
-          <Link className="header__list" to="/">
+          <Link className="header__link" to="/">
             Home
           </Link>
-          <Link className="header__list" to="/about">
+          <Link className="header__link" to="/about">
             About
           </Link>
-          <Link className="header__list" to="/faq">
+          <Link className="header__link" to="/faq">
             FAQ
           </Link>
-          <Link className="header__list" to="/resume">
+          <Link className="header__link" to="/resume">
             Resume
           </Link>
         </ul>
