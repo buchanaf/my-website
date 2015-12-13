@@ -16,10 +16,16 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve('client', 'src', 'index.html'),
+      inject: true,
+    }),
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
+    preLoaders: [
+      {test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/}
+    ],
     loaders: [
       {
         test: /\.js?$/,

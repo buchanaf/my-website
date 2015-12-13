@@ -12,5 +12,5 @@ window.onload = function() {
     <Router history={createBrowserHistory()}>
       <Route path="/" component={Home} />
     </Router>
-  ), document.body)
+  ), document.getElementById('app'));
 }
