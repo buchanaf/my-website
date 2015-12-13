@@ -1,0 +1,8 @@
+.header {
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.header__list {
+  float: right;
+}

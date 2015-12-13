@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
 var postcssImport = require('postcss-import');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -43,9 +42,17 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'client', 'src', 'components'),
+      views: path.resolve(__dirname, 'client', 'src', 'views'),
+    }
+  },
   postcss: function (webpack) {
     return [
-      autoprefixer,
+      require('autoprefixer'),
+      require('postcss-custom-media'),
+      require("postcss-custom-media"),
       postcssImport({
           addDependencyTo: webpack
       }),
