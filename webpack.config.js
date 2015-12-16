@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
 var postcssImport = require('postcss-import');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -40,15 +39,32 @@ module.exports = {
       {
         test: /\.css$/,
         loader: "style-loader!css-loader!postcss-loader"
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
       }
     ]
   },
   postcss: function (webpack) {
     return [
-      autoprefixer,
       postcssImport({
-          addDependencyTo: webpack
+        addDependencyTo: webpack
       }),
+      require('autoprefixer'),
+      require('postcss-custom-media'),
+      require('postcss-css-variables'),
     ];
-  }
+  },
+  resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'client', 'src', 'components'),
+      views: path.resolve(__dirname, 'client', 'src', 'views'),
+      assets: path.resolve(__dirname, 'client', 'src', 'assets'),
+    }
+  },
+
 };
