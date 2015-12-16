@@ -1,0 +1,42 @@
+:root {
+  --button-font-family: var(--font-family);
+  --button-font-size: 1rem;
+  --button-font-weight: normal;
+  --button-line-height: 1rem;
+  --button-padding-y: 0.25rem;
+  --button-padding-x: 0.25rem;
+  --border-width: 1px;
+}
+
+button,
+.button {
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: var(--button-line-height);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  margin: 0;
+  height: auto;
+  border: var(--border-width) solid transparent;
+  vertical-align: middle;
+}
+
+button,
+button::after,
+button::before,
+.button,
+.button::after,
+.button::before {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.button:hover { text-decoration: none }
