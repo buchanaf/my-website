@@ -1,5 +1,5 @@
 :root {
-  --button-font-family: var(--font-family);
+  --button-font-family: var(--font-one);
   --button-font-size: 1rem;
   --button-font-weight: normal;
   --button-line-height: 1rem;
@@ -20,6 +20,7 @@ button,
   padding: var(--button-padding-y) var(--button-padding-x);
   margin: 0;
   height: auto;
+  outline: none;
   border: var(--border-width) solid transparent;
   vertical-align: middle;
 }
@@ -40,3 +41,23 @@ button::before,
 }
 
 .button:hover { text-decoration: none }
+
+.button--transparent {
+  background: transparent;
+  border: 1px solid white;
+  font-family: var(--font-two);
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1.25rem;
+  text-transform: uppercase;
+
+}
+
+.button--transparent:hover {
+  background: white;
+  color: black;
+}

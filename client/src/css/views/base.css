@@ -1,0 +1,32 @@
+.content {
+
+}
+
+.content__subsection {
+  border-bottom: 1px solid var(--grey-text);
+  font-size: 2.125rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 1024px
+}
+
+.content__description {
+  color: var(--grey-text);
+  font-size: 1.125rem;
+  font-family: var(--font-two);
+  line-height: 2rem;
+}
+
+.description__wrapper {
+  width: 50rem;
+}
+
+.photo--headshot {
+    background-image: url('../assets/Alex.jpg');
+    background-size: 407px 407px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+    width: 407px;
+    height: 407px;
+}

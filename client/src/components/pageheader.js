@@ -8,7 +8,7 @@ export default class PageHeader extends Component {
 
   render() {
     return (
-      <header className="header">
+      <header className="header zindex-2 ">
         <ul className="header__list">
           <Link className="header__link" to="/">
             Home

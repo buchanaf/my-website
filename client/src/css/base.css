@@ -1,8 +1,16 @@
 :root {
-  --font-family: 'Julius Sans One', sans-serif;
-};
-
-* {
-  font-family: 'Julius Sans One', sans-serif;
+  --font-one:   'Julius Sans One', sans-serif;
+  --font-two:   'Open Sans', sans-serif;
 }
 
+* {
+  font-family: var(--font-one);
+}
+
+.icon {
+  color: white;
+  height: 2rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  width: 2rem;
+}

@@ -24,7 +24,6 @@ export default class Button extends Component {
 
   onClickHandler = (e) => {
     e.preventDefault();
-
     if (this.props.onClick) {
       this.props.onClick(e);
     }

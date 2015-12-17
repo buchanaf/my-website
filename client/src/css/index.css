@@ -1,7 +1,8 @@
 /* COMPONENT CSS FILES */
+@import 'colors';
+@import 'fonts';
 @import 'base';
 @import 'media-queries';
 @import 'components';
-@import 'fonts';
 @import 'helpers';
 @import 'views';

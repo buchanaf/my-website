@@ -1,0 +1,16 @@
+.footer {
+  background-color: #434343;
+  height: 15rem;
+  padding: 4rem;
+  width: 100%;
+}
+
+.footer__wrapper {
+  width: 50rem;
+}
+
+.small {
+  color: white;
+  height: 2rem;
+  width: 2rem;
+}
