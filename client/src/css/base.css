@@ -1,8 +1,9 @@
 :root {
-  --font-family: 'Julius Sans One', sans-serif;
-};
+  --font-one:   'Julius Sans One', sans-serif;
+  --font-two:   'Open Sans', sans-serif;
+}
 
 * {
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: var(--font-one);
 }
 

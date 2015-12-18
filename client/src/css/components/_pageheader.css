@@ -1,15 +1,16 @@
 .header {
   height: 4rem;
   line-height: 4rem;
-}
-
-.header__list {
-  float: right;
+  position: absolute;
+  left: 4rem;
+  top: 0;
 }
 
 .header__link {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  @mixin nav-link 1.5rem
 }
+
+.header__link:hover {
+  text-decoration: underline;
+}
+

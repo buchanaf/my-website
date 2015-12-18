@@ -1,0 +1,21 @@
+.footer {
+  background-color: var(--grey-footer-background);
+  color: var(--grey-footer-text);
+  height: 15rem;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+.footer__wrapper {
+  width: 50rem;
+}
+
+.footer__links,
+.footer__icons {
+  margin: 2rem 0;
+}
+
+.footer__link {
+  @mixin nav-link 1rem
+}
+

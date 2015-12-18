@@ -28,6 +28,11 @@ module.exports = {
     loaders: [
       {
         test: /\.js?$/,
+        loader: 'react-hot',
+        exclude: path.resolve(__dirname, 'node_modules'),
+      },
+      {
+        test: /\.js?$/,
         exclude: path.resolve(__dirname, 'node_modules'),
         loader: 'babel-loader',
         query: {
@@ -54,6 +59,7 @@ module.exports = {
       postcssImport({
         addDependencyTo: webpack
       }),
+      require('postcss-mixins'),
       require('autoprefixer'),
       require('postcss-custom-media'),
       require('postcss-css-variables'),
