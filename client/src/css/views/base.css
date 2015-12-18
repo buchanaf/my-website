@@ -3,11 +3,14 @@
 }
 
 .content__subsection {
-  border-bottom: 1px solid var(--grey-text);
   font-size: 2.125rem;
   margin: 1rem auto;
   padding: 1rem;
   width: 1024px
+}
+
+.content__subsection--border {
+  border-bottom: 1px solid var(--grey-text);
 }
 
 .content__description {

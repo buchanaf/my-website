@@ -44,20 +44,20 @@ button::before,
 
 .button--transparent {
   background: transparent;
-  border: 1px solid white;
+  border: 3px solid white;
   font-family: var(--font-two);
   color: white;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem;
   line-height: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 0.5rem 1.25rem;
   text-transform: uppercase;
-
+  transition: all 0.3s ease 0s;
 }
 
 .button--transparent:hover {
   background: white;
-  color: black;
+  color: var(--grey-text);
 }

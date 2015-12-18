@@ -1,0 +1,70 @@
+.icon--facebook {
+  background-image: url('../assets/facebook.svg');
+}
+
+.icon--twitter {
+  background-image: url('../assets/twitter.svg');
+}
+
+.icon--github {
+  background-image: url('../assets/github.svg');
+}
+
+.icon--instagram {
+  background-image: url('../assets/instagram.svg');
+}
+
+.icon--linkedin {
+  background-image: url('../assets/linkedin.svg');
+}
+
+.icon {
+  background-size: 1rem;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  box-sizing: content-box;
+}
+
+.icon--dazzle .icon {
+  transition: box-shadow 0.2s;
+}
+
+.icon--dazzle .icon:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-shadow: 0 0 0 2px #fff;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Effect 9a */
+.icon--dazzle  .icon:hover:after {
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+.icon--dazzle  .icon:hover {
+  box-shadow: 0 0 0 4px rgba(255,255,255,1);
+  color: #fff;
+}

@@ -1,0 +1,9 @@
+@define-mixin nav-link $font {
+  color: white;
+  font-size: $font;
+  line-height: $font;
+  margin-left: calc($font / 5);
+  margin-right: calc($font / 5);
+  padding: calc($font / 2) $font;
+  text-decoration: none;
+}

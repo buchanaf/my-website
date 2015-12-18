@@ -59,6 +59,7 @@ module.exports = {
       postcssImport({
         addDependencyTo: webpack
       }),
+      require('postcss-mixins'),
       require('autoprefixer'),
       require('postcss-custom-media'),
       require('postcss-css-variables'),

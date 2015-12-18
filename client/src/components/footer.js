@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import Facebook from 'assets/facebook.svg';
-import Twitter from 'assets/twitter.svg';
-import Instagram from 'assets/instagram.svg';
-import Linkedin from 'assets/linkedin.svg';
-import GitHub from 'assets/github.svg';
-
+import { Link } from 'react-router';
 
 export default class PageHeader extends Component {
   constructor(props) {
@@ -15,12 +10,27 @@ export default class PageHeader extends Component {
     return (
       <footer className="footer">
         <div className="footer__wrapper center text-center">
-          <div className>
-            <img className="icon" src={Facebook} />
-            <img className="icon" src={Twitter} />
-            <img className="icon" src={Instagram} />
-            <img className="icon" src={Linkedin} />
-            <img className="icon"src={GitHub} />
+          <ul className="footer__links">
+            <Link className="footer__link" to="/faq">
+              FAQ
+            </Link>
+            <Link className="footer__link" to="/home">
+              Home
+            </Link>
+            <Link className="footer__link" to="/resume">
+              Resume
+            </Link>
+            <Link className="footer__link" to="/contact">
+              Contact
+            </Link>
+          </ul>
+          <p>© 2015 Alex Buchanan. All rights reserved. Front-End Developer </p>
+          <div className="icon-wrap icon--dazzle ">
+            <i className="icon icon--facebook" />
+            <i className="icon icon--twitter" />
+            <i className="icon icon--github" />
+            <i className="icon icon--instagram" />
+            <i className="icon icon--linkedin" />
           </div>
         </div>
       </footer>
