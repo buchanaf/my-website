@@ -10,7 +10,7 @@ export default class PageHeader extends Component {
     return (
       <header className="header zindex-2 ">
         <ul className="header__list">
-          <Link className="header__link" to="/">
+          <Link className="header__link active" to="/">
             Home
           </Link>
           <Link className="header__link" to="/about">

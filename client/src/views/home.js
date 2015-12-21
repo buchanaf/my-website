@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Masthead from 'components/masthead';
 import Button from 'components/button';
-import Footer from 'components/footer';
 
 export default class Home extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ export default class Home extends Component {
     return (
       <div className="content">
         <div className="masthead__container">
-          <Masthead />
+          <Masthead className="masthead--home"/>
           <div className="center-absolute text-center">
             <strong className="masthead__title block">
               JAVASCRIPT
@@ -41,7 +40,6 @@ export default class Home extends Component {
             </p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -1,11 +1,9 @@
-.masthead {
-  background: url('../assets/asheville4.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
+.masthead--home {
+  @mixin masthead asheville4.jpg
+}
+
+.masthead--resume {
+  @mixin masthead desk.jpg
 }
 
 .masthead__container {
@@ -17,5 +15,24 @@
   color: white;
   font-family: var(--font-one);
   font-size: 5rem;
-  padding: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  animation: fadein 1.5s;
+}
+
+.masthead__paragraph {
+  color: var(--white);
+  font-size: 1.5rem;
+  animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }

@@ -7,10 +7,16 @@
 }
 
 .header__link {
-  @mixin nav-link 1.5rem
+  @mixin nav-link 1.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .header__link:hover {
-  text-decoration: underline;
+  outline: 1px solid white;
+}
+
+.header__link.active {
+ outline: 3px solid white;
 }
 

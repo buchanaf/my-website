@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class Masthead extends Component {
   static propTypes = {
     children: PropTypes.any,
+    className: PropTypes.string,
   }
 
   constructor(props) {
@@ -10,8 +11,9 @@ export default class Masthead extends Component {
   }
 
   render() {
+    const { className } = this.props;
     return (
-      <img className="masthead">
+      <img className={className}>
        {this.props.children}
       </img>
     );

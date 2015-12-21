@@ -1,15 +1,11 @@
-.content {
-
-}
-
 .content__subsection {
   font-size: 2.125rem;
   margin: 1rem auto;
   padding: 1rem;
-  width: 1024px
+  width: 1200px
 }
 
-.content__subsection--border {
+.border-bottom {
   border-bottom: 1px solid var(--grey-text);
 }
 
@@ -21,7 +17,43 @@
 }
 
 .description__wrapper {
-  width: 50rem;
+  padding: 3rem 0;
+}
+
+.description--3col {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-family: var(--font-two);
+  text-align: left;
+  vertical-align: top;
+  width: 33.33%;
+}
+
+.description--4col {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  width: 25%;
+}
+
+.description--4col-3 {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-family: var(--font-two);
+  padding-left: 3rem;
+  text-align: left;
+  vertical-align: top;
+  width: calc(75% - 3rem);
+}
+
+.description__list {
+  font-family: var(--font-two);
+}
+
+.description__list li {
+  font-family: inherit;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .photo--headshot {
