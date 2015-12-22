@@ -33,17 +33,17 @@ export default class Home extends Component {
           <h2>
             Resume
           </h2>
-          <div className="description__wrapper border-bottom center">
-            <div className="description--3col">
-              <h4>
+          <div className="resume__container border-bottom center">
+            <div className="col-3 align-top">
+              <h4 className="resume__header4">
                 Technologies
               </h4>
             </div>
-            <div className="description--3col">
-              <h5 className="margin-top-3">
+            <div className="col-3 align-top">
+              <h5 className="resume__header5">
                 Primary
               </h5>
-              <ul className="description__list">
+              <ul className="resume__list">
                 <li>
                   Javascript / ES6
                 </li>
@@ -73,11 +73,11 @@ export default class Home extends Component {
                 </li>
               </ul>
             </div>
-            <div className="description--3col">
-              <h5 className="margin-top-3">
+            <div className="col-3 align-top">
+              <h5 className="resume__header5">
                 Secondary
               </h5>
-              <ul className="description__list">
+              <ul className="resume__list">
                 <li>
                   Angular
                 </li>
@@ -99,21 +99,21 @@ export default class Home extends Component {
               </ul>
             </div>
           </div>
-          <div className="description__wrapper text-left">
-            <div className="description--4col">
-              <h4>
+          <div className="resume__container text-left border-bottom">
+            <div className="col-4 align-top">
+              <h4 className="resume__header4">
                 Work Experience
               </h4>
             </div>
-            <div className="description--4col-3 margin-top-3">
-              <div className="description__job">
-                <h5>
+            <div className="col-4-3 align-top margin-top-3">
+              <div className="resume__job">
+                <h5 className="resume__header5">
                   Web Engineer
                 </h5>
                 <p>
                   CogoLabs, Cambridge, MA, November 2014 – Present
                 </p>
-                <ul className="description__list">
+                <ul className="resume__list">
                   <li>
                     Led walkthroughs of major accounting cycles that required dozens of interviews with senior members throughout the client organization
                   </li>
@@ -128,14 +128,14 @@ export default class Home extends Component {
                   </li>
                 </ul>
               </div>
-              <div className="description__job">
-                <h5>
+              <div className="resume__job">
+                <h5 className="resume__header5">
                   Web Engineer
                 </h5>
                 <p>
                   CogoLabs, Cambridge, MA, November 2014 – Present
                 </p>
-                <ul className="description__list">
+                <ul className="resume__list">
                   <li>
                     Led walkthroughs of major accounting cycles that required dozens of interviews with senior members throughout the client organization
                   </li>
@@ -147,6 +147,47 @@ export default class Home extends Component {
                   </li>
                   <li>
                     Tailored audit procedures procedures to meet changing public accounting standards by incorporating and working with PwC specialists in the areas of journal entries, taxes, and investment valuations
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="resume__container text-left">
+            <div className="col-4 align-top">
+              <h4 className="resume__header4">
+                Education
+              </h4>
+            </div>
+            <div className="col-4-3 align-top margin-top-3">
+              <div className="resume__job">
+                <h5 className="resume__header5">
+                  Boston College, Carroll School of Management
+                </h5>
+                <p className="italic">
+                  Bachelor of Science in Business Administration: Information Systems and Accounting
+                </p>
+                <ul className="resume__list">
+                  <li>
+                    GPA: 3.7; Rank: 114/522
+                  </li>
+                  <li>
+                    Accolades: Cum Laude, Dean’s List First Honors, Golden Key Club Honor Society
+                  </li>
+                  <li>
+                    Semester abroad: University of Glasgow
+                  </li>
+                </ul>
+              </div>
+              <div className="resume__job">
+                <h5 className="resume__header5">
+                  Fullstack Academy of Code
+                </h5>
+                <p className="italic">
+                  Web Development Immsersive Program
+                </p>
+                <ul className="resume__list">
+                  <li>
+                    A full-time immersive Software Development program focused on full-stack JavaScript including Node.js/Express, Angular.js, MongoDB, HTML5/CSS3, SQL. Class of 18 students selected from 200+ applicants after technical challenge and multiple interviews.
                   </li>
                 </ul>
               </div>

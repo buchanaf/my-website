@@ -6,7 +6,7 @@
 }
 
 .border-bottom {
-  border-bottom: 1px solid var(--grey-text);
+  border-bottom: 1px solid var(--grey-hr);
 }
 
 .content__description {
@@ -16,12 +16,7 @@
   line-height: 2rem;
 }
 
-.description__wrapper {
-  padding: 3rem 0;
-}
-
 .description--3col {
-  display: inline-block;
   font-size: 1.25rem;
   font-family: var(--font-two);
   text-align: left;
@@ -44,16 +39,6 @@
   text-align: left;
   vertical-align: top;
   width: calc(75% - 3rem);
-}
-
-.description__list {
-  font-family: var(--font-two);
-}
-
-.description__list li {
-  font-family: inherit;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 
 .photo--headshot {
