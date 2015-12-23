@@ -1,18 +1,14 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
-var path = require('path');
+require('babel-core/register')({presets: ['react', 'es2015', 'stage-0']});
 
-new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
-  hot: true,
-  historyApiFallback: true,
-  contentBase: path.resolve(__dirname, 'client', 'dist'),
-  stats: { colors: true, progress: true},
-}).listen(3000, 'localhost', function (err, result) {
-  if (err) {
-    console.log(err);
-  }
+var express = require('express')
+var server =  require('./server/index.js');
+var PORT = process.env.PORT || 3000;
+var app = new express();
 
-  console.log('Listening at localhost:3000');
+server(app);
+
+app.listen(PORT, function () {
+  console.log('Server listening on: ' + PORT);
 });
+
+

@@ -2,21 +2,22 @@ var path = require('path');
 var webpack = require('webpack');
 var postcssImport = require('postcss-import');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var rootDir = path.join(__dirname, '..');
 
 module.exports = {
   entry: [
     'babel-polyfill',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './client/src/index.js'
+    path.resolve(rootDir, 'client', 'src')
   ],
   output: {
-    path: path.resolve(__dirname, 'client/dist'),
+    path: path.resolve(rootDir, 'client/dist'),
     filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('client', 'src', 'index.html'),
+      template: path.resolve(rootDir, 'client', 'src', 'index.html'),
       inject: true,
     }),
     new webpack.HotModuleReplacementPlugin()
@@ -29,11 +30,11 @@ module.exports = {
       {
         test: /\.js?$/,
         loader: 'react-hot',
-        exclude: path.resolve(__dirname, 'node_modules'),
+        exclude: path.resolve(rootDir, 'node_modules'),
       },
       {
         test: /\.js?$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
+        exclude: path.resolve(rootDir, 'node_modules'),
         loader: 'babel-loader',
         query: {
           cacheDirectory: true,
@@ -67,9 +68,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      components: path.resolve(__dirname, 'client', 'src', 'components'),
-      views: path.resolve(__dirname, 'client', 'src', 'views'),
-      assets: path.resolve(__dirname, 'client', 'src', 'assets'),
+      components: path.resolve(rootDir, 'client', 'src', 'components'),
+      views: path.resolve(rootDir, 'client', 'src', 'views'),
+      assets: path.resolve(rootDir, 'client', 'src', 'assets'),
     }
   },
 
