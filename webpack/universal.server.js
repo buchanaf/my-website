@@ -1,9 +1,10 @@
 import webpack              from 'webpack';
-
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+import path                 from 'path';
 import config               from './webpack.config';
 import render               from '../server';
+
 
 const compiler = webpack(config);
 const serverOptions = {
@@ -15,6 +16,6 @@ const serverOptions = {
 };
 
 export default function universalServer(app) {
-  app.use(webpackDevMiddleware(compiler, { noInfo: true }));
+  app.use(webpackDevMiddleware(compiler, serverOptions));
   app.use(webpackHotMiddleware(compiler));
 }

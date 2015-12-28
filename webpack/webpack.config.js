@@ -3,28 +3,36 @@ var webpack = require('webpack');
 var postcssImport = require('postcss-import');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var rootDir = path.join(__dirname, '..');
+var isomorphicConfig = require('./universal.config.js');
+var isomorphicTools = require('webpack-isomorphic-tools/plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
+  context: rootDir,
   entry: [
     'babel-polyfill',
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
+    'webpack-hot-middleware/client',
+    'normalize.css',
+    path.resolve(rootDir, 'client', 'src', 'css', 'main.css'),
     path.resolve(rootDir, 'client', 'src')
   ],
   output: {
     path: path.resolve(rootDir, 'client/dist'),
+    publicPath: '/dist/',
     filename: 'bundle.js',
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(rootDir, 'client', 'src', 'index.html'),
-      inject: true,
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new isomorphicTools(isomorphicConfig).development()
   ],
   module: {
     preLoaders: [
-      {test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/}
+      {
+        test: /\.js$/,
+        loader: "eslint-loader", exclude: /node_modules/
+      }
     ],
     loaders: [
       {
@@ -44,7 +52,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader!postcss-loader"
+        loader: "css-loader!postcss-loader"
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -52,7 +60,7 @@ module.exports = {
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
-      }
+      },
     ]
   },
   postcss: function (webpack) {

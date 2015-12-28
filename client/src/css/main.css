@@ -1,4 +1,5 @@
 /* COMPONENT CSS FILES */
+@import 'normalize';
 @import 'colors';
 @import 'fonts';
 @import 'mixins';
