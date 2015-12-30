@@ -12,8 +12,6 @@ module.exports = {
   entry: [
     'babel-polyfill',
     'webpack-hot-middleware/client',
-    'normalize.css',
-    path.resolve(rootDir, 'client', 'src', 'css', 'main.css'),
     path.resolve(rootDir, 'client', 'src')
   ],
   output: {
@@ -22,6 +20,11 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __DEVELOPMENT__: true,
+      __CLIENT__: true,
+      __SERVER__: false,
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -52,7 +55,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "css-loader!postcss-loader"
+        loader: "style-loader!css-loader!postcss-loader"
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -61,6 +64,10 @@ module.exports = {
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
+      // {
+      //   test: isomorphicTools.regular_expression('images'),
+      //   loader: 'url-loader?limit=10240',
+      // }
     ]
   },
   postcss: function (webpack) {
@@ -79,6 +86,7 @@ module.exports = {
       components: path.resolve(rootDir, 'client', 'src', 'components'),
       views: path.resolve(rootDir, 'client', 'src', 'views'),
       assets: path.resolve(rootDir, 'client', 'src', 'assets'),
+      css: path.resolve(rootDir, 'client', 'src', 'css'),
     }
   },
 

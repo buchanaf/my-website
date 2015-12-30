@@ -8,12 +8,13 @@
 
 .header__link {
   @mixin nav-link 1.5rem;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .header__link:hover {
-  outline: 1px solid white;
+  color: white;
+  font-weight: bold;
 }
 
 .header__link.active {
