@@ -58,7 +58,6 @@
   transition: transform 0.2s, opacity 0.2s;
 }
 
-/* Effect 9a */
 .icon--dazzle  .icon:hover:after {
   transform: scale(0.85);
   opacity: 0.5;

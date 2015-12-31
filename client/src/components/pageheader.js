@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+require('css/components/_pageheader.css');
 
 export default class PageHeader extends Component {
   constructor(props) {
@@ -21,6 +22,9 @@ export default class PageHeader extends Component {
           </Link>
           <Link className="header__link" to="/resume">
             Resume
+          </Link>
+          <Link className="header__link active" to="/contact">
+            Contact
           </Link>
         </ul>
       </header>
