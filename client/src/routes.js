@@ -4,7 +4,7 @@ import React from 'react';
 import App from 'views/app';
 import Home from 'views/home';
 import Resume from 'views/resume';
-import Contact from 'views/contact';
+import Contact from 'views/Contact';
 
 import Pageheader from 'components/pageheader';
 import Footer from 'components/footer';
