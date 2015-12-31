@@ -8,7 +8,7 @@ export default class html extends Component {
 
   render() {
     const { assets, component, store } = this.props;
-    console.log(assets)
+
     return (
       <html lang="en-us">
         <head>

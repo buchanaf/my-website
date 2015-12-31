@@ -34,7 +34,9 @@ module.exports = {
     preLoaders: [
       {
         test: /\.js$/,
-        loader: "eslint-loader", exclude: /node_modules/
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        include: path.resolve(rootDir, 'server', 'index.js')
       }
     ],
     loaders: [

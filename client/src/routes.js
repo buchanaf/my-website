@@ -4,6 +4,7 @@ import React from 'react';
 import App from 'views/app';
 import Home from 'views/home';
 import Resume from 'views/resume';
+import Contact from 'views/contact';
 
 import Pageheader from 'components/pageheader';
 import Footer from 'components/footer';
@@ -20,5 +21,6 @@ export default (
   <Route path="/" component={App}>
     <IndexRoute components={wrap(Home)} />
     <Route path="/resume" components={wrap(Resume)} />
+    <Route path="/contact" components={wrap(Contact)} />
   </Route>
 );

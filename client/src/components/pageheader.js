@@ -23,7 +23,7 @@ export default class PageHeader extends Component {
           <Link className="header__link" to="/resume">
             Resume
           </Link>
-          <Link className="header__link active" to="/resume">
+          <Link className="header__link active" to="/contact">
             Contact
           </Link>
         </ul>

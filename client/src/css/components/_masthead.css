@@ -6,6 +6,10 @@
   @mixin masthead desk.jpg
 }
 
+.masthead--contact {
+  @mixin masthead contact.jpg
+}
+
 .masthead__container {
   position: relative;
   width: 100%;
