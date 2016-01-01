@@ -54,6 +54,7 @@ export default class Input extends Component {
 
   render() {
     const { className, type, placeholder, name, value } = this.props;
+
     return (
       <input
         className={cx('input', className)}

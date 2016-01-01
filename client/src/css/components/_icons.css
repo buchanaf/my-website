@@ -27,8 +27,8 @@
   font-size: 0px;
   cursor: pointer;
   margin: 0.5rem;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   text-align: center;
   position: relative;
@@ -54,7 +54,7 @@
   top: 0;
   left: 0;
   padding: 0;
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 3px #fff;
   transition: transform 0.2s, opacity 0.2s;
 }
 

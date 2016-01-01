@@ -11,3 +11,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-one);
 }
 
+
+.col-2 {
+  display: inline-block;
+  position: relative;
+  width: calc(1200px / 2);
+}

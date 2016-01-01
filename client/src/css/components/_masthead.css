@@ -1,13 +1,20 @@
 .masthead--home {
-  @mixin masthead asheville.jpg
+  @mixin masthead asheville.jpg;
 }
 
 .masthead--resume {
-  @mixin masthead desk.jpg
+  @mixin masthead desk.jpg;
 }
 
 .masthead--contact {
-  @mixin masthead contact.jpg
+  @mixin masthead contact.jpg;
+}
+
+.image--boston {
+  width: 500px;
+  margin: 25px 50px;
+  vertical-align: top;
+  object-fit: contain;
 }
 
 .masthead__container {
