@@ -1,3 +1,21 @@
+.icon {
+  background-size: 1rem;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
 .icon--facebook {
   background-image: url('../assets/facebook.svg');
 }
@@ -18,22 +36,16 @@
   background-image: url('../assets/linkedin.svg');
 }
 
-.icon {
-  background-size: 1rem;
-  border-radius: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: inline-block;
-  font-size: 0px;
-  cursor: pointer;
-  margin: 0.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  color: #fff;
+.icon--angle-down {
+  animation: fadein 1.5s;
+  background-image: url('../assets/angle-down.svg');
+  background-size: 3rem;
+  bottom: 3rem;
+  height: 3rem;
+  left: 49.4%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 3rem;
 }
 
 .icon:after {

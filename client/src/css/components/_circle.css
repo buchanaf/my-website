@@ -1,0 +1,105 @@
+.circle {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  width: 100%;
+}
+
+.circle__container {
+  background-repeat: no-repeat;
+  height: 200px;
+  display: block;
+  position: relative;
+  perspective: 800px;
+  width: 200px;
+}
+
+.circle__figure {
+  background-size: 200px 200px;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  display: block;
+  height: 200px;
+  margin: 0;
+  position: absolute;
+  width: 200px;
+}
+
+.circle__figure--front {
+  background: red;
+}
+
+.circle__figure--back {
+  background: green;
+  transform: rotateY( 180deg );
+  z-index: 11;
+}
+
+.circle__figure--front:after {
+  top: -4px;
+  left: -4px;
+  padding: 0;
+  border: 4px dashed black;
+  z-index: 10;
+}
+
+.circle__figure--front:after {
+  top: -4px;
+  left: -4px;
+  padding: 0;
+  z-index: 10;
+  border: 4px dashed black;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.circle__figure:before {
+  line-height: 200px;
+}
+
+.circle__figure--front:hover {
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+
+.circle:hover .circle__figure--front:after {
+  -webkit-animation: spinAround 9s linear infinite;
+  -moz-animation: spinAround 9s linear infinite;
+  animation: spinAround 9s linear infinite;
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinAround {
+  from {
+    -moz-transform: rotate(0deg)
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

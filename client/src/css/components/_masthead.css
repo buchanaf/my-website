@@ -37,23 +37,3 @@
   font-size: 1.5rem;
   animation: fadein-down 1.5s;
 }
-
-@keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
-@keyframes fadein-down {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
