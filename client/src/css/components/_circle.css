@@ -8,22 +8,25 @@
 
 .circle__container {
   background-repeat: no-repeat;
-  height: 200px;
-  display: block;
-  position: relative;
+  display: inline-block;
+  height: 300px;
+  margin-right: 50px;
+  margin-left: 50px;
   perspective: 800px;
-  width: 200px;
+  position: relative;
+  width: 300px;
 }
 
 .circle__figure {
-  background-size: 200px 200px;
+  background-size: 300px 300px;
   backface-visibility: hidden;
   border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--grey-text);
   display: block;
-  height: 200px;
+  height: 300px;
   margin: 0;
   position: absolute;
-  width: 200px;
+  width: 300px;
 }
 
 .circle__figure--front {
@@ -31,25 +34,27 @@
 }
 
 .circle__figure--back {
-  background: green;
+  background-size: 300px 300px;
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
   transform: rotateY( 180deg );
   z-index: 11;
 }
 
 .circle__figure--front:after {
-  top: -4px;
-  left: -4px;
+  top: -3px;
+  left: -3px;
   padding: 0;
-  border: 4px dashed black;
+  border: 3px dashed var(--grey-text);
   z-index: 10;
 }
 
 .circle__figure--front:after {
-  top: -4px;
-  left: -4px;
+  top: -3px;
+  left: -3px;
   padding: 0;
   z-index: 10;
-  border: 4px dashed black;
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -75,6 +80,10 @@
   -webkit-animation: spinAround 9s linear infinite;
   -moz-animation: spinAround 9s linear infinite;
   animation: spinAround 9s linear infinite;
+}
+
+.circle:hover .circle__figure {
+  box-shadow: none;
 }
 
 @-webkit-keyframes spinAround {

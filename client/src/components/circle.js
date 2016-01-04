@@ -3,13 +3,13 @@ import { Motion, spring } from 'react-motion'
 import cx from 'classnames';
 
 export default class Circle extends Component {
-
   static propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
     disabled: PropTypes.bool,
     name: PropTypes.string,
     onClick: PropTypes.func,
+    image: PropTypes.string,
     type: PropTypes.string,
   }
 
@@ -33,7 +33,7 @@ export default class Circle extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { className, image } = this.props;
     const { hover } = this.state;
 
     return (
@@ -44,10 +44,9 @@ export default class Circle extends Component {
             <section className="circle__container" onMouseEnter={this.onMouseHandler} onMouseLeave={this.onMouseHandler}>
               <div className={cx('circle', className)} style={{
                   WebkitTransform: `rotateY(${Math.ceil(style.x)}deg)`,
-                  transform: `rotateY(${Math.ceil(style.x)}deg)`,
-              }}>
+                  transform: `rotateY(${Math.ceil(style.x)}deg)`}} >
                 <figure className="circle__figure circle__figure--front">1</figure>
-                <figure className="circle__figure circle__figure--back">2</figure>
+                <img className="circle__figure circle__figure--back" src={image} />
               </div>
             </section>
           );

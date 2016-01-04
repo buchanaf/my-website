@@ -4,6 +4,13 @@ import Masthead from 'components/masthead';
 import Button from 'components/button';
 import Circle from 'components/circle';
 
+import Cruise from 'assets/cruise.jpg';
+import Dogs from 'assets/dogs.jpg';
+import Snowboarding from 'assets/snowboarding.jpg';
+import Tough from 'assets/tough.jpg';
+import Siblings from 'assets/tough.jpg';
+import College from 'assets/tough.jpg';
+
 export default class About extends Component {
   constructor(props) {
     super(props);
@@ -32,11 +39,12 @@ export default class About extends Component {
           <i className="icon icon--angle-down" />
         </div>
         <div className="content__subsection text-center">
-          <Circle />
-          <Circle />
-          <Circle />
-          <Circle />
-          <Circle />
+          <Circle image={Cruise} />
+          <Circle image={Dogs} />
+          <Circle image={Snowboarding} />
+          <Circle image={Tough} />
+          <Circle image={Siblings} />
+          <Circle image={College} />
         </div>
       </div>
     );
