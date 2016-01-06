@@ -9,12 +9,11 @@
 .circle__container {
   background-repeat: no-repeat;
   display: inline-block;
-  height: 300px;
-  margin-right: 50px;
-  margin-left: 50px;
+  height: 332px;
+  margin: 25px 18px;
   perspective: 800px;
   position: relative;
-  width: 300px;
+  width: 332px;
 }
 
 .circle__figure {
@@ -25,15 +24,51 @@
   display: block;
   height: 300px;
   margin: 0;
+  padding: 1rem;
   position: absolute;
   width: 300px;
 }
 
+.circle__figure__text {
+  color: white;
+  border-radius: 50%;
+  line-height: 250px;
+  width: 250px;
+  height: 250px;
+  padding: 25px;
+  background-color: var(--grey-text);
+}
+
+.circle__figure__wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.circle__figure__description {
+  color: white;
+  display: inline-block;
+  font-family: var(--font-two);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.circle__figure__title {
+  display: block;
+  font-size: 1.9rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid white;
+  width: 250px;
+}
+
 .circle__figure--front {
-  background: red;
+  background: var(--grey-xlight);
 }
 
 .circle__figure--back {
+  background: var(--grey-xlight);
   background-size: 300px 300px;
   height: 300px;
   width: 300px;
@@ -68,6 +103,31 @@
 
 .circle__figure:before {
   line-height: 200px;
+}
+
+.job__wrapper {
+  display: inline-block;
+  line-height: normal;
+  margin: 50px;
+  width: 300px;
+  vertical-align: top;
+}
+
+.job__wrapper__span {
+  display: inline-block;;
+  font-family: var(--font-two);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.circle__figure--job {
+  background-size: 250px 250px;
+  border-radius: 50%;
+  display: inline-block;
+  height: 250px;
+  margin: 1rem;
+  object-fit: contain;
+  width: 250px;
 }
 
 .circle__figure--front:hover {

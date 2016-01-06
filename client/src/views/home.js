@@ -31,9 +31,9 @@ export default class Home extends Component {
           <i className="icon icon--angle-down" />
         </div>
         <div className="content__subsection text-center">
-          <h2>
+          <h3>
             A Little About Me
-          </h2>
+          </h3>
           <div className="photo--headshot center"/>
           <div className="description__wrapper center">
             <p className="content__description center">

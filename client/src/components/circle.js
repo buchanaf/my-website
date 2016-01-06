@@ -39,13 +39,14 @@ export default class Circle extends Component {
     return (
       <Motion style={{x: spring(hover ? 180 : 0, [170, 30])}}>
         {(style) => {
-
           return (
             <section className="circle__container" onMouseEnter={this.onMouseHandler} onMouseLeave={this.onMouseHandler}>
               <div className={cx('circle', className)} style={{
                   WebkitTransform: `rotateY(${Math.ceil(style.x)}deg)`,
                   transform: `rotateY(${Math.ceil(style.x)}deg)`}} >
-                <figure className="circle__figure circle__figure--front">1</figure>
+                <figure className="circle__figure circle__figure--front">
+                  {this.props.children}
+                </figure>
                 <img className="circle__figure circle__figure--back" src={image} />
               </div>
             </section>

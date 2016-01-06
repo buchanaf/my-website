@@ -10,6 +10,26 @@
   @mixin masthead contact.jpg;
 }
 
+.masthead--pwc {
+  background-image: url('../assets/pwc.jpg');
+  background-color: #282b37;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+}
+
+.masthead--cogo {
+  background-image: url('../assets/cogolabs.jpg');
+  background-color: #282b37;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+}
+
 .image--boston {
   width: 500px;
   margin: 25px 50px;
