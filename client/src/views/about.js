@@ -43,102 +43,109 @@ export default class About extends Component {
           <i className="icon icon--angle-down" />
         </div>
         <div className="content__subsection text-center">
-          <h3>
-            Some of my <span className="block"><em>Interests</em> and <em>Memories</em></span>
-          </h3>
+          <h2>
+            Some of my
+            <span className="block">
+              <span className="content__emphasize">
+                Interests
+              </span> and <span className="content__emphasize">
+                Moments
+              </span>
+            </span>
+          </h2>
           <Circle image={Cruise} >
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
                   Traveling
                 </h5>
-                <span className="circle__figure__description">
-                  with my girlfriend Robin
+                <span className="circle__description">
+                  By virtue of weddings, scattered family, and a girlfriend, I've found myself getting to some pretty cool places.
                 </span>
               </div>
             </div>
           </Circle>
           <Circle image={Dogs}>
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
                   Dogs
                 </h5>
-                <span className="circle__figure__description">
-                  pretty much all things
+                <span className="circle__description">
+                  I just really like dogs. I think 2016 is going to be the year...
                 </span>
               </div>
             </div>
           </Circle>
           <Circle image={Snowboarding}>
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
                   Snowboarding
                 </h5>
-                <span className="circle__figure__description">
-                  in Colorado with buddies
+                <span className="circle__description">
+                  I've had a blast snowboarding in Vermont, Maine, and Colorado.
                 </span>
               </div>
             </div>
           </Circle>
           <Circle image={Tough} >
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
                   Toughmudder
                 </h5>
-                <span className="circle__figure__description">
-                  but honestly, I hate running
+                <span className="circle__description">
+                  I don't actual enjoy running, but I had fun completing my first mudder in Vermont.
                 </span>
               </div>
             </div>
           </Circle>
           <Circle image={Siblings}>
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
                   Siblings
                 </h5>
-                <span className="circle__figure__description">
-                  Hannah and Josh!
+                <span className="circle__description">
+                  Hannah and Josh! Living in NYC and Raleigh, respectively. Both coding as well.
                 </span>
               </div>
             </div>
           </Circle>
           <Circle image={College} >
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
-                  Boston College 2011
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
+                  Boston College
                 </h5>
-                <span className="circle__figure__description">
-                  I keep getting older but my graduation year stays the same
+                <span className="circle__description">
+                  It's sad how my graduation year keeps getting further and further away.
                 </span>
               </div>
             </div>
           </Circle>
           <Circle image={Weddings} >
-            <div className="circle__figure__text">
-              <div className="circle__figure__wrapper">
-                <h5 className="circle__figure__title">
+            <div className="circle__text">
+              <div className="circle__wrapper">
+                <h5 className="circle__title">
                   Weddings
                 </h5>
-                <span className="circle__figure__description">
-                  Always a good time
+                <span className="circle__description">
+                  Congrats to those in 2015 and those coming up in 2016! They have been a blast, and I can't wait for the next ones.
                 </span>
               </div>
             </div>
           </Circle>
         </div>
         <div className="masthead__container">
-          <div className="masthead--pwc" />
+          <div className="masthead--cogo" />
         </div>
         <div className="content__subsection text-center">
-          <h3>
-            PricewaterhouseCoopers
-          </h3>
-          <span>
+          <h2>
+            CogoLabs
+          </h2>
+          <span className="content__subtitle">
             2011 to 2014
           </span>
           <div className="description__wrapper center">
@@ -147,33 +154,33 @@ export default class About extends Component {
             </p>
             <div className="job__wrapper">
               <img className="circle__figure--job" src={pwc1} />
-              <span className="job__wrapper__span">
-                Some random facts about work and what I used to do there.
+              <span className="job__span">
+                Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
             <div className="job__wrapper">
               <img className="circle__figure--job" src={pwc2} />
-              <span className="job__wrapper__span">
-                Some random facts about work and what I used to do there.
+              <span className="job__span">
+                Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
             <div className="job__wrapper">
               <img className="circle__figure--job" src={pwc3} />
-              <span className="job__wrapper__span">
-                Some random facts about work and what I used to do there. A little extra long.
+              <span className="job__span">
+                Some random facts about work and what I used to do there.
               </span>
             </div>
           </div>
         </div>
         <div className="masthead__container">
-          <div className="masthead--cogo" />
+          <div className="masthead--pwc" />
         </div>
         <div className="content__subsection text-center">
-          <h3>
-            CogoLabs
-          </h3>
-          <span>
-            2014 to present
+          <h2>
+            PricewaterhouseCoopers
+          </h2>
+          <span className="content__subtitle content__subtitle--italic">
+            2011 to 2014
           </span>
           <div className="description__wrapper center">
             <p className="content__description center">
@@ -181,20 +188,20 @@ export default class About extends Component {
             </p>
             <div className="job__wrapper">
               <img className="circle__figure--job" src={pwc1} />
-              <span className="job__wrapper__span">
-                Some random facts about work and what I used to do there. A little extra long.
+              <span className="job__span">
+                Some random facts about work and what I used to do there.
               </span>
             </div>
             <div className="job__wrapper">
               <img className="circle__figure--job" src={pwc2} />
-              <span className="job__wrapper__span">
-                Some random facts about work and what I used to do there. A little extra long.
+              <span className="job__span">
+                Some random facts about work and what I used to do there.
               </span>
             </div>
             <div className="job__wrapper">
               <img className="circle__figure--job" src={pwc3} />
-              <span className="job__wrapper__span">
-                Some random facts about work and what I used to do there.
+              <span className="job__span">
+                Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
           </div>

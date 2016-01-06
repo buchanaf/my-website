@@ -1,5 +1,5 @@
 .resume {
-  color: var(--grey-text);
+  color: var(--grey);
 }
 
 .resume__container {
@@ -12,7 +12,7 @@
 }
 
 .resume__list {
-  color: var(--grey-text);
+  color: var(--grey);
   font-family: var(--font-two);
   text-align: left;
 }
@@ -24,13 +24,13 @@
 }
 
 .resume__header4 {
-  color: var(--grey-dark-text);
+  color: var(--grey-dark);
   font-size: 2.25rem;
   line-height: 2.25rem;
 }
 
 .resume__header5 {
-  color: var(--grey-dark-text);
+  color: var(--grey-dark);
   font-size: 1.5rem;
   font-family: var(--font-two);
   line-height: 1.5rem;
