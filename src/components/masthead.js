@@ -4,7 +4,7 @@ export default class Masthead extends Component {
   static propTypes = {
     children: PropTypes.any,
     className: PropTypes.string,
-  }
+  };
 
   constructor(props) {
     super(props);

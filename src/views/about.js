@@ -22,7 +22,7 @@ export default class About extends Component {
 
   onResumeClick = () => {
     this.history.pushState(null, '/resume');
-  }
+  };
 
   render() {
     return (
