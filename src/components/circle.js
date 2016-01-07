@@ -11,13 +11,13 @@ export default class Circle extends Component {
     onClick: PropTypes.func,
     image: PropTypes.string,
     type: PropTypes.string,
-  }
+  };
 
   static defaultProps = {
     type: 'button',
     disabled: false,
     name: null,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -30,7 +30,7 @@ export default class Circle extends Component {
   onMouseHandler = (e) => {
     e.preventDefault();
     this.setState({ hover: !this.state.hover })
-  }
+  };
 
   render() {
     const { className, image } = this.props;

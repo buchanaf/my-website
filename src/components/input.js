@@ -13,12 +13,12 @@ export default class Input extends Component {
     placeholder: PropTypes.string,
     type: PropTypes.string,
     value: PropTypes.string,
-  }
+  };
 
   static defaultProps = {
     type: 'text',
     name: null,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -29,28 +29,28 @@ export default class Input extends Component {
     if (this.props.onChange) {
       this.props.onChange(e);
     }
-  }
+  };
 
   onFocusHandler = (e) => {
     e.preventDefault();
     if (this.props.onFocusHandler) {
       this.props.onFocusHandler(e);
     }
-  }
+  };
 
   onBlurHandler = (e) => {
     e.preventDefault();
     if (this.props.onBlurHandler) {
       this.props.onBlurHandler(e);
     }
-  }
+  };
 
   onKeyUpHandler = (e) => {
     e.preventDefault();
     if (this.props.onKeyUpHandler) {
       this.props.onKeyUpHandler(e);
     }
-  }
+  };
 
   render() {
     const { className, type, placeholder, name, value } = this.props;

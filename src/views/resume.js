@@ -10,7 +10,7 @@ export default class Home extends Component {
 
   onResumeClick = () => {
     this.history.pushState(null, '/resume');
-  }
+  };
 
   render() {
     return (

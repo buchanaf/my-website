@@ -11,15 +11,14 @@ export default class Home extends Component {
 
   componentDidMount = () => {
     this.props.onIndexAnimation();
-  }
+  };
 
   onResumeClick = () => {
     this.history.pushState(null, '/resume');
-  }
+  };
 
   render() {
     const { indexView } = this.props;
-    console.log(this.props);
 
     return (
       <div className="content">

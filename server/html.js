@@ -4,7 +4,7 @@ export default class html extends Component {
   static propTypes = {
     assets    : PropTypes.object,
     component : PropTypes.object,
-  }
+  };
 
   render() {
     const { assets, component, store } = this.props;

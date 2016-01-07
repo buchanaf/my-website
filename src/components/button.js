@@ -10,13 +10,13 @@ export default class Button extends Component {
     name: PropTypes.string,
     onClick: PropTypes.func,
     type: PropTypes.string,
-  }
+  };
 
   static defaultProps = {
     type: 'button',
     disabled: false,
     name: null,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ export default class Button extends Component {
     if (this.props.onClick) {
       this.props.onClick(e);
     }
-  }
+  };
 
   render() {
     const { className, type, disabled, name } = this.props;
