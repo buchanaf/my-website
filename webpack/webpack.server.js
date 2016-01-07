@@ -1,18 +1,33 @@
+var express = require('express');
 var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
-var path = require('path');
 
-new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
+var webpackConfig = require('./webpack.dev');
+var compiler = webpack(webpackConfig);
+
+var host = (process.env.HOST || 'localhost');
+var port = parseInt(process.env.PORT) + 1 || 3001;
+
+var serverOptions = {
+  contentBase: 'http://' + host + ':' + port,
+  quiet: true,
+  noInfo: true,
   hot: true,
-  historyApiFallback: true,
-  contentBase: path.join(__dirname, '..', 'client', 'dist'),
-  stats: { colors: true, progress: true},
-}).listen(3000, 'localhost', function (err, result) {
-  if (err) {
-    console.log(err);
-  }
+  inline: true,
+  lazy: false,
+  publicPath: webpackConfig.output.publicPath,
+  headers: {'Access-Control-Allow-Origin': '*'},
+  stats: {colors: true}
+};
 
-  console.log('Listening at localhost:3000');
+var app = new express();
+
+app.use(require('webpack-dev-middleware')(compiler, serverOptions));
+app.use(require('webpack-hot-middleware')(compiler));
+
+app.listen(port, function hotLoadingInit(err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.info('Webpack development server listening on port %s', port);
+  }
 });

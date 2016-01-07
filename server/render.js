@@ -3,15 +3,12 @@ import React                     from 'react';
 import { renderToString }        from 'react-dom/server'
 import { RoutingContext, match } from 'react-router';
 import createLocation            from 'history/lib/createLocation';
-import routes                    from '../client/src/routes';
+import routes                    from '../src/routes';
 import path                      from 'path';
-import webpackDev                from '../webpack/universal.server';
 import Html                      from './html';
 
 const PORT = process.env.PORT || 3000;
 const app = new express();
-
-webpackDev(app);
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use( (req, res) => {

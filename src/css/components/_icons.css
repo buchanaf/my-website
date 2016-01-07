@@ -1,0 +1,86 @@
+.icon {
+  background-size: 1rem;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.icon__wrapper {
+  display: block;
+  position: relative;
+}
+
+.icon--facebook {
+  background-image: url('../assets/facebook.svg');
+}
+
+.icon--twitter {
+  background-image: url('../assets/twitter.svg');
+}
+
+.icon--github {
+  background-image: url('../assets/github.svg');
+}
+
+.icon--instagram {
+  background-image: url('../assets/instagram.svg');
+}
+
+.icon--linkedin {
+  background-image: url('../assets/linkedin.svg');
+}
+
+.icon--angle-down {
+  animation: fadein 1.5s;
+  background-image: url('../assets/angle-down.svg');
+  background-size: 3rem;
+  bottom: 3rem;
+  height: 3rem;
+  left: 49.4%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 3rem;
+}
+
+.icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  box-sizing: content-box;
+}
+
+.icon__wrapper .icon {
+  transition: box-shadow 0.2s;
+}
+
+.icon__wrapper .icon:after {
+  top: 0;
+  left: 0;
+  padding: 0;
+  box-shadow: 0 0 0 3px #fff;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.icon__wrapper  .icon:hover:after {
+  transform: scale(0.85);
+  opacity: 0.5;
+}
+
+.icon__wrapper  .icon:hover {
+  box-shadow: 0 0 0 4px rgba(255,255,255,1);
+  color: #fff;
+}
