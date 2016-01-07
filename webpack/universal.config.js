@@ -21,9 +21,9 @@ module.exports = {
   webpack_assets_file_path: 'webpack-assets.json',
   webpack_stats_file_path: 'webpack-stats.json',
   alias: {
-    components: path.resolve(rootDir, 'client', 'src', 'components'),
-    views: path.resolve(rootDir, 'client', 'src', 'views'),
-    assets: path.resolve(rootDir, 'client', 'src', 'assets'),
-    css: path.resolve(rootDir, 'client', 'src', 'css'),
+    components: path.resolve(rootDir, 'src', 'components'),
+    views: path.resolve(rootDir, 'src', 'views'),
+    assets: path.resolve(rootDir, 'src', 'assets'),
+    css: path.resolve(rootDir, 'src', 'css'),
   }
 }

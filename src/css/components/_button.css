@@ -1,0 +1,78 @@
+:root {
+  --button-font-family: var(--font-one);
+  --button-font-size: 1rem;
+  --button-font-weight: normal;
+  --button-line-height: 1rem;
+  --button-padding-y: 0.25rem;
+  --button-padding-x: 0.25rem;
+  --border-width: 1px;
+}
+
+button,
+.button {
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: var(--button-line-height);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  margin: 0;
+  height: auto;
+  outline: none;
+  border: var(--border-width) solid transparent;
+  vertical-align: middle;
+}
+
+button,
+button::after,
+button::before,
+.button,
+.button::after,
+.button::before {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.button:hover { text-decoration: none }
+
+.button--transparent {
+  background: transparent;
+  border: 3px solid white;
+  font-family: var(--font-two);
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1.25rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+
+.button--transparent:hover {
+  background: white;
+  color: var(--grey);
+}
+
+.button--black {
+  background: var(--grey-dark);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease 0s;
+}
+
+.button--black:hover {
+  background: white;
+  border: 1px solid var(--grey-dark);
+  color: var(--grey-dark);;
+}
