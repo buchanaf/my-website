@@ -2,9 +2,10 @@ import { Route, IndexRoute } from 'react-router';
 import React from 'react';
 
 import App from 'views/app';
+import About from 'views/about';
+import Contact from 'views/contact';
 import Home from 'views/home';
 import Resume from 'views/resume';
-import Contact from 'views/contact';
 
 import Pageheader from 'components/pageheader';
 import Footer from 'components/footer';
@@ -22,5 +23,6 @@ export default (
     <IndexRoute components={wrap(Home)} />
     <Route path="/resume" components={wrap(Resume)} />
     <Route path="/contact" components={wrap(Contact)} />
+    <Route path="/about" components={wrap(About)} />
   </Route>
 );

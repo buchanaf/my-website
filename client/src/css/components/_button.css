@@ -59,5 +59,20 @@ button::before,
 
 .button--transparent:hover {
   background: white;
-  color: var(--grey-text);
+  color: var(--grey);
+}
+
+.button--black {
+  background: var(--grey-dark);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease 0s;
+}
+
+.button--black:hover {
+  background: white;
+  border: 1px solid var(--grey-dark);
+  color: var(--grey-dark);;
 }

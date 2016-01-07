@@ -5,7 +5,6 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import routes from './routes';
 
 require('css/main.css');
-require('normalize.css');
 
 window.onload = function initApp() {
   render((

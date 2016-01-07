@@ -1,13 +1,40 @@
 .masthead--home {
-  @mixin masthead asheville.jpg
+  @mixin masthead asheville.jpg;
 }
 
 .masthead--resume {
-  @mixin masthead desk.jpg
+  @mixin masthead desk.jpg;
 }
 
 .masthead--contact {
-  @mixin masthead contact.jpg
+  @mixin masthead contact.jpg;
+}
+
+.masthead--pwc {
+  background-image: url('../assets/pwc.jpg');
+  background-color: #282b37;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+}
+
+.masthead--cogo {
+  background-image: url('../assets/cogolabs.jpg');
+  background-color: #282b37;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+}
+
+.image--boston {
+  width: 500px;
+  margin: 25px 50px;
+  vertical-align: top;
+  object-fit: contain;
 }
 
 .masthead__container {
@@ -29,24 +56,4 @@
   color: var(--white);
   font-size: 1.5rem;
   animation: fadein-down 1.5s;
-}
-
-@keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
-@keyframes fadein-down {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
 }

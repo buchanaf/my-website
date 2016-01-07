@@ -1,9 +1,9 @@
 .header {
   height: 4rem;
+  right: 4rem;
   line-height: 4rem;
   position: absolute;
-  left: 4rem;
-  top: 0;
+  top: 1rem;
 }
 
 .header__link {
@@ -20,4 +20,3 @@
 .header__link.active {
  outline: 3px solid white;
 }
-

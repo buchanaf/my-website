@@ -77,6 +77,7 @@ module.exports = {
       postcssImport({
         addDependencyTo: webpack
       }),
+      require('postcss-clearfix'),
       require('postcss-mixins'),
       require('autoprefixer'),
       require('postcss-custom-media'),

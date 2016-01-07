@@ -1,3 +1,6 @@
+.clear {
+  clear: fix; }
+
 .left {
   float: left; }
 
@@ -108,5 +111,6 @@
 .margin-top-3 {
   margin-top: 3rem;
 }
+
 
 /*# sourceMappingURL=helpers.css.map */

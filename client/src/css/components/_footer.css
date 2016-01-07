@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--grey-footer-background);
-  color: var(--grey-footer-text);
+  background-color: var(--grey-xdark);
+  color: var(--grey-light);
   height: 15rem;
   padding: 4rem 0;
   width: 100%;

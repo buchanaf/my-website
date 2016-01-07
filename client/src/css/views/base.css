@@ -2,18 +2,35 @@
   font-size: 2.125rem;
   margin: 1rem auto;
   padding: 1rem;
-  width: 1200px
+  width: 1200px;
 }
 
 .border-bottom {
-  border-bottom: 1px solid var(--grey-hr);
+  border-bottom: 1px solid var(--grey-light);
 }
 
 .content__description {
-  color: var(--grey-text);
+  color: var(--grey);
   font-size: 1.125rem;
   font-family: var(--font-two);
   line-height: 2rem;
+  margin-top: 2rem;
+  width: 800px;
+}
+
+.content__subtitle {
+  color: var(--grey);
+  font-family: var(--font-two);
+  font-size: 1.5rem;
+}
+
+.content__subtitle--italic {
+  text-decoration: italic;
+}
+
+.content__emphasize {
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .description--3col {
@@ -42,7 +59,7 @@
 }
 
 .photo--headshot {
-    background-image: url('../assets/Alex.jpg');
+    background-image: url('../assets/alex.jpg');
     background-size: 407px 407px;
     background-repeat: no-repeat;
     border-radius: 50%;
