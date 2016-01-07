@@ -1,0 +1,49 @@
+.footer {
+  background-color: var(--grey-xdark);
+  color: var(--grey-light);
+  height: 20rem;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.footer__banner {
+  background: var(--grey-dark);
+  display: block;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.footer__wrapper:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.footer__wrapper {
+  display: inline-block;
+  height: 5rem;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.footer__copyright {
+  margin-bottom: 1rem;
+}
+
+.footer__links,
+.footer__icons {
+  margin: 2rem;
+}
+
+.footer__link {
+  @mixin nav-link 1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}

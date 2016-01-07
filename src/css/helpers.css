@@ -1,0 +1,116 @@
+.clear {
+  clear: fix; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.zindex-1 {
+  z-index: 1; }
+
+.zindex-2 {
+  z-index: 2; }
+
+.zindex-3 {
+  z-index: 3; }
+
+.zindex-4 {
+  z-index: 4; }
+
+.fixed {
+  position: fixed; }
+
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-just {
+  text-align: justify; }
+
+.align-top {
+  vertical-align: top; }
+
+.align-bottom {
+  vertical-align: bottom; }
+
+.align-middle {
+  vertical-align: middle; }
+
+.align-baseline {
+  vertical-align: baseline; }
+
+.fit {
+  max-width: 100%; }
+
+.half-width {
+  width: 50%; }
+
+.full-width {
+  width: 100%; }
+
+.full-height {
+  height: 100%; }
+
+.inline {
+  display: inline; }
+
+.block {
+  display: block; }
+
+.inline-block {
+  display: inline-block; }
+
+.hidden {
+  display: none; }
+
+.white {
+  color: #fff; }
+
+.bold {
+  font-weight: bold; }
+
+.regular {
+  font-weight: normal; }
+
+.italic {
+  font-style: italic; }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.break-word {
+  word-wrap: break-word; }
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.margin-top-3 {
+  margin-top: 3rem;
+}
+
+
+/*# sourceMappingURL=helpers.css.map */
