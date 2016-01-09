@@ -1,16 +1,3 @@
-.resume {
-  color: var(--grey);
-}
-
-.resume__container {
-  font-size: 1.125rem;
-  font-family: var(--font-two);
-  line-height: 2rem;
-  padding: 3rem 0;
-  text-align: left;
-  vertical-align: top;
-}
-
 .resume__list {
   color: var(--grey);
   font-family: var(--font-two);
@@ -26,7 +13,9 @@
 .resume__header4 {
   color: var(--grey-dark);
   font-size: 2.25rem;
+  display: block;
   line-height: 2.25rem;
+  width: 100%;
 }
 
 .resume__header5 {
@@ -34,20 +23,25 @@
   font-size: 1.5rem;
   font-family: var(--font-two);
   line-height: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .col-3 {
   display: inline-block;
-  width: 33.33%;
+  width: 300px;
+}
+
+.col-3-2 {
+  display: inline-block;
+  width: 600px;
 }
 
 .col-4 {
   display: inline-block;
-  width: 25%;
+  width: 225px;
 }
 
 .col-4-3 {
   display: inline-block;
-  width: 75%;
+  width: 675px;
 }

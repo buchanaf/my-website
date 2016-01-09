@@ -48,11 +48,11 @@ button::before,
   font-family: var(--font-two);
   color: white;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.5rem;
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
 }

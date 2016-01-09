@@ -10,6 +10,10 @@
   @mixin masthead contact.jpg;
 }
 
+.masthead--about {
+  @mixin masthead cogolabs.jpg;
+}
+
 .masthead--pwc {
   background-image: url('../assets/pwc.jpg');
   background-color: #282b37;
@@ -21,7 +25,7 @@
 }
 
 .masthead--cogo {
-  background-image: url('../assets/cogolabs.jpg');
+  background-image: url('../assets/cogolabs1.jpg');
   background-color: #282b37;
   background-position: center;
   background-size: cover;

@@ -1,31 +1,82 @@
+.content {
+  position: relative;
+}
+
 .content__subsection {
   font-size: 2.125rem;
   margin: 1rem auto;
   padding: 1rem;
-  width: 1200px;
+  width: 900px;
 }
 
-.border-bottom {
-  border-bottom: 1px solid var(--grey-light);
+.content__container {
+  clear: fix;
+  font-size: 0.9rem;
+  font-family: var(--font-two);
+  line-height: 1.75rem;
+  padding: 3rem 0;
+  text-align: left;
+  vertical-align: top;
 }
 
 .content__description {
   color: var(--grey);
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   font-family: var(--font-two);
-  line-height: 2rem;
+  line-height: 1.5rem;
   margin-top: 2rem;
-  width: 800px;
+}
+
+.content__title {
+  color: var(--grey-dark);
+  font-family: var(--font-two);
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .content__subtitle {
   color: var(--grey);
+  display: block;
   font-family: var(--font-two);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.content__subtitle--italic {
-  text-decoration: italic;
+.content__hr,
+.content__hr--short {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.content__hr:before {
+  @mixin horizontal-rule;
+  left: 0;
+  width: 35%;
+}
+
+.content__hr:after {
+  @mixin horizontal-rule;
+  right: 0;
+  width: 35%;
+}
+
+.content__hr--short:before {
+  @mixin horizontal-rule;
+  left: 0;
+  width: 30%;
+
+}
+
+.content__hr--short:after {
+  @mixin horizontal-rule;
+  right: 0;
+  width: 30%;
 }
 
 .content__emphasize {
@@ -59,11 +110,11 @@
 }
 
 .photo--headshot {
-    background-image: url('../assets/alex.jpg');
-    background-size: 407px 407px;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    display: block;
-    width: 407px;
-    height: 407px;
+  background-image: url('../assets/alex.jpg');
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: block;
+  width: 300px;
+  height: 300px;
 }

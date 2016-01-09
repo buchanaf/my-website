@@ -9,39 +9,39 @@
 .circle__container {
   background-repeat: no-repeat;
   display: inline-block;
-  height: 332px;
-  margin: 25px 18px;
+  height: 225px;
+  margin: 2rem 1rem;
   perspective: 800px;
   position: relative;
-  width: 332px;
+  width: calc(225px + 32px);
 }
 
 .circle__figure {
-  background-size: 300px 300px;
+  background-size: 225px;
   backface-visibility: hidden;
   border-radius: 50%;
   display: block;
-  height: 300px;
+  height: 225px;
   margin: 0;
   padding: 1rem;
   position: absolute;
-  width: 300px;
+  width: 225px;
 }
 
 .circle__background--front {
   color: white;
   box-shadow: 0px 0px 3px #333333;
   border-radius: 50%;
-  line-height: 250px;
-  width: 250px;
-  height: 250px;
+  line-height: 175px;
+  width: 175px;
+  height: 175px;
   padding: 25px;
   background-color: var(--grey-dark);
 }
 
 .circle__wrapper {
   display: inline-block;
-  height: 10rem;
+  height: 7rem;
   line-height: normal;
   vertical-align: middle;
 }
@@ -49,19 +49,19 @@
 .circle__title {
   display:block;
   border-bottom: 1px solid white;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  width: 250px;
+  width: 175px;
 }
 
 .circle__description {
   color: white;
   display: inline-block;
   font-family: var(--font-two);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
   vertical-align: top;
 }
 
@@ -71,9 +71,9 @@
 
 .circle__figure--back {
   background: var(--grey-xlight);
-  background-size: 300px 300px;
-  height: 300px;
-  width: 300px;
+  background-size: 225px 225px;
+  height: 225px;
+  width: 225px;
   object-fit: contain;
   transform: rotateY( 180deg );
   z-index: 10;
@@ -111,7 +111,7 @@
   display: inline-block;
   line-height: normal;
   margin: 50px;
-  width: 300px;
+  width: 200px;
   vertical-align: top;
 }
 
@@ -123,13 +123,13 @@
 }
 
 .circle__figure--job {
-  background-size: 250px 250px;
+  background-size: 175px 175px;
   border-radius: 50%;
   display: inline-block;
-  height: 250px;
+  height: 175px;
   margin: 1rem;
   object-fit: contain;
-  width: 250px;
+  width: 175px;
 }
 
 .circle:hover .circle__figure--front:after {

@@ -6,20 +6,20 @@ import piping from 'piping';
 const rootDir = path.resolve(__dirname, '..');
 
 global.__DEVELOPMENT__ = true;
-global.__CLIENT__ = true;
-global.__SERVER__ = false;
+global.__CLIENT__ = false;
+global.__SERVER__ = true;
 
 global.isomorphicTools = new isomorphicTools(universalConfig)
   .development()
   .server(rootDir, function() {
     if (__DEVELOPMENT__) {
-      if(piping({
-        hook: true,
-      })){
-        require('./render');
+      if (!require('piping')({
+          hook: true,
+          ignore: /(\/\.|~$|\.svg|\.jpg|\.png|\.css$)/i
+        })) {
+        return;
       }
-    } else {
-      require('./render');
     }
-  })
+    require('./render');
+  });
 

@@ -1,10 +1,11 @@
 @define-mixin nav-link $font {
   color: white;
   font-size: $font;
+  font-weight: bold;
   line-height: $font;
   margin-left: calc($font / 5);
   margin-right: calc($font / 5);
-  padding: calc($font / 2) $font;
+  padding: calc($font / 2) calc($font / 2);
   text-decoration: none;
 }
 
@@ -16,6 +17,16 @@
   background-size: cover;
   height: 100vh;
   width: 100%;
+}
+
+@define-mixin horizontal-rule {
+  background: #dfe1e6;
+  content: '';
+  height: 1px;
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+  top: 35%;
 }
 
 

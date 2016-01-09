@@ -11,6 +11,7 @@ var host = (process.env.HOST || 'localhost');
 var port = parseInt(process.env.PORT) + 1 || 3001;
 
 module.exports = {
+  devtool: 'source-map',
   context: rootDir,
   entry: [
     'babel-polyfill',
@@ -21,6 +22,7 @@ module.exports = {
     path: path.resolve(rootDir, '/dist'),
     publicPath: 'http://' + host + ':' + port + '/dist/',
     filename: 'bundle.js',
+    pathinfo: true,
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -59,7 +61,7 @@ module.exports = {
         loader: "style-loader!css-loader!postcss-loader"
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|jpg|png|gif|svg)$/i,
         loaders: [
           'file?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
@@ -84,6 +86,7 @@ module.exports = {
       components: path.resolve(rootDir, 'src', 'components'),
       views: path.resolve(rootDir, 'src', 'views'),
       assets: path.resolve(rootDir, 'src', 'assets'),
+      utils: path.resolve(rootDir, 'src', 'utils'),
       css: path.resolve(rootDir, 'src', 'css'),
     }
   },

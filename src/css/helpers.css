@@ -108,8 +108,8 @@
   margin: 0 auto;
 }
 
-.margin-top-3 {
-  margin-top: 3rem;
+.border-bottom {
+  border-bottom: 1px solid var(--grey-light);
 }
 
 
