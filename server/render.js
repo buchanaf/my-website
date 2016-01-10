@@ -13,7 +13,10 @@ const app = new express();
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use( (req, res) => {
   const location = createLocation(req.url);
-  isomorphicTools.refresh();
+
+  if (__DEVELOPMENT__) {
+    isomorphicTools.refresh();
+  }
 
   match({ routes, location }, (err, redirectLocation, renderProps) => {
     if(err) {

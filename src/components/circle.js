@@ -42,8 +42,8 @@ export default class Circle extends Component {
           return (
             <section className="circle__container" onMouseEnter={this.onMouseHandler} onMouseLeave={this.onMouseHandler}>
               <div className={cx('circle', className)} style={{
-                  WebkitTransform: `rotateY(${Math.ceil(style.x)}deg)`,
-                  transform: `rotateY(${Math.ceil(style.x)}deg)`}} >
+                WebkitTransform: `rotateY(${Math.ceil(style.x)}deg)`,
+                transform: `rotateY(${Math.ceil(style.x)}deg)`}} >
                 <figure className="circle__figure circle__figure--front">
                   {this.props.children}
                 </figure>

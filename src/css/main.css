@@ -1,10 +1,10 @@
 /* COMPONENT CSS FILES */
 @import 'normalize';
+@import 'media-queries';
 @import 'colors';
 @import 'fonts';
 @import 'mixins';
 @import 'base';
-@import 'media-queries';
 @import 'components';
-@import 'helpers';
 @import 'views';
+@import 'helpers';

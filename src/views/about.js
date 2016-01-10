@@ -28,31 +28,14 @@ export default class About extends Component {
     return (
       <div className="content">
         <div className="masthead__container">
-          <Masthead className="masthead--home"/>
+          <Masthead className="masthead--about"/>
           <div className="center-absolute text-center">
-            <strong className="masthead__title block">
-              JAVASCRIPT
+            <strong className='masthead__title block'>
+              About me
             </strong>
-            <Button className="button--transparent" onClick={this.onResumeClick}>
-              Resume
-            </Button>
-            <Button className="button--transparent">
-              Contact
-            </Button>
           </div>
-          <i className="icon icon--angle-down" />
         </div>
         <div className="content__subsection text-center">
-          <h2>
-            Some of my
-            <span className="block">
-              <span className="content__emphasize">
-                Interests
-              </span> and <span className="content__emphasize">
-                Moments
-              </span>
-            </span>
-          </h2>
           <Circle image={Cruise} >
             <div className="circle__background--front">
               <div className="circle__wrapper">
@@ -142,31 +125,33 @@ export default class About extends Component {
           <div className="masthead--cogo" />
         </div>
         <div className="content__subsection text-center">
-          <h2>
-            CogoLabs
-          </h2>
-          <span className="content__subtitle">
-            2011 to 2014
-          </span>
+          <div className="content__hr">
+            <h2 className="content__title">
+              Cogo Labs
+            </h2>
+            <h3 className="content__subtitle">
+              2014 to Present
+            </h3>
+          </div>
           <div className="description__wrapper center">
             <p className="content__description center">
               I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
             </p>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc1} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc2} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc3} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there.
               </span>
             </div>
@@ -176,31 +161,33 @@ export default class About extends Component {
           <div className="masthead--pwc" />
         </div>
         <div className="content__subsection text-center">
-          <h2>
-            PricewaterhouseCoopers
-          </h2>
-          <span className="content__subtitle content__subtitle--italic">
-            2011 to 2014
-          </span>
+          <div className="content__hr">
+            <h2 className="content__title">
+              PwC
+            </h2>
+            <h3 className="content__subtitle">
+              2011 to 2014
+            </h3>
+          </div>
           <div className="description__wrapper center">
             <p className="content__description center">
               I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
             </p>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc1} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc2} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc3} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>

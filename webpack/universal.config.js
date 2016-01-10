@@ -24,6 +24,7 @@ module.exports = {
     components: path.resolve(rootDir, 'src', 'components'),
     views: path.resolve(rootDir, 'src', 'views'),
     assets: path.resolve(rootDir, 'src', 'assets'),
+    utils: path.resolve(rootDir, 'src', 'utils'),
     css: path.resolve(rootDir, 'src', 'css'),
   }
 }

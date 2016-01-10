@@ -18,9 +18,6 @@ export default class Home extends Component {
         <div className="masthead__container">
           <Masthead className="masthead--resume"/>
           <div className="center-absolute text-center">
-            <p className="masthead__paragraph italic">
-              Here is my
-            </p>
             <strong className="masthead__title block">
               Resume
             </strong>
@@ -29,85 +26,88 @@ export default class Home extends Component {
             </Button>
           </div>
         </div>
-        <div className="content__subsection text-center">
-          <h2>
-            Resume
-          </h2>
-          <div className="resume__container border-bottom center">
-            <div className="col-3 align-top">
-              <h4 className="resume__header4">
-                Technologies
-              </h4>
-            </div>
-            <div className="col-3 align-top">
-              <h5 className="resume__header5">
-                Primary
-              </h5>
-              <ul className="resume__list">
-                <li>
-                  Javascript / ES6
-                </li>
-                <li>
-                  Reactjs
-                </li>
-                <li>
-                  Flux Architecture
-                </li>
-                <li>
-                  Webpack
-                </li>
-                <li>
-                  Javascript / ES6
-                </li>
-                <li>
-                  Babel
-                </li>
-                <li>
-                  HTML5 / CSS3
-                </li>
-                <li>
-                  PostCSS
-                </li>
-                <li>
-                  BEM methodology
-                </li>
-              </ul>
-            </div>
-            <div className="col-3 align-top">
-              <h5 className="resume__header5">
-                Secondary
-              </h5>
-              <ul className="resume__list">
-                <li>
-                  Angular
-                </li>
-                <li>
-                  Node.js / Express
-                </li>
-                <li>
-                  Grunt
-                </li>
-                <li>
-                  D3.js
-                </li>
-                <li>
-                  Nginx
-                </li>
-                <li>
-                  Docker
-                </li>
-              </ul>
+        <div className="resume content__subsection text-center">
+          <div className="content__hr">
+            <h2 className="content__title">
+              My Skills
+            </h2>
+            <h3 className="content__subtitle">
+              And alleged talents...
+            </h3>
+          </div>
+          <div className="content__container border-bottom center">
+            <h4 className="header4">
+              Technology
+            </h4>
+            <div className="col-3-2 right">
+              <div className="col-3 col-3--mobile left align-top">
+                <h5 className="header5">
+                  Primary
+                </h5>
+                <ul className="resume__list">
+                  <li>
+                    Javascript / ES6
+                  </li>
+                  <li>
+                    Reactjs
+                  </li>
+                  <li>
+                    Flux Architecture
+                  </li>
+                  <li>
+                    Webpack
+                  </li>
+                  <li>
+                    Javascript / ES6
+                  </li>
+                  <li>
+                    Babel
+                  </li>
+                  <li>
+                    HTML5 / CSS3
+                  </li>
+                  <li>
+                    PostCSS
+                  </li>
+                  <li>
+                    BEM methodology
+                  </li>
+                </ul>
+              </div>
+              <div className="col-3 col-3--mobile left align-top">
+                <h5 className="header5">
+                  Secondary
+                </h5>
+                <ul className="resume__list">
+                  <li>
+                    Angular
+                  </li>
+                  <li>
+                    Node.js / Express
+                  </li>
+                  <li>
+                    Grunt
+                  </li>
+                  <li>
+                    D3.js
+                  </li>
+                  <li>
+                    Nginx
+                  </li>
+                  <li>
+                    Docker
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className="resume__container text-left border-bottom">
-            <div className="col-4 align-top">
-              <h4 className="resume__header4">
-                Work Experience
-              </h4>
-            </div>
-            <div className="col-4-3 align-top margin-top-3">
+          <div className="content__container text-left border-bottom">
+            <h4 className="header4">
+              Experience
+            </h4>
+            <div className="col-4-3 right align-top">
               <div className="resume__job">
-                <h5 className="resume__header5">
+                <h5 className="header5">
                   Web Engineer
                 </h5>
                 <p>
@@ -129,7 +129,7 @@ export default class Home extends Component {
                 </ul>
               </div>
               <div className="resume__job">
-                <h5 className="resume__header5">
+                <h5 className="header5">
                   Web Engineer
                 </h5>
                 <p>
@@ -152,15 +152,13 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="resume__container text-left">
-            <div className="col-4 align-top">
-              <h4 className="resume__header4">
-                Education
-              </h4>
-            </div>
-            <div className="col-4-3 align-top margin-top-3">
+          <div className="content__container text-left">
+            <h4 className="header4">
+              Education
+            </h4>
+            <div className="col-4-3 right align-top">
               <div className="resume__job">
-                <h5 className="resume__header5">
+                <h5 className="header5">
                   Boston College, Carroll School of Management
                 </h5>
                 <p className="italic">
@@ -179,7 +177,7 @@ export default class Home extends Component {
                 </ul>
               </div>
               <div className="resume__job">
-                <h5 className="resume__header5">
+                <h5 className="header5">
                   Fullstack Academy of Code
                 </h5>
                 <p className="italic">
