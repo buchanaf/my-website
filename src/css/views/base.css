@@ -5,8 +5,8 @@
 .content__subsection {
   font-size: 2.125rem;
   margin: 1rem auto;
-  padding: 1rem;
-  width: 900px;
+  padding: 1rem 2rem;
+  width: calc(100% - 4rem);
 }
 
 .content__container {
@@ -14,7 +14,7 @@
   font-size: 0.9rem;
   font-family: var(--font-two);
   line-height: 1.75rem;
-  padding: 3rem 0;
+  padding: 2rem 0;
   text-align: left;
   vertical-align: top;
 }
@@ -25,12 +25,14 @@
   font-family: var(--font-two);
   line-height: 1.5rem;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .content__title {
   color: var(--grey-dark);
-  font-family: var(--font-two);
+  font-family: var(--font-one);
   font-size: 2.5rem;
+  font-weight: bold;
   line-height: 3rem;
 }
 
@@ -56,27 +58,31 @@
 
 .content__hr:before {
   @mixin horizontal-rule;
+  display: inline-block;
   left: 0;
-  width: 35%;
+  width: 15%;
 }
 
 .content__hr:after {
   @mixin horizontal-rule;
+  display: inline-block;
   right: 0;
-  width: 35%;
+  width: 15%;
 }
 
 .content__hr--short:before {
   @mixin horizontal-rule;
+  display: inline-block;
   left: 0;
-  width: 30%;
+  width: 15%;
 
 }
 
 .content__hr--short:after {
   @mixin horizontal-rule;
+  display: inline-block;
   right: 0;
-  width: 30%;
+  width: 15%;
 }
 
 .content__emphasize {
@@ -84,29 +90,34 @@
   font-style: italic;
 }
 
-.description--3col {
-  font-size: 1.25rem;
-  font-family: var(--font-two);
-  text-align: left;
-  vertical-align: top;
-  width: 33.33%;
+.col-2 {
+  display: inline-block;
+  position: relative;
+  width: 100%
 }
 
-.description--4col {
+.col-3 {
   display: inline-block;
-  text-align: left;
-  vertical-align: top;
-  width: 25%;
+  width: 100%
 }
 
-.description--4col-3 {
+.col-3-2 {
   display: inline-block;
-  font-size: 1.25rem;
-  font-family: var(--font-two);
-  padding-left: 3rem;
-  text-align: left;
-  vertical-align: top;
-  width: calc(75% - 3rem);
+  width: 100%
+}
+
+.col-3--mobile {
+  width: 50%;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 100%
+}
+
+.col-4-3 {
+  display: inline-block;
+  width: 100%
 }
 
 .photo--headshot {
@@ -117,4 +128,100 @@
   display: block;
   width: 300px;
   height: 300px;
+}
+
+@media (--xlarge-viewport) {
+  .content__subsection {
+    width: 900px;
+  }
+
+  .content__description {
+    padding: 0;
+    width: 600px;
+  }
+
+  .content__hr:before,
+  .content__hr:after,
+  .content__hr--short:before,
+  .content__hr--short:after {
+    display: inline-block;
+  }
+
+  .content__hr:before {
+    width: 35%;
+  }
+
+  .content__hr:after {
+    width: 35%;
+  }
+
+  .content__hr--short:before {
+    width: 30%;
+  }
+
+  .content__hr--short:after {
+    width: 30%;
+  }
+
+  .col-2 {
+    display: inline-block;
+    position: relative;
+    width: calc(900px / 2);
+  }
+
+  .col-3 {
+    display: inline-block;
+    width: 300px;
+  }
+
+  .col-3-2 {
+    display: inline-block;
+    width: 600px;
+  }
+
+  .col-4 {
+    display: inline-block;
+    width: 225px;
+  }
+
+  .col-4-3 {
+    display: inline-block;
+    width: 675px;
+  }
+
+  .photo--headshot {
+    background-image: url('../assets/alex.jpg');
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+   .col-2 {
+    display: inline-block;
+    position: relative;
+    width: calc(900px / 2);
+  }
+
+  .col-3 {
+    display: inline-block;
+    width: 300px;
+  }
+
+  .col-3-2 {
+    display: inline-block;
+    width: 600px;
+  }
+
+  .col-4 {
+    display: inline-block;
+    width: 225px;
+  }
+
+  .col-4-3 {
+    display: inline-block;
+    width: 675px;
+  }
 }

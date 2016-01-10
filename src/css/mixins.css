@@ -1,5 +1,6 @@
 @define-mixin nav-link $font {
   color: white;
+  font-family: var(--font-one);
   font-size: $font;
   font-weight: bold;
   line-height: $font;

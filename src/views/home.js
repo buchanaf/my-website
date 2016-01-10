@@ -20,7 +20,7 @@ export default class Home extends Component {
   };
 
   onResumeClick = () => {
-    this.history.pushState(null, '/resume');
+    this.props.history.pushState(null, '/resume');
   };
 
   onClickScroll = (e) => {
@@ -76,7 +76,10 @@ export default class Home extends Component {
 
   scrollHandler = (scrollPos) => {
     if (__CLIENT__) {
-      window.scrollTo(0, Math.floor(scrollPos));
+      const windowStart = Math.floor(window.scrollY);
+      const scrollMove = Math.floor(scrollPos);
+      const scrollY = scrollMove >= windowStart ? scrollMove : windowStart;
+      window.scrollTo(0, scrollY);
     }
   };
 

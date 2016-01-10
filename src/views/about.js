@@ -29,17 +29,13 @@ export default class About extends Component {
       <div className="content">
         <div className="masthead__container">
           <Masthead className="masthead--about"/>
-          <i className="icon icon--angle-down" />
+          <div className="center-absolute text-center">
+            <strong className='masthead__title block'>
+              About me
+            </strong>
+          </div>
         </div>
         <div className="content__subsection text-center">
-          <div className="content__hr">
-            <h2 className="content__title">
-              Interests
-            </h2>
-            <h3 className="content__subtitle">
-              Outside of work
-            </h3>
-          </div>
           <Circle image={Cruise} >
             <div className="circle__background--front">
               <div className="circle__wrapper">
@@ -141,21 +137,21 @@ export default class About extends Component {
             <p className="content__description center">
               I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
             </p>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc1} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc2} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc3} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there.
               </span>
             </div>
@@ -177,21 +173,21 @@ export default class About extends Component {
             <p className="content__description center">
               I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
             </p>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc1} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc2} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there.
               </span>
             </div>
-            <div className="job__wrapper">
+            <div className="circle__job">
               <img className="circle__figure--job" src={pwc3} />
-              <span className="job__span">
+              <span className="circle__span">
                 Some random facts about work and what I used to do there. A little extra long.
               </span>
             </div>

@@ -107,18 +107,19 @@
   line-height: 200px;
 }
 
-.job__wrapper {
+.circle__job {
+  color: var(--grey);
   display: inline-block;
   line-height: normal;
-  margin: 50px;
+  margin: 25px;
   width: 200px;
   vertical-align: top;
 }
 
-.job__span {
+.circle__span {
   display: inline-block;;
   font-family: var(--font-two);
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5rem;
 }
 
@@ -141,3 +142,8 @@
   animation: spinAround 9s linear infinite;
 }
 
+@media (--xlarge-viewport) {
+  .circle__job {
+    margin: 50px;
+  }
+}

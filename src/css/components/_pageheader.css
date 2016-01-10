@@ -8,6 +8,7 @@
 
 .header__link {
   @mixin nav-link 1rem;
+  color: var(--grey-light);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }

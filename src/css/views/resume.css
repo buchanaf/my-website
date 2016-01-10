@@ -2,6 +2,7 @@
   color: var(--grey);
   font-family: var(--font-two);
   text-align: left;
+  list-style: disc;
 }
 
 .resume__list li {
@@ -10,15 +11,17 @@
   margin-bottom: 0.75rem;
 }
 
-.resume__header4 {
+.header4 {
   color: var(--grey-dark);
   font-size: 2.25rem;
+  font-family: var(--font-one);
   display: block;
   line-height: 2.25rem;
+  text-align: center;
   width: 100%;
 }
 
-.resume__header5 {
+.header5 {
   color: var(--grey-dark);
   font-size: 1.5rem;
   font-family: var(--font-two);
@@ -26,22 +29,8 @@
   margin-top: 2rem;
 }
 
-.col-3 {
-  display: inline-block;
-  width: 300px;
-}
-
-.col-3-2 {
-  display: inline-block;
-  width: 600px;
-}
-
-.col-4 {
-  display: inline-block;
-  width: 225px;
-}
-
-.col-4-3 {
-  display: inline-block;
-  width: 675px;
+@media (--xlarge-viewport) {
+  .header4 {
+    text-align: left;
+  }
 }

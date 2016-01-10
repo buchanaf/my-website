@@ -20,23 +20,22 @@ export default class Home extends Component {
         <div className="masthead__container">
           <Masthead className="masthead--contact"/>
           <div className="center-absolute text-center">
-            <p className="masthead__paragraph italic">
-              Give me a
-            </p>
             <strong className="masthead__title block">
-              Ring
+              Hello.
             </strong>
-            <Button className="button--transparent" onClick={this.onDownloadClick}>
-              Download Resume
-            </Button>
           </div>
         </div>
-        <div className="content__subsection text-center clear border-bottom">
-          <h3>
-            Contact
-          </h3>
-          <div className="resume__container col-3 align-middle left">
-            <h5 className="resume__header5">
+        <div className="content__subsection text-center clear">
+          <div className="content__hr">
+            <h2 className="content__title">
+              Contact
+            </h2>
+            <h3 className="content__subtitle">
+              Cambridge, MA
+            </h3>
+          </div>
+          <div className="content__container col-3 text-center left">
+            <h5 className="header5">
               Personal Information
             </h5>
             <p className="bold">
@@ -52,15 +51,20 @@ export default class Home extends Component {
               buchanaf@gmail.com
             </p>
           </div>
-          <div className="resume__container col-3 align-top right">
+          <div className="content__container col-3 align-top right">
             <div className="photo--headshot center" />
           </div>
         </div>
         <div className="content__subsection text-center clear">
-          <h3>
-            Send Me A Message
-          </h3>
-          <div className="col-2 resume__container text-left inline-block">
+          <div className="content__hr">
+            <h2 className="content__title">
+              Message Me
+            </h2>
+            <h3 className="content__subtitle">
+              With nice words
+            </h3>
+          </div>
+          <div className="content__container col-2 text-left inline-block">
             <form>
               <div className="inline-block">
                 <label>
@@ -91,7 +95,7 @@ export default class Home extends Component {
               </Button>
             </form>
           </div>
-          <div className="col-2 resume__container relative inline-block">
+          <div className="col-2 content__container relative inline-block">
             <img className="image--boston" src={BostonImg} />
           </div>
         </div>

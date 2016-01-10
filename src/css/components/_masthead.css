@@ -35,10 +35,9 @@
 }
 
 .image--boston {
-  width: 500px;
-  margin: 25px 50px;
-  vertical-align: top;
   object-fit: contain;
+  vertical-align: top;
+  width: 100%;
 }
 
 .masthead__container {
@@ -53,7 +52,7 @@
 .masthead__title {
   color: white;
   font-family: var(--font-one);
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   padding: 0 1rem;
 }
@@ -70,3 +69,15 @@
 .masthead__paragraph--animate {
   animation: fadein-down 1.5s;
 }
+
+@media (--xlarge-viewport) {
+  .masthead__title {
+    font-size: 5rem;
+  }
+
+  .image--boston {
+    margin: 25px 50px;
+    width: 500px;
+  }
+}
+
