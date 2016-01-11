@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-require('css/components/_pageheader.css');
 
 export default class PageHeader extends Component {
   constructor(props) {

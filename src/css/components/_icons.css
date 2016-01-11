@@ -41,6 +41,18 @@
   background-image: url('../assets/linkedin.svg');
 }
 
+.icon--menu {
+  background-image: url('../assets/menu.svg');
+  background-size: 2rem;
+  background-color: white;
+  border-radius: 2px;
+  height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+}
+
 .icon--angle-down {
   animation: fadein 1.5s;
   background-image: url('../assets/angle-down.svg');

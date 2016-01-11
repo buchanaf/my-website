@@ -1,0 +1,31 @@
+.sidenav {
+  background: var(--grey-dark);
+  color: white;
+  bottom: 0;
+  height: 100%;
+  line-height: 1em;
+  overflow: auto;
+  position: fixed;
+  text-align: left;
+  right: -260px;
+  top: 0;
+  width: 260px;
+  z-index: -1;
+}
+
+.sidenav__list {
+  display: block;
+  padding: 2rem;
+}
+
+.sidenav__link {
+  @mixin nav-link 1rem;
+  display: block;
+  margin: 1.25rem 0;
+}
+
+.sidenav__link:first-child {
+  height: 100%;
+  margin-top: 0;
+  overflow: hidden;
+}
