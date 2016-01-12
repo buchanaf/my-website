@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { spring, Motion } from 'react-motion'
 import cx from 'classnames';
 import Dom from 'utils/dom';
@@ -16,16 +17,16 @@ export default class Home extends Component {
 
   componentDidMount = () => {
     this.props.onIndexAnimation();
-    this.setState({ scrollTo: Dom.getElement('masthead--home').clientHeight});
-  };
-
-  onResumeClick = () => {
-    this.props.history.pushState(null, '/resume');
+    this.setState({ scrollTo: Dom.getElement('masthead--home').clientHeight });
   };
 
   onClickScroll = (e) => {
     e.preventDefault();
     this.setState({scroll: true});
+    setTimeout(() => {
+      this.setState({scroll: false})
+    }, 2000);
+
   };
 
   render() {
@@ -33,7 +34,7 @@ export default class Home extends Component {
     const { scroll, scrollTo } = this.state;
 
     return (
-      <Motion style={{x: spring( scroll ? scrollTo : 0, [100, 20])}}>
+      <Motion style={{x: spring( scroll ? scrollTo : 0, [75, 20])}}>
         {(style) => {
           this.scrollHandler(style.x);
           return (
@@ -44,12 +45,12 @@ export default class Home extends Component {
                   <strong className={cx('masthead__title', {'masthead__title--animate': indexView}, 'block')}>
                     JAVASCRIPT
                   </strong>
-                  <Button className="button--transparent" onClick={this.onResumeClick}>
+                  <Link className="button button--transparent" to="/resume">
                     Resume
-                  </Button>
-                  <Button className="button--transparent">
+                  </Link>
+                  <Link className="button button--transparent" to="/contact">
                     Contact
-                  </Button>
+                  </Link>
                 </div>
                 <i className="icon icon--angle-down" onClick={this.onClickScroll}/>
               </div>
@@ -62,8 +63,8 @@ export default class Home extends Component {
                     A Little Bit About Me
                   </h3>
                 </div>
-                <div className="photo--headshot center"/>
-                <p className="content__description center">
+                <div className="image--headshot"/>
+                <p className="content__description">
                   I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
                 </p>
               </div>
@@ -78,8 +79,9 @@ export default class Home extends Component {
     if (__CLIENT__) {
       const windowStart = Math.floor(window.scrollY);
       const scrollMove = Math.floor(scrollPos);
-      const scrollY = scrollMove >= windowStart ? scrollMove : windowStart;
-      window.scrollTo(0, scrollY);
+      if (scrollMove > windowStart && windowStart < this.state.scrollTo) {
+        window.scrollTo(0, scrollMove);
+      }
     }
   };
 

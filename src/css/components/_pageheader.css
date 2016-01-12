@@ -1,8 +1,9 @@
 .header {
+  display: none;
   height: 4rem;
-  right: 4rem;
   line-height: 4rem;
   position: absolute;
+  right: 4rem;
   top: 1rem;
 }
 
@@ -20,4 +21,10 @@
 
 .header__link.active {
  outline: 3px solid white;
+}
+
+@media (--xlarge-viewport) {
+  .header {
+    display: block;
+  }
 }

@@ -1,17 +1,13 @@
-import express                   from 'express';
 import React                     from 'react';
 import { renderToString }        from 'react-dom/server'
 import { RoutingContext, match } from 'react-router';
 import createLocation            from 'history/lib/createLocation';
-import routes                    from '../src/routes';
 import path                      from 'path';
-import Html                      from './html';
 
-const PORT = process.env.PORT || 3000;
-const app = new express();
+import routes                    from '../../src/routes';
+import Html                      from '../helpers/html';
 
-app.use(express.static(path.join(__dirname, 'dist')));
-app.use( (req, res) => {
+export default function render(req, res) {
   const location = createLocation(req.url);
 
   if (__DEVELOPMENT__) {
@@ -30,7 +26,7 @@ app.use( (req, res) => {
     res.end(renderView(renderProps))
 
   });
-});
+};
 
 function renderView(renderProps) {
   const component = ( <RoutingContext {...renderProps} /> );
@@ -41,6 +37,3 @@ function renderView(renderProps) {
   return html;
 }
 
-app.listen(PORT, function () {
-  console.log('Server listening on: ' + PORT);
-});

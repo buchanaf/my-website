@@ -9,20 +9,22 @@ import Resume from 'views/resume';
 
 import Pageheader from 'components/pageheader';
 import Footer from 'components/footer';
+import SideNav from 'components/sidenav';
 
-function wrap(main) {
+function structureApp(Component) {
   return {
     header: Pageheader,
-    main: main,
+    main: Component,
     footer: Footer,
+    sideNav: SideNav,
   };
 }
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute components={wrap(Home)} />
-    <Route path="/resume" components={wrap(Resume)} />
-    <Route path="/contact" components={wrap(Contact)} />
-    <Route path="/about" components={wrap(About)} />
+    <IndexRoute components={structureApp(Home)} />
+    <Route path="/resume" components={structureApp(Resume)} />
+    <Route path="/contact" components={structureApp(Contact)} />
+    <Route path="/about" components={structureApp(About)} />
   </Route>
 );

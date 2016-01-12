@@ -10,6 +10,7 @@
   padding: 0.5rem;
   resize: none;
   vertical-align: middle;
+  max-width: calc(30rem - 1rem);
   width: calc(100% - 1rem);
 }
 
@@ -22,6 +23,7 @@
 }
 
 .input--medium {
+  display: block;
   width: 10rem;
 }
 
@@ -29,11 +31,16 @@
   width: 30rem;
 }
 
+.input__wrapper {
+  display: block;
+}
+
 .textarea {
+  display: block;
   font-family: var(--font-two);
-  font-size: 1.2rem;
   height: 8.5rem;
   padding: 1rem;
+  max-width: calc(30rem - 2rem);
   width: calc(100% - 2rem);
 }
 
@@ -43,6 +50,7 @@ label {
 
 @media (--xlarge-viewport) {
   .input__wrapper {
+    display: inline-block;
     margin-left: 2rem;
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import request from 'superagent';
 
 import Masthead from 'components/masthead';
 import Button from 'components/button';
@@ -6,15 +7,55 @@ import Input from 'components/input';
 import BostonImg from 'assets/boston.jpg';
 
 export default class Home extends Component {
+
   constructor(props) {
     super(props);
+    this.state = {...this.getInitState()};
   }
+
+  getInitState = () => {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      message: '',
+    }
+  };
 
   onResumeClick = () => {
     this.history.pushState(null, '/resume');
   };
 
+  onFormChange = (key) => {
+    return (e) => {
+      const update = {};
+      update[key] = e.target.value;
+      this.setState(update);
+    }
+  };
+
+  onSendClick = (e) => {
+    // this.setState({ ...{sending: true}, ...this.getInitState() });
+    request
+      .post('/api/message')
+      .send(this.state)
+      .end((res, err) => {
+
+      });
+  };
+
   render() {
+    const {
+      firstName,
+      lastName,
+      email,
+      subject,
+      message,
+    } = this.state;
+
+    console.log(this.state)
+
     return (
       <div className="content">
         <div className="masthead__container">
@@ -34,7 +75,7 @@ export default class Home extends Component {
               Cambridge, MA
             </h3>
           </div>
-          <div className="content__container col-3 text-center left">
+          <div className="content__container col-3 left">
             <h5 className="header5">
               Personal Information
             </h5>
@@ -52,10 +93,10 @@ export default class Home extends Component {
             </p>
           </div>
           <div className="content__container col-3 align-top right">
-            <div className="photo--headshot center" />
+            <div className="image--headshot center" />
           </div>
         </div>
-        <div className="content__subsection text-center clear">
+        <div className="content__subsection content text-left clear">
           <div className="content__hr">
             <h2 className="content__title">
               Message Me
@@ -64,39 +105,39 @@ export default class Home extends Component {
               With nice words
             </h3>
           </div>
-          <div className="content__container col-2 text-left inline-block">
-            <form>
+          <div className="content__container text-left inline-block">
+            <form className="col-2">
               <div className="inline-block">
                 <label>
                   First Name:
-                  <Input className="input--medium block" />
+                  <Input className="input--medium block" value={firstName} onChange={this.onFormChange('firstName')} />
                 </label>
               </div>
-              <div className="inline-block input__wrapper">
+              <div className="input__wrapper">
                 <label>
                   Last Name:
-                  <Input className="input--medium block" />
+                  <Input className="input--medium block" value={lastName} onChange={this.onFormChange('lastName')} />
                 </label>
               </div>
               <label className="block">
                 Email *:
-                <Input className="input block" />
+                <Input className="input block" value={email} onChange={this.onFormChange('email')} />
               </label>
               <label className="block">
                 Subject:
-                <Input className="input block" />
+                <Input className="input block" value={subject} onChange={this.onFormChange('subject')} />
               </label>
               <label className="block">
                 Message:
-                <textarea className="textarea" />
+                <textarea className="textarea" value={message} onChange={this.onFormChange('message')} />
               </label>
-              <Button className="button--black">
+              <Button className="button--black" onClick={this.onSendClick}>
                 Send
               </Button>
             </form>
-          </div>
-          <div className="col-2 content__container relative inline-block">
-            <img className="image--boston" src={BostonImg} />
+            <div className="col-2 content__container relative inline-block">
+              <img className="image--boston" src={BostonImg} />
+            </div>
           </div>
         </div>
       </div>
