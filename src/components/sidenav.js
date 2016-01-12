@@ -11,7 +11,6 @@ export default class PageHeader extends Component {
 
   onMenuClick = (e) => {
     const { sideOpen } = this.props;
-
     this.props.onSideNavToggle();
     setClass(document.body).toggle('scroll--prevent');
     if (!sideOpen) {
@@ -23,7 +22,7 @@ export default class PageHeader extends Component {
     const { sideOpen } = this.props;
 
     return (
-      <div>
+      <div className="sidenav__container">
         <i className="icon icon--menu" onClick={this.onMenuClick}/>
         <nav className={cx('sidenav', { 'side-nav--visible': sideOpen})}>
           <ul className="sidenav__list">

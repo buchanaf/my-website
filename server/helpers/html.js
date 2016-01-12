@@ -21,7 +21,7 @@ export default class html extends Component {
                   rel="stylesheet" type="text/css"/>)}
 
           {/* resolves the initial style flash (flicker) on page load in development mode */}
-          { <style dangerouslySetInnerHTML={{__html: require('../src/css/main.css')}}/>}
+          { <style dangerouslySetInnerHTML={{__html: require('../../src/css/main.css')}}/>}
         </head>
 
         <body>

@@ -22,3 +22,9 @@
 .header__link.active {
  outline: 3px solid white;
 }
+
+@media (--xlarge-viewport) {
+  .header {
+    display: block;
+  }
+}

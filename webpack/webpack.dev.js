@@ -83,11 +83,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      components: path.resolve(rootDir, 'src', 'components'),
-      views: path.resolve(rootDir, 'src', 'views'),
       assets: path.resolve(rootDir, 'src', 'assets'),
-      utils: path.resolve(rootDir, 'src', 'utils'),
+      components: path.resolve(rootDir, 'src', 'components'),
       css: path.resolve(rootDir, 'src', 'css'),
+      src: path.resolve(rootDir, 'src'),
+      utils: path.resolve(rootDir, 'src', 'utils'),
+      views: path.resolve(rootDir, 'src', 'views'),
     }
   },
 

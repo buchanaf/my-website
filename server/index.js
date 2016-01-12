@@ -20,6 +20,6 @@ global.isomorphicTools = new isomorphicTools(universalConfig)
         return;
       }
     }
-    require('./render');
+    require('./router');
   });
 

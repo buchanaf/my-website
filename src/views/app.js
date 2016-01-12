@@ -42,7 +42,7 @@ export default class App extends Component {
           { onSideNavToggle: this.onSideNavToggle, sideOpen })
         }
         { React.cloneElement(this.props.main,
-          { onIndexAnimation: this.onIndexAnimation, indexView })
+          { onIndexAnimation: this.onIndexAnimation, indexView, sideOpen })
         }
         { this.props.footer }
       </div>

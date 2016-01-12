@@ -10,18 +10,18 @@
 
 button,
 .button {
+  border: var(--border-width) solid transparent;
+  cursor: pointer;
   font-family: var(--button-font-family);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
-  text-decoration: none;
-  cursor: pointer;
   display: inline-block;
-  line-height: var(--button-line-height);
-  padding: var(--button-padding-y) var(--button-padding-x);
-  margin: 0;
   height: auto;
+  line-height: var(--button-line-height);
+  margin: 0;
   outline: none;
-  border: var(--border-width) solid transparent;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  text-decoration: none;
   vertical-align: middle;
 }
 

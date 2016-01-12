@@ -34,12 +34,6 @@
   position: relative;
 }
 
-.image--boston {
-  object-fit: contain;
-  vertical-align: top;
-  width: 100%;
-}
-
 .masthead__container {
   position: relative;
   width: 100%;
@@ -73,11 +67,6 @@
 @media (--xlarge-viewport) {
   .masthead__title {
     font-size: 5rem;
-  }
-
-  .image--boston {
-    margin: 25px 50px;
-    width: 500px;
   }
 }
 

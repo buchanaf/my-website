@@ -27,6 +27,7 @@
   font-family: var(--font-two);
   line-height: 1.5rem;
   margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (--xlarge-viewport) {
