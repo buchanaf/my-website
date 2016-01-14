@@ -9,9 +9,11 @@ module.exports = {
     },
     style_modules: {
       extension: 'css',
-      filter: function(module, regular_expression, options, log) {
-        if (true) {
-          return isomorphicTools.style_loader_filter(module, regular_expression, options, log)
+      filter: function(module, regex, options, log) {
+        if (options.development) {
+          return isomorphicTools.style_loader_filter(module, regex, options, log);
+        } else {
+          return regex.test(module.name);
         }
       },
       path: isomorphicTools.style_loader_path_extractor,

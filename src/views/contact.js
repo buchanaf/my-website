@@ -36,7 +36,7 @@ export default class Home extends Component {
   };
 
   onSendClick = (e) => {
-    // this.setState({ ...{sending: true}, ...this.getInitState() });
+    this.setState({ ...{sending: true}, ...this.getInitState() });
     request
       .post('/api/message')
       .send(this.state)

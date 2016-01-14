@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import { renderToString } from 'react-dom/server';
 
 export default class html extends Component {
   static propTypes = {
@@ -25,7 +26,7 @@ export default class html extends Component {
         </head>
 
         <body>
-          <div id="app" dangerouslySetInnerHTML={{__html: React.renderToString(component)}}/>
+          <div id="app" dangerouslySetInnerHTML={{__html: renderToString(component)}}/>
           {Object.keys(assets.javascript).map((script, i) =>
             <script src={assets.javascript[script]} key={i}/>
           )}

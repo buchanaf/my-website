@@ -16,7 +16,6 @@ export default class Home extends Component {
   }
 
   componentDidMount = () => {
-    this.props.onIndexAnimation();
     this.setState({ scrollTo: Dom.getElement('masthead--home').clientHeight });
   };
 
@@ -30,7 +29,6 @@ export default class Home extends Component {
   };
 
   render() {
-    const { indexView } = this.props;
     const { scroll, scrollTo } = this.state;
 
     return (
@@ -39,10 +37,10 @@ export default class Home extends Component {
           this.scrollHandler(style.x);
           return (
             <div className="content">
-              <div className={cx('masthead__container', {'masthead__container--animate': indexView})}>
+              <div className={cx('masthead__container', 'masthead__container--animate')}>
                 <Masthead className="masthead--home"/>
                 <div className="center-absolute text-center">
-                  <strong className={cx('masthead__title', {'masthead__title--animate': indexView}, 'block')}>
+                  <strong className={cx('masthead__title', 'masthead__title--animate', 'block')}>
                     JAVASCRIPT
                   </strong>
                   <Link className="button button--transparent" to="/resume">
