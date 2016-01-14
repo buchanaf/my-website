@@ -43,7 +43,6 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.1.2",
-    "babel-core": "^6.3.15",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.1",
     "babel-plugin-react-transform": "^2.0.0",
@@ -80,6 +79,7 @@
   "dependencies": {
     "better-npm-run": "0.0.5",
     "babel-polyfill": "^6.3.14",
+    "babel-core": "^6.3.15",
     "body-parser": "^1.14.2",
     "concurrently": "^1.0.0",
     "classnames": "^2.2.1",
