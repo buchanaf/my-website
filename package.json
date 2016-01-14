@@ -41,7 +41,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^6.1.2",
     "babel-core": "^6.3.15",
     "babel-eslint": "^4.1.6",
@@ -75,7 +75,9 @@
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
-    "webpack-hot-middleware": "^2.6.0",
+    "webpack-hot-middleware": "^2.6.0"
+  },
+  "dependencies": {
     "better-npm-run": "0.0.5",
     "babel-polyfill": "^6.3.14",
     "body-parser": "^1.14.2",
