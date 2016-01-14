@@ -12,14 +12,9 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      indexView: true,
       sideOpen: false,
     };
   }
-
-  onIndexAnimation = () => {
-    this.setState({ indexView: false });
-  };
 
   onSideNavToggle = () => {
     const { sideOpen } = this.state;
@@ -33,7 +28,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { indexView, sideOpen } = this.state;
+    const { sideOpen } = this.state;
 
     return (
       <div className={cx('app-container', {'app-container--left': sideOpen})}>
@@ -42,7 +37,7 @@ export default class App extends Component {
           { onSideNavToggle: this.onSideNavToggle, sideOpen })
         }
         { React.cloneElement(this.props.main,
-          { onIndexAnimation: this.onIndexAnimation, indexView, sideOpen })
+          { onIndexAnimation: this.onIndexAnimation, sideOpen })
         }
         { this.props.footer }
       </div>

@@ -1,40 +1,52 @@
 var path = require('path');
 var webpack = require('webpack');
 var postcssImport = require('postcss-import');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var rootDir = path.join(__dirname, '..');
 var isomorphicConfig = require('./universal.config.js');
 var isomorphicTools = require('webpack-isomorphic-tools/plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var host = (process.env.HOST || 'localhost');
-var port = parseInt(process.env.PORT) + 1 || 3001;
+var rootDir = path.join(__dirname, '..');
 
 module.exports = {
   devtool: 'source-map',
   context: rootDir,
-  entry: [
-    'babel-polyfill',
-    'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr',
-    path.resolve(rootDir, 'src')
-  ],
+  entry: {
+    bundle: [
+     'babel-polyfill',
+      path.resolve(rootDir, 'src'),
+    ],
+    vendor: [
+      'react',
+      'react-dom',
+      'react-router',
+      'history',
+    ]
+  },
   output: {
-    path: path.resolve(rootDir, '/dist'),
-    publicPath: 'http://' + host + ':' + port + '/dist/',
-    filename: 'bundle.js',
+    path: path.resolve(rootDir, 'dist'),
+    publicPath: '/dist/',
+    filename: '[name].[chunkhash].js',
     pathinfo: true,
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new isomorphicTools(isomorphicConfig).development(),
+    new ExtractTextPlugin('index.css', {
+      allChunks: true
+    }),
     new webpack.DefinePlugin({
+      __DEVELOPMENT__: false,
       __CLIENT__: true,
       __SERVER__: false,
-      __DEVELOPMENT__: true,
-      __DEVTOOLS__: true
     }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.optimize.CommonsChunkPlugin('vender', 'vendor.[chunkhash].js'),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new isomorphicTools(isomorphicConfig),
   ],
   module: {
     preLoaders: [
@@ -53,7 +65,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader!postcss-loader"
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
       {
         test: /\.(jpe?g|jpg|png|gif|svg)$/i,
@@ -86,5 +98,4 @@ module.exports = {
       views: path.resolve(rootDir, 'src', 'views'),
     }
   },
-
 };

@@ -9,7 +9,7 @@
     "watch-client": "better-npm-run watch-client",
     "start": "concurrent --kill-others \"npm run start-prod\"",
     "start-prod": "better-npm-run start-prod",
-    "build": "webpack --verbose --colors --display-error-details --config webpack/webpack.prod.js",
+    "build": "NODE_ENV=production webpack --verbose --colors --display-error-details --config webpack/webpack.prod.js",
     "postinstall": "webpack --display-error-details --config webpack/prod.config.js",
     "lint": "eslint -c .eslintrc src"
   },
@@ -90,7 +90,7 @@
     "nodemailer": "^2.0.0",
     "normalize.css": "^3.0.3",
     "react": "^0.14.6",
-    "react-dom": "^0.14.3",
+    "react-dom": "^0.14.6",
     "react-motion": "^0.3.1",
     "react-router": "^1.0.2",
     "superagent": "^1.6.1",

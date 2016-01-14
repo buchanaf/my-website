@@ -5,7 +5,7 @@ import piping from 'piping';
 
 const rootDir = path.resolve(__dirname, '..');
 
-global.__DEVELOPMENT__ = true;
+global.__DEVELOPMENT__ = process.env.NODE_ENV !== 'production' || true;
 global.__CLIENT__ = false;
 global.__SERVER__ = true;
 
