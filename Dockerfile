@@ -1,9 +1,8 @@
-FROM nodesource/node:4.0
+FROM node:argon
 
 ADD package.json package.json
 RUN npm install
 
 ADD . .
 
-EXPOSE  8000
 CMD ["npm", "run", "start-prod"]
