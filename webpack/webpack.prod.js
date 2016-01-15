@@ -68,7 +68,6 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" },
       { test: isomorphicTools.regular_expression('images'), loader: 'url-loader?limit=10240' }
     ]
   },

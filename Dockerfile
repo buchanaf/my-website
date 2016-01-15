@@ -1,7 +1,8 @@
 FROM node:argon
 
 ADD package.json package.json
-RUN npm install
+RUN npm install --silent
+RUN npm run build
 
 ADD . .
 

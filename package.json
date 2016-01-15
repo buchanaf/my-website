@@ -19,7 +19,7 @@
       "env": {
         "NODE_PATH": "./src",
         "NODE_ENV": "production",
-        "PORT": 80
+        "PORT": 8000
       }
     },
     "start-dev": {
