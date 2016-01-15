@@ -5,7 +5,12 @@ var rootDir = path.join(__dirname, '..');
 module.exports = {
   assets: {
     images: {
-      extensions: ['png', 'jpg', 'gif', 'ico', 'svg']
+      extensions: ['png', 'jpg', 'gif', 'ico', 'svg'],
+      parser: isomorphicTools.url_loader_parser
+    },
+    svg: {
+      extension: 'svg',
+      parser: isomorphicTools.url_loader_parser
     },
     style_modules: {
       extension: 'css',

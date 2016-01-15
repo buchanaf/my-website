@@ -66,10 +66,6 @@ module.exports = {
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
-      // {
-      //   test: isomorphicTools.regular_expression('images'),
-      //   loader: 'url-loader?limit=10240',
-      // }
     ]
   },
   postcss: function (webpack) {
