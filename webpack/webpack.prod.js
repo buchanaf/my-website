@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var postcssImport = require('postcss-import');
 var isomorphicConfig = require('./universal.config.js');
 var isomorphicTools = require('webpack-isomorphic-tools/plugin');
+var isomorphicTools = new isomorphicTools(isomorphicConfig);
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var rootDir = path.join(__dirname, '..');
@@ -46,7 +47,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vender', 'vendor.[chunkhash].js'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new isomorphicTools(isomorphicConfig),
+    isomorphicTools,
   ],
   module: {
     preLoaders: [
@@ -67,13 +68,8 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
-      {
-        test: /\.(jpe?g|jpg|png|gif|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
-      },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" },
+      { test: isomorphicTools.regular_expression('images'), loader: 'url-loader?limit=10240' }
     ]
   },
   postcss: function (webpack) {
