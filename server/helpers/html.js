@@ -19,7 +19,7 @@ export default class html extends Component {
           {head.title.toComponent()}
           {head.meta.toComponent()}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/dist/favicon.ico" />
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>

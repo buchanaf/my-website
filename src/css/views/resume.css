@@ -1,8 +1,13 @@
 .resume__list {
   color: var(--grey);
   font-family: var(--font-two);
+  font-size: 0.8rem;
   text-align: left;
   list-style: disc;
+}
+
+.resume__list--inside {
+  list-style-position: inside;
 }
 
 .resume__list li {
@@ -28,10 +33,15 @@
   line-height: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 @media (--xlarge-viewport) {
   .header4 {
     text-align: left;
+  }
+
+  .resume__list {
+    font-size: 1rem;
   }
 }

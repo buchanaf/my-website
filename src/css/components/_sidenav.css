@@ -1,13 +1,13 @@
 .sidenav {
   background: var(--grey-dark);
-  color: white;
   bottom: 0;
-  height: 100%;
+  color: white;
+  min-height: 100%;
   line-height: 1em;
   overflow: auto;
   position: fixed;
   text-align: left;
-  right: -260px;
+  right: calc(-260px);
   top: 0;
   width: 260px;
   z-index: -1;

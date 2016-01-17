@@ -26,7 +26,7 @@ export default class PageHeader extends Component {
           </ul>
         </div>
         <div className="footer__base">
-          <div className="center-absolute">
+          <div className="footer__wrapper center-absolute">
             <i className="icon icon--logo" />
             <p className="footer__copyright">
               © 2015 Alex Buchanan. All rights reserved. Front-End Developer
