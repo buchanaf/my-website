@@ -3,15 +3,15 @@
 }
 
 .masthead--resume {
-  @mixin masthead desk.jpg;
+  @mixin masthead-mobile desk.jpg;
 }
 
 .masthead--contact {
-  @mixin masthead contact.jpg;
+  @mixin masthead-mobile contact.jpg;
 }
 
 .masthead--about {
-  @mixin masthead cogolabs.jpg;
+  @mixin masthead-mobile cogolabs.jpg;
 }
 
 .masthead--pwc {
