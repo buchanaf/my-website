@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 
 import Masthead from 'components/masthead';
 import Button from 'components/button';
@@ -15,15 +16,16 @@ export default class Home extends Component {
   render() {
     return (
       <div className="content">
+        <Helmet title="Resume"/>
         <div className="masthead__container">
           <Masthead className="masthead--resume"/>
           <div className="center-absolute text-center">
             <strong className="masthead__title block">
               Resume
             </strong>
-            <Button className="button--transparent" onClick={this.onDownloadClick}>
+            <a className="button button--transparent" href="/dist/1a556a1cd058410e4f3a59d0a62fe6ac.jpg" download="1a556a1cd058410e4f3a59d0a62fe6ac.jpg">
               Download Resume
-            </Button>
+            </a>
           </div>
         </div>
         <div className="resume content__subsection text-center">

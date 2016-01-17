@@ -29,19 +29,13 @@
   color: white;
 }
 
-.footer__wrapper {
+.footer__base {
   display: inline-block;
-  height: 5rem;
+  height: 15rem;
+  position: relative;
   text-align: center;
   vertical-align: middle;
   width: 100%;
-}
-
-.footer__wrapper:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
 }
 
 .footer__copyright {

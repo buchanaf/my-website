@@ -1,5 +1,14 @@
 import React, { Component, PropTypes } from 'react';
+import Helmet from 'react-helmet';
 import cx from 'classnames';
+import config from 'src/config';
+
+require('assets/asheville.jpg');
+require('assets/contact.jpg');
+require('assets/cogolabs.jpg');
+require('assets/pwc.jpg');
+require('assets/alex.jpg');
+require('assets/boston.jpg');
 
 export default class App extends Component {
   static propTypes = {
@@ -15,6 +24,10 @@ export default class App extends Component {
       sideOpen: false,
     };
   }
+
+  componentDidMount = () => {
+    console.log(window.__data);
+  };
 
   onSideNavToggle = () => {
     const { sideOpen } = this.state;
@@ -32,6 +45,7 @@ export default class App extends Component {
 
     return (
       <div className={cx('app-container', {'app-container--left': sideOpen})}>
+        <Helmet {...config.app.head} />
         { this.props.header }
         { React.cloneElement(this.props.sideNav,
           { onSideNavToggle: this.onSideNavToggle, sideOpen })

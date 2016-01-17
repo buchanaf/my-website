@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { spring, Motion } from 'react-motion'
+import Helmet from 'react-helmet';
 import cx from 'classnames';
 import Dom from 'utils/dom';
 
@@ -37,6 +38,7 @@ export default class Home extends Component {
           this.scrollHandler(style.x);
           return (
             <div className="content">
+              <Helmet title="Front-end Developer"/>
               <div className={cx('masthead__container', 'masthead__container--animate')}>
                 <Masthead className="masthead--home"/>
                 <div className="center-absolute text-center">

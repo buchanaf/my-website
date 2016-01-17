@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import request from 'superagent';
+import Helmet from 'react-helmet';
 
 import Masthead from 'components/masthead';
 import Button from 'components/button';
@@ -58,6 +59,7 @@ export default class Home extends Component {
 
     return (
       <div className="content">
+        <Helmet title="Contact"/>
         <div className="masthead__container">
           <Masthead className="masthead--contact"/>
           <div className="center-absolute text-center">

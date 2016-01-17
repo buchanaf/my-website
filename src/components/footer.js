@@ -25,16 +25,19 @@ export default class PageHeader extends Component {
             </Link>
           </ul>
         </div>
-        <div className="footer__wrapper">
-          <p className="footer__copyright">
-            © 2015 Alex Buchanan. All rights reserved. Front-End Developer
-          </p>
-          <div className="icon__wrapper">
-            <i className="icon icon--facebook" />
-            <i className="icon icon--twitter" />
-            <i className="icon icon--github" />
-            <i className="icon icon--instagram" />
-            <i className="icon icon--linkedin" />
+        <div className="footer__base">
+          <div className="center-absolute">
+            <i className="icon icon--logo" />
+            <p className="footer__copyright">
+              © 2015 Alex Buchanan. All rights reserved. Front-End Developer
+            </p>
+            <div className="icon__wrapper">
+              <i className="icon icon--facebook" />
+              <i className="icon icon--twitter" />
+              <i className="icon icon--github" />
+              <i className="icon icon--instagram" />
+              <i className="icon icon--linkedin" />
+            </div>
           </div>
         </div>
       </footer>
