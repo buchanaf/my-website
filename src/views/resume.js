@@ -46,7 +46,7 @@ export default class Home extends Component {
                 <h5 className="header5">
                   Primary
                 </h5>
-                <ul className="resume__list">
+                <ul className="resume__list resume__list--inside">
                   <li>
                     Javascript / ES6
                   </li>
@@ -80,7 +80,7 @@ export default class Home extends Component {
                 <h5 className="header5">
                   Secondary
                 </h5>
-                <ul className="resume__list">
+                <ul className="resume__list resume__list--inside">
                   <li>
                     Angular
                   </li>

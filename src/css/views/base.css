@@ -3,6 +3,7 @@
 }
 
 .content__subsection {
+  clear: fix;
   font-size: 2.125rem;
   margin: 1rem auto;
   padding: 1rem 2rem;
@@ -23,7 +24,7 @@
 .content__description {
   color: var(--grey);
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-family: var(--font-two);
   line-height: 1.5rem;
   margin: 1rem auto 0 auto;
@@ -33,16 +34,16 @@
 .content__title {
   color: var(--grey-dark);
   font-family: var(--font-one);
-  font-size: 2.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 .content__subtitle {
   color: var(--grey);
   display: block;
   font-family: var(--font-two);
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .content__hr,
@@ -124,17 +125,23 @@
 
 .image--headshot {
   background-image: url('../assets/alex.jpg');
-  background-size: 300px 300px;
+  background-size: 200px 200px;
   background-repeat: no-repeat;
   border-radius: 50%;
   display: block;
-  height: 300px;
+  height: 200px;
   margin: 1rem auto;
-  width: 300px;
+  width: 200px;
 }
 
 .image--boston {
   display: none;
+}
+
+@media (--large-viewport) {
+  .content__description {
+    width: 600px;
+  }
 }
 
 @media (--xlarge-viewport) {
@@ -148,8 +155,17 @@
   }
 
   .content__description {
+    font-size: 0.8rem;
     padding: 0;
-    width: 600px;
+  }
+
+  .content__title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .content__subtitle {
+    font-size: 1rem;
   }
 
   .content__hr:before,
@@ -233,5 +249,11 @@
     margin: 0 50px;
     vertical-align: top;
     width: calc(500px - 100px)  ;
+  }
+
+  .image--headshot {
+    background-size: 300px 300px;
+    height: 300px;
+    width: 300px;
   }
 }

@@ -3,7 +3,14 @@
   --font-two:   'Open Sans', sans-serif;
 }
 
-body, html {padding: 0; margin:0}
+* {
+  box-sizing: content-box;
+}
+
+body, html {
+  min-height: 100%;
+  padding: 0; margin:0
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -15,18 +22,18 @@ p {
 
 
 .app-container {
-  position: absolute;
-  top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,.7);
+  min-height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 1;
   transition: 1s ease-in-out;
 }
 
 .app-container--left {
-  transform: translate(-250px);
+  transform: translate(-260px);
 }
 
 .scroll--prevent {

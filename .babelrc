@@ -1,12 +1,9 @@
 {
   presets: ['es2015', 'stage-0', 'react'],
-  plugins: [
-    "typecheck"
-  ],
   "env": {
     "development": {
       "plugins":[
-        ["react-transform", {
+        ["typecheck", "react-transform", {
           "transforms": [{
             "transform": "react-transform-hmr",
             "imports": ["react"],

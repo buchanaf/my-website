@@ -26,16 +26,16 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
-    console.log(window.__data);
+
   };
 
   onSideNavToggle = () => {
     const { sideOpen } = this.state;
     this.setState({ sideOpen: !sideOpen });
-    if (sideOpen) {
+    if (!sideOpen) {
       window.addEventListener('touchmove', this.preventTouchMove);
     }
-    if (!sideOpen) {
+    if (sideOpen) {
       window.removeEventListener('touchmove', this.preventTouchMove);
     }
   };

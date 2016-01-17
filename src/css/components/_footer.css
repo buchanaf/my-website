@@ -31,7 +31,8 @@
 
 .footer__base {
   display: inline-block;
-  height: 15rem;
+  height: 12rem;
+  width: 18rem;
   position: relative;
   text-align: center;
   vertical-align: middle;
@@ -40,9 +41,13 @@
 
 .footer__copyright {
   margin-bottom: 1rem;
+  max-width: 20rem;
 }
 
 .footer__icons {
   margin: 2rem;
 }
 
+.footer__wrapper {
+  width: 20rem;
+}
