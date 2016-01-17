@@ -1,4 +1,7 @@
-FROM node:argon
+FROM    centos:centos6
+
+RUN     yum install -y epel-release
+RUN     yum install -y nodejs npm
 
 ADD package.json /tmp/package.json
 RUN cd /tmp && npm install --silent
