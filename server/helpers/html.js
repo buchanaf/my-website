@@ -1,5 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { renderToString } from 'react-dom/server';
+import Helmet from 'react-helmet';
+import serialize from 'serialize-javascript';
 
 export default class html extends Component {
   static propTypes = {
@@ -9,12 +11,15 @@ export default class html extends Component {
 
   render() {
     const { assets, component, store } = this.props;
-
+    const head = Helmet.rewind();
     return (
       <html lang="en-us">
         <head>
-          <meta charSet="utf-8"/>
-          <title>Alex's Website</title>
+          {head.base.toComponent()}
+          {head.title.toComponent()}
+          {head.meta.toComponent()}
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="shortcut icon" href="/favicon.ico" />
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
@@ -30,6 +35,7 @@ export default class html extends Component {
           {Object.keys(assets.javascript).map((script, i) =>
             <script src={assets.javascript[script]} key={i}/>
           )}
+          <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(assets)};`}} charSet="UTF-8"/>
         </body>
       </html>
     )

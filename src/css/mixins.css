@@ -16,7 +16,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  display: block;
+  height: 40rem;
   width: 100%;
 }
 

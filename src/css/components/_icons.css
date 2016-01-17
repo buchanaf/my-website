@@ -3,17 +3,17 @@
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
   display: inline-block;
   font-size: 0px;
-  cursor: pointer;
-  margin: 0.5rem;
-  width: 2rem;
   height: 2rem;
-  border-radius: 50%;
-  text-align: center;
+  margin: 0.5rem;
   position: relative;
+  text-align: center;
+  width: 2rem;
   z-index: 1;
-  color: #fff;
 }
 
 .icon__wrapper {
@@ -39,6 +39,13 @@
 
 .icon--linkedin {
   background-image: url('../assets/linkedin.svg');
+}
+
+.icon--logo {
+  background-image: url('../assets/adb_white.svg');
+  background-size: 4rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .icon--menu {

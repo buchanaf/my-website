@@ -5,6 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var rootDir = path.join(__dirname, '..');
 var isomorphicConfig = require('./universal.config.js');
 var isomorphicTools = require('webpack-isomorphic-tools/plugin');
+var isomorphicTools = new isomorphicTools(isomorphicConfig).development()
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var host = (process.env.HOST || 'localhost');
@@ -28,13 +29,13 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new isomorphicTools(isomorphicConfig).development(),
     new webpack.DefinePlugin({
       __CLIENT__: true,
       __SERVER__: false,
       __DEVELOPMENT__: true,
       __DEVTOOLS__: true
     }),
+    isomorphicTools
   ],
   module: {
     preLoaders: [
@@ -56,12 +57,9 @@ module.exports = {
         loader: "style-loader!css-loader!postcss-loader"
       },
       {
-        test: /\.(jpe?g|jpg|png|gif|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
-      },
+        test: isomorphicTools.regular_expression('images'),
+        loader: 'url-loader?limit=10240'
+      }
     ]
   },
   postcss: function (webpack) {
@@ -71,7 +69,9 @@ module.exports = {
       }),
       require('postcss-clearfix'),
       require('postcss-mixins'),
-      require('autoprefixer'),
+      require('autoprefixer')({
+        browsers: ['last 4 versions']
+      }),
       require('postcss-custom-media'),
       require('postcss-css-variables'),
     ];

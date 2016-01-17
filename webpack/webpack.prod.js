@@ -4,6 +4,7 @@ var postcssImport = require('postcss-import');
 var isomorphicConfig = require('./universal.config.js');
 var isomorphicTools = require('webpack-isomorphic-tools/plugin');
 var isomorphicTools = new isomorphicTools(isomorphicConfig);
+var webpackManifest = require('./webpack.manifest')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var rootDir = path.join(__dirname, '..');

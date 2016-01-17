@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 
 import Masthead from 'components/masthead';
 import Button from 'components/button';
@@ -27,6 +28,7 @@ export default class About extends Component {
   render() {
     return (
       <div className="content">
+        <Helmet title="About Me"/>
         <div className="masthead__container">
           <Masthead className="masthead--about"/>
           <div className="center-absolute text-center">
