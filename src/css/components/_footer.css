@@ -21,8 +21,8 @@
 .footer__link {
   @mixin nav-link 0.75rem;
   color: var(--grey-light);
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .footer__link:hover {
@@ -50,4 +50,11 @@
 
 .footer__wrapper {
   width: 20rem;
+}
+
+@media (--large-viewport) {
+  .footer__link {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+  }
 }
