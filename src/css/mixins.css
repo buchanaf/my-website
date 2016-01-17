@@ -10,6 +10,17 @@
   text-decoration: none;
 }
 
+@define-mixin masthead-mobile $image {
+  background-image: url('../assets/$image');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  position: relative;
+  width: 100%;
+
+}
+
 @define-mixin masthead $image {
   background: url('../assets/$image') no-repeat center center fixed;
   -webkit-background-size: cover;
