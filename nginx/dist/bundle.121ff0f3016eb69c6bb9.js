@@ -929,4 +929,4 @@ function(e,t,n){e.exports=n.p+"0c535c1a4dce5b6b20e08d11ef7934c6.jpg"},/*!*******
   !*** ./src/assets/weddings.jpg ***!
   \*********************************/
 function(e,t,n){e.exports=n.p+"3a8301379a0891d86cf36d7371629037.jpg"}]);
-//# sourceMappingURL=bundle.98ee9d9d606b5e81ec12.js.map
+//# sourceMappingURL=bundle.121ff0f3016eb69c6bb9.js.map
