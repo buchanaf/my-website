@@ -25,7 +25,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(rootDir, 'dist'),
+    path: path.resolve(rootDir, 'nginx', 'dist'),
     publicPath: '/dist/',
     filename: '[name].[chunkhash].js',
     pathinfo: true,
