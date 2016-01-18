@@ -23,6 +23,7 @@ export default function render(req, res) {
       return res.status(404).end('Not found');
     }
 
+    res.setHeader('content-type', 'text/text/html');
     res.end(renderView(renderProps))
 
   });
