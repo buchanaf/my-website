@@ -29,7 +29,7 @@ export default class PageHeader extends Component {
           <div className="footer__wrapper center-absolute">
             <i className="icon icon--logo" />
             <p className="footer__copyright">
-              © 2015 Alex Buchanan. All rights reserved. Front-End Developer
+              &copy; 2015 Alex Buchanan. All rights reserved. Front-End Developer
             </p>
             <div className="icon__wrapper">
               <i className="icon icon--facebook" />

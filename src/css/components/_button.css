@@ -57,9 +57,13 @@ button::before,
   transition: all 0.3s ease 0s;
 }
 
-.button--transparent:hover {
+.button--transparent:active {
   background: white;
   color: var(--grey);
+}
+
+.button--resume {
+  margin-left: 0;
 }
 
 .button--black {
@@ -71,8 +75,21 @@ button::before,
   transition: all 0.3s ease 0s;
 }
 
-.button--black:hover {
+.button--black:active {
   background: white;
   border: 1px solid var(--grey-dark);
   color: var(--grey-dark);;
+}
+
+@media (--large-viewport) {
+  .button--transparent:hover {
+    background: white;
+    color: var(--grey);
+  }
+
+  .button--black:hover {
+    background: white;
+    border: 1px solid var(--grey-dark);
+    color: var(--grey-dark);;
+  }
 }

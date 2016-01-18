@@ -55,8 +55,6 @@ export default class Home extends Component {
       message,
     } = this.state;
 
-    console.log(this.state)
-
     return (
       <div className="content">
         <Helmet title="Contact"/>

@@ -110,7 +110,9 @@
 }
 
 .col-3--mobile {
-  width: 50%;
+  width: 46%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .col-4 {
@@ -145,6 +147,11 @@
 }
 
 @media (--xlarge-viewport) {
+  .col-3--mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .content__subsection {
     width: calc(900px - 2rem);
     padding: 1rem 0;

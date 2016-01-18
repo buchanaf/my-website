@@ -3,7 +3,7 @@
 }
 
 .masthead--resume {
-  @mixin masthead-mobile desk.jpg;
+  @mixin masthead-mobile resume.jpg;
 }
 
 .masthead--contact {
@@ -70,7 +70,7 @@
   }
 
   .masthead--resume {
-    @mixin masthead desk.jpg;
+    @mixin masthead resume.jpg;
   }
 
   .masthead--contact {

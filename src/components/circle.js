@@ -27,7 +27,7 @@ export default class Circle extends Component {
     }
   }
 
-  onMouseHandler = (e) => {
+  onToggleEvent = (e) => {
     e.preventDefault();
     this.setState({ hover: !this.state.hover })
   };
@@ -40,7 +40,7 @@ export default class Circle extends Component {
       <Motion style={{x: spring(hover ? 180 : 0, [170, 30])}}>
         {(style) => {
           return (
-            <section className="circle__container" onMouseEnter={this.onMouseHandler} onMouseLeave={this.onMouseHandler}>
+            <section className="circle__container" onMouseEnter={this.onToggleEvent} onMouseLeave={this.onToggleEvent} onTouchStart={this.onToggleEvent}>
               <div className={cx('circle', className)} style={{
                 WebkitTransform: `rotateY(${Math.ceil(style.x)}deg)`,
                 transform: `rotateY(${Math.ceil(style.x)}deg)`}} >

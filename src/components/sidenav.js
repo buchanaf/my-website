@@ -38,6 +38,9 @@ export default class PageHeader extends Component {
             <Link className="sidenav__link active" to="/contact" onClick={this.onMenuClick}>
               Contact
             </Link>
+            <a className="button button--transparent button--resume" href="/dist/1a556a1cd058410e4f3a59d0a62fe6ac.jpg" download="1a556a1cd058410e4f3a59d0a62fe6ac.jpg">
+              Download Resume
+            </a>
           </ul>
         </nav>
       </div>

@@ -26,7 +26,17 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
+    const images = Object.keys(window.__data.assets).filter((asset) => {
+      return /\.jpg/.test(asset);
+    }).map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => { resolve(); }
+        img.src = window.__data.assets[image]
+      })
+    });
 
+    Promise.all(images);
   };
 
   onSideNavToggle = () => {
