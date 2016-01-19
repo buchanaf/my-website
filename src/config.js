@@ -19,7 +19,6 @@ module.exports = Object.assign({
       titleTemplate: 'Alex Buchanan: %s',
       meta: [
         {name: 'description', content: "A front-end developer's personal website."},
-        {charset: 'utf-8'},
       ]
     }
   },
