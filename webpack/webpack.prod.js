@@ -69,7 +69,14 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
-      { test: isomorphicTools.regular_expression('images'), loader: 'url-loader?limit=10240' }
+      {
+        test: isomorphicTools.regular_expression('images'),
+        loader: 'url-loader?limit=10240'
+      },
+      {
+        test : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader : 'url-loader?limit=10240'
+      }
     ]
   },
   postcss: function (webpack) {

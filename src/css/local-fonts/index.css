@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Julius Sans One';
+  font-weight: 400;
+  font-style: normal;
+  src: url('local-fonts/julius-sans-one/Julius-Sans-One-regular.eot');
+  src: url('local-fonts/julius-sans-one/Julius-Sans-One-regular.eot?#iefix') format('embedded-opentype'),
+       url('local-fonts/julius-sans-one/Julius-Sans-One-regular.woff2') format('woff2'),
+       url('local-fonts/julius-sans-one/Julius-Sans-One-regular.woff') format('woff'),
+       url('local-fonts/julius-sans-one/Julius-Sans-One-regular.ttf') format('truetype'),
+       url('local-fonts/julius-sans-one/Julius-Sans-One-regular.svg#JuliusSansOne') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+  src: url('local-fonts/open-sans/Open-Sans-300.eot');
+  src: url('local-fonts/open-sans/Open-Sans-300.eot?#iefix') format('embedded-opentype'),
+       url('local-fonts/open-sans/Open-Sans-300.woff2') format('woff2'),
+       url('local-fonts/open-sans/Open-Sans-300.woff') format('woff'),
+       url('local-fonts/open-sans/Open-Sans-300.ttf') format('truetype'),
+       url('local-fonts/open-sans/Open-Sans-300.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url('local-fonts/open-sans/Open-Sans-regular.eot');
+  src: url('local-fonts/open-sans/Open-Sans-regular.eot?#iefix') format('embedded-opentype'),
+       url('local-fonts/open-sans/Open-Sans-regular.woff2') format('woff2'),
+       url('local-fonts/open-sans/Open-Sans-regular.woff') format('woff'),
+       url('local-fonts/open-sans/Open-Sans-regular.ttf') format('truetype'),
+       url('local-fonts/open-sans/Open-Sans-regular.svg#OpenSans') format('svg');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: url('local-fonts/open-sans/Open-Sans-600.eot');
+  src: url('local-fonts/open-sans/Open-Sans-600.eot?#iefix') format('embedded-opentype'),
+       url('local-fonts/open-sans/Open-Sans-600.woff2') format('woff2'),
+       url('local-fonts/open-sans/Open-Sans-600.woff') format('woff'),
+       url('local-fonts/open-sans/Open-Sans-600.ttf') format('truetype'),
+       url('local-fonts/open-sans/Open-Sans-600.svg#OpenSans') format('svg');
+}
+
+
