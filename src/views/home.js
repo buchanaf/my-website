@@ -25,7 +25,7 @@ export default class Home extends Component {
     this.setState({scroll: true});
     setTimeout(() => {
       this.setState({scroll: false})
-    }, 2000);
+    }, 1000);
 
   };
 
@@ -33,7 +33,7 @@ export default class Home extends Component {
     const { scroll, scrollTo } = this.state;
 
     return (
-      <Motion style={{x: spring( scroll ? scrollTo : 0, [75, 20])}}>
+      <Motion style={{x: spring( scroll ? scrollTo : 0, [125, 20])}}>
         {(style) => {
           this.scrollHandler(style.x);
           return (

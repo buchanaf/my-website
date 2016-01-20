@@ -40,7 +40,7 @@ export default class Circle extends Component {
       <Motion style={{x: spring(hover ? 180 : 0, [170, 30])}}>
         {(style) => {
           return (
-            <section className="circle__container" onMouseEnter={this.onToggleEvent} onMouseLeave={this.onToggleEvent} onTouchStart={this.onToggleEvent}>
+            <section className="circle__container" onMouseEnter={this.onToggleEvent} onMouseLeave={this.onToggleEvent} onClick={this.onToggleEvent}>
               <div className={cx('circle', className)} style={{
                 WebkitTransform: `rotateY(${Math.ceil(style.x)}deg)`,
                 transform: `rotateY(${Math.ceil(style.x)}deg)`}} >
