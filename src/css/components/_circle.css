@@ -112,7 +112,7 @@
   display: inline-block;
   line-height: normal;
   margin: 15px 25px;
-  width: 175px;
+  width: 200px;    ;
   vertical-align: top;
 }
 
@@ -124,13 +124,13 @@
 }
 
 .circle__figure--job {
-  background-size: 125px 125px;
+  background-size: 150px 150px;
   border-radius: 50%;
   display: inline-block;
-  height: 125px;
+  height: 150px;
   margin: 1rem;
   object-fit: contain;
-  width: 125px;
+  width: 150px;
 }
 
 .circle:hover .circle__figure--front:after {
