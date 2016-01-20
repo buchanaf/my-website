@@ -117,7 +117,7 @@ export default class About extends Component {
                   Weddings
                 </h5>
                 <span className="circle__description">
-                  Congrats to those in 2015 and those coming up in 2016! They have been a blast, and I can't wait for the next ones.
+                  Congrats to those in 2015 and those coming up in 2016! They have been a blast!
                 </span>
               </div>
             </div>
