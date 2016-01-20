@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 import Masthead from 'components/masthead';
-import Button from 'components/button';
 import Circle from 'components/circle';
 
 const Cruise = require('assets/cruise.jpg');
@@ -32,12 +31,20 @@ export default class About extends Component {
         <div className="masthead__container">
           <Masthead className="masthead--about"/>
           <div className="center-absolute text-center">
-            <strong className='masthead__title block'>
+            <strong className="masthead__title block">
               About me
             </strong>
           </div>
         </div>
         <div className="content__subsection text-center">
+          <div className="content__title-wrapper">
+            <h2 className="content__title content__hr">
+              Interests
+            </h2>
+            <h3 className="content__subtitle">
+              Outside of Work
+            </h3>
+          </div>
           <Circle image={Cruise} >
             <div className="circle__background--front">
               <div className="circle__wrapper">
@@ -127,8 +134,8 @@ export default class About extends Component {
           <div className="masthead--cogo" />
         </div>
         <div className="content__subsection text-center">
-          <div className="content__hr">
-            <h2 className="content__title">
+          <div className="content__title-wrapper">
+            <h2 className="content__title content__hr">
               Cogo Labs
             </h2>
             <h3 className="content__subtitle">
@@ -163,8 +170,8 @@ export default class About extends Component {
           <div className="masthead--pwc" />
         </div>
         <div className="content__subsection text-center">
-          <div className="content__hr">
-            <h2 className="content__title">
+          <div className="content__title-wrapper">
+            <h2 className="content__title content__hr">
               PwC
             </h2>
             <h3 className="content__subtitle">

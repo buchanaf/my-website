@@ -31,9 +31,9 @@ export default class App extends Component {
     }).map((image) => {
       return new Promise((resolve) => {
         const img = new Image();
-        img.onload = () => { resolve(); }
-        img.src = window.__data.assets[image]
-      })
+        img.onload = () => { resolve(); };
+        img.src = window.__data.assets[image];
+      });
     });
 
     Promise.all(images);
@@ -50,11 +50,15 @@ export default class App extends Component {
     }
   };
 
+  preventTouchMove = (e) => {
+    e.preventDefault();
+  };
+
   render() {
     const { sideOpen } = this.state;
 
     return (
-      <div className={cx('app-container', {'app-container--left': sideOpen})}>
+      <div className={ cx('app-container', { 'app-container--left': sideOpen }) }>
         <Helmet {...config.app.head} />
         { this.props.header }
         { React.cloneElement(this.props.sideNav,
@@ -67,9 +71,5 @@ export default class App extends Component {
       </div>
     );
   }
-
-  preventTouchMove = (e) => {
-    e.preventDefault();
-  };
 
 }

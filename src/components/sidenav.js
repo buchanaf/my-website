@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import cx from 'classnames';
 import setClass from'element-class';
 
 
 export default class PageHeader extends Component {
+  static propTypes = {
+    sideOpen: PropTypes.bool,
+    onSideNavToggle: PropTypes.func,
+  };
+
   constructor(props) {
     super(props);
   }
 
-  onMenuClick = (e) => {
+  onMenuClick = () => {
     const { sideOpen } = this.props;
     this.props.onSideNavToggle();
     setClass(document.body).toggle('scroll--prevent');
@@ -24,7 +29,7 @@ export default class PageHeader extends Component {
     return (
       <div className="sidenav__container">
         <i className="icon icon--menu" onClick={this.onMenuClick}/>
-        <nav className={cx('sidenav', { 'side-nav--visible': sideOpen})}>
+        <nav className={ cx('sidenav', { 'side-nav--visible': sideOpen }) }>
           <ul className="sidenav__list">
             <Link className="sidenav__link" to="/" onClick={this.onMenuClick}>
               Home

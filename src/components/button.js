@@ -36,7 +36,8 @@ export default class Button extends Component {
         className={cx('button', className)}
         disabled={disabled}
         type={type}
-        name={name}>
+        name={name}
+      >
        {this.props.children}
       </button>
     );

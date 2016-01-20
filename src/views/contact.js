@@ -11,18 +11,8 @@ export default class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {...this.getInitState()};
+    this.state = { ...this.getInitState() };
   }
-
-  getInitState = () => {
-    return {
-      firstName: '',
-      lastName: '',
-      email: '',
-      subject: '',
-      message: '',
-    }
-  };
 
   onResumeClick = () => {
     this.history.pushState(null, '/resume');
@@ -33,17 +23,28 @@ export default class Home extends Component {
       const update = {};
       update[key] = e.target.value;
       this.setState(update);
-    }
+    };
   };
 
   onSendClick = (e) => {
-    this.setState({ ...{sending: true}, ...this.getInitState() });
+    e.preventDefault();
+    this.setState({ ...{ sending: true }, ...this.getInitState() });
     request
       .post('/api/message')
       .send(this.state)
-      .end((res, err) => {
+      .end(() => {
 
       });
+  };
+
+  getInitState = () => {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      message: '',
+    };
   };
 
   render() {
@@ -72,8 +73,8 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="content__subsection text-center clear">
-          <div className="content__hr">
-            <h2 className="content__title">
+          <div className="content__title-wrapper">
+            <h2 className="content__title content__hr">
               Contact
             </h2>
             <h3 className="content__subtitle">
@@ -102,11 +103,11 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="content__subsection content text-left clear">
-          <div className="content__hr">
-            <h2 className="content__title">
+          <div className="content__title-wrapper">
+            <h2 className="content__title content__hr">
               Message Me
             </h2>
-            <h3 className="content__subtitle">
+            <h3 className="content__subtitle center">
               With nice words
             </h3>
           </div>

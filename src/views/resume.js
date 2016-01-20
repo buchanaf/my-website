@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 import Masthead from 'components/masthead';
-import Button from 'components/button';
 
 export default class Home extends Component {
   constructor(props) {
@@ -31,8 +30,8 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="resume content__subsection text-center">
-          <div className="content__hr">
-            <h2 className="content__title">
+          <div className="content__title-wrapper">
+            <h2 className="content__title content__hr">
               My Skills
             </h2>
             <h3 className="content__subtitle">

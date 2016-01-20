@@ -7,9 +7,9 @@ export default class Input extends Component {
     className: PropTypes.string,
     name: PropTypes.string,
     onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onBlur:PropTypes.func,
-    onKeyUp: PropTypes.func,
+    onFocusHandler: PropTypes.func,
+    onBlurHandler: PropTypes.func,
+    onKeyUpHandler: PropTypes.func,
     placeholder: PropTypes.string,
     type: PropTypes.string,
     value: PropTypes.string,
@@ -65,7 +65,8 @@ export default class Input extends Component {
         onKeyUpHandler={this.onKeyUpHandler}
         placeholder={placeholder}
         type={type}
-        value={value} />
+        value={value}
+      />
     );
   }
 }

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { spring, Motion } from 'react-motion'
+import { spring, Motion } from 'react-motion';
 import Helmet from 'react-helmet';
-import cx from 'classnames';
 import Dom from 'utils/dom';
 
 import Masthead from 'components/masthead';
-import Button from 'components/button';
 
 export default class Home extends Component {
   constructor(props) {
@@ -22,31 +20,39 @@ export default class Home extends Component {
 
   onClickScroll = (e) => {
     e.preventDefault();
-    this.setState({scroll: true});
+    this.setState({ scroll: true });
     setTimeout(() => {
-      this.setState({scroll: false})
+      this.setState({ scroll: false });
     }, 1000);
+  };
 
+  scrollHandler = (scrollPos) => {
+    if (__CLIENT__) {//eslint-disable-line
+      const windowStart = Math.floor(window.scrollY);
+      const scrollMove = Math.floor(scrollPos);
+      if (scrollMove > windowStart && windowStart < this.state.scrollTo) {
+        window.scrollTo(0, scrollMove);
+      }
+    }
   };
 
   render() {
     const { scroll, scrollTo } = this.state;
-
     return (
-      <Motion style={{x: spring( scroll ? scrollTo : 0, [125, 20])}}>
+      <Motion style={{ x: spring(scroll ? scrollTo : 0, [125, 20]) }}>
         {(style) => {
           this.scrollHandler(style.x);
           return (
             <div className="content">
               <Helmet title="Front-end Developer"/>
-              <div className={cx('masthead__container', 'masthead__container--animate')}>
+              <div className="masthead__container masthead__container--animate">
                 <Masthead className="masthead--home"/>
                 <div className="center-absolute text-center">
                   <div className="masthead__title-wrapper">
-                    <strong className={cx('masthead__title', 'masthead__title--animate', 'block')}>
+                    <strong className="masthead__title masthead__title--animate block">
                       Front-end
                     </strong>
-                    <strong className={cx('masthead__subtitle', 'masthead__title--animate', 'block')}>
+                    <strong className="masthead__subtitle masthead__title--animate block">
                       Developer
                     </strong>
                   </div>
@@ -60,8 +66,8 @@ export default class Home extends Component {
                 <i className="icon icon--angle-down" onClick={this.onClickScroll}/>
               </div>
               <div className="content__subsection text-center">
-                <div className="content__hr--none">
-                  <h2 className="content__title">
+                <div className="content__title-wrapper">
+                  <h2 className="content__title content__hr">
                     Alex Buchanan
                   </h2>
                   <h3 className="content__subtitle">
@@ -79,15 +85,4 @@ export default class Home extends Component {
       </Motion>
     );
   }
-
-  scrollHandler = (scrollPos) => {
-    if (__CLIENT__) {
-      const windowStart = Math.floor(window.scrollY);
-      const scrollMove = Math.floor(scrollPos);
-      if (scrollMove > windowStart && windowStart < this.state.scrollTo) {
-        window.scrollTo(0, scrollMove);
-      }
-    }
-  };
-
 }

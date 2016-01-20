@@ -42,8 +42,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "eslint-loader",
-        exclude: /node_modules/,
-        include: path.resolve(rootDir, 'server', 'index.js')
+        // include: path.resolve(rootDir, 'src'),
       }
     ],
     loaders: [

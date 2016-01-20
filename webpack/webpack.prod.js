@@ -6,6 +6,7 @@ var isomorphicTools = require('webpack-isomorphic-tools/plugin');
 var isomorphicTools = new isomorphicTools(isomorphicConfig);
 var webpackManifest = require('./webpack.manifest')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ChunkManifest = require('./webpack.manifest');
 
 var rootDir = path.join(__dirname, '..');
 
@@ -48,6 +49,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vender', 'vendor.[chunkhash].js'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
+    new ChunkManifest(),
     isomorphicTools,
   ],
   module: {

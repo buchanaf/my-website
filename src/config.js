@@ -2,25 +2,25 @@ require('babel-polyfill');
 
 const environment = {
   development: {
-    isProduction: false
+    isProduction: false,
   },
   production: {
-    isProduction: true
-  }
+    isProduction: true,
+  },
 }[process.env.NODE_ENV || 'development'];
 
 module.exports = Object.assign({
   host: process.env.HOST || 'localhost',
-  port: process.env.PORT ,
+  port: process.env.PORT,
   app: {
     title: 'Alex Buchanan',
     description: "A front-end developer's personal website.",
     head: {
       titleTemplate: 'Alex Buchanan: %s',
       meta: [
-        {name: 'description', content: "A front-end developer's personal website."},
-      ]
-    }
+        { name: 'description', content: "A front-end developer's personal website." },
+      ],
+    },
   },
 
 }, environment);
