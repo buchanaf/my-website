@@ -41,7 +41,7 @@
 
 .masthead__title-wrapper {
   margin-bottom: 2rem;
-  width: 40rem;
+  width: 18rem;
 }
 
 .masthead__container--animate {
@@ -91,6 +91,11 @@
 
   .masthead--about {
     @mixin masthead cogolabs.jpg;
+  }
+
+  .masthead__title-wrapper {
+    margin-bottom: 2rem;
+    width: 40rem;
   }
 
   .masthead--about,
