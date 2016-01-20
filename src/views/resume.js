@@ -20,9 +20,11 @@ export default class Home extends Component {
         <div className="masthead__container">
           <Masthead className="masthead--resume"/>
           <div className="center-absolute text-center">
-            <strong className="masthead__title block">
-              Resume
-            </strong>
+            <div className="masthead__title-wrapper">
+              <strong className="masthead__title block">
+                Resume
+              </strong>
+            </div>
             <a className="button button--transparent" href="/dist/1a556a1cd058410e4f3a59d0a62fe6ac.jpg" download="1a556a1cd058410e4f3a59d0a62fe6ac.jpg">
               Download Resume
             </a>
@@ -60,9 +62,6 @@ export default class Home extends Component {
                     Webpack
                   </li>
                   <li>
-                    Javascript / ES6
-                  </li>
-                  <li>
                     Babel
                   </li>
                   <li>
@@ -70,9 +69,6 @@ export default class Home extends Component {
                   </li>
                   <li>
                     PostCSS
-                  </li>
-                  <li>
-                    BEM methodology
                   </li>
                 </ul>
               </div>

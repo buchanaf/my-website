@@ -55,6 +55,7 @@
   background-color: white;
   border-radius: 2px;
   height: 1.5rem;
+  padding: 0.5rem;
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -108,6 +109,6 @@
 
 @media (--large-viewport) {
   .icon--menu {
-    background-size: 1rem;
+    background-size: 2rem;
   }
 }

@@ -42,9 +42,14 @@ export default class Home extends Component {
               <div className={cx('masthead__container', 'masthead__container--animate')}>
                 <Masthead className="masthead--home"/>
                 <div className="center-absolute text-center">
-                  <strong className={cx('masthead__title', 'masthead__title--animate', 'block')}>
-                    JAVASCRIPT
-                  </strong>
+                  <div className="masthead__title-wrapper">
+                    <strong className={cx('masthead__title', 'masthead__title--animate', 'block')}>
+                      Front-end
+                    </strong>
+                    <strong className={cx('masthead__subtitle', 'masthead__title--animate', 'block')}>
+                      Developer
+                    </strong>
+                  </div>
                   <Link className="button button--transparent" to="/resume">
                     Resume
                   </Link>
@@ -55,7 +60,7 @@ export default class Home extends Component {
                 <i className="icon icon--angle-down" onClick={this.onClickScroll}/>
               </div>
               <div className="content__subsection text-center">
-                <div className="content__hr--short">
+                <div className="content__hr--none">
                   <h2 className="content__title">
                     Alex Buchanan
                   </h2>

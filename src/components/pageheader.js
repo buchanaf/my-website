@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
 export default class PageHeader extends Component {
   constructor(props) {
@@ -10,16 +10,16 @@ export default class PageHeader extends Component {
     return (
       <header className="header zindex-2">
         <ul className="header__list">
-          <Link className="header__link" to="/">
+          <IndexLink className="header__link" activeClassName="active" to="/">
             Home
-          </Link>
-          <Link className="header__link" to="/about">
+          </IndexLink>
+          <Link className="header__link" activeClassName="active" to="/about">
             About
           </Link>
-          <Link className="header__link" to="/resume">
+          <Link className="header__link" activeClassName="active" to="/resume">
             Resume
           </Link>
-          <Link className="header__link active" to="/contact">
+          <Link className="header__link" activeClassName="active" to="/contact">
             Contact
           </Link>
         </ul>

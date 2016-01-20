@@ -21,7 +21,7 @@ function structureApp(Component) {
 }
 
 export default (
-  <Route path="/" component={App}>
+  <Route path="/"component={App}>
     <IndexRoute components={structureApp(Home)} />
     <Route path="/resume" components={structureApp(Resume)} />
     <Route path="/contact" components={structureApp(Contact)} />

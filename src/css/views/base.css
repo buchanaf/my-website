@@ -15,7 +15,7 @@
   font-size: 0.9rem;
   font-family: var(--font-two);
   line-height: 1.75rem;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   text-align: center;
   vertical-align: top;
   width: 100%;
@@ -34,7 +34,7 @@
 .content__title {
   color: var(--grey-dark);
   font-family: var(--font-one);
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 2rem;
 }
@@ -46,6 +46,7 @@
   font-size: .8rem;
 }
 
+.content__hr--none,
 .content__hr,
 .content__hr--short {
   display: block;

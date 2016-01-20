@@ -39,6 +39,11 @@
   width: 100%;
 }
 
+.masthead__title-wrapper {
+  margin-bottom: 2rem;
+  width: 40rem;
+}
+
 .masthead__container--animate {
   animation: fadein 1.5s;
 }
@@ -46,13 +51,20 @@
 .masthead__title {
   color: white;
   font-family: var(--font-one);
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
   padding: 0 1rem;
 }
 
 .masthead__title--animate {
   animation: fadein-down 1.5s;
+}
+
+.masthead__subtitle {
+  color: white;
+  font-family: var(--font-one);
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
 .masthead__paragraph {
@@ -64,7 +76,7 @@
   animation: fadein-down 1.5s;
 }
 
-@media (--large-viewport) {
+@media (--xlarge-viewport) {
   .masthead--home {
     @mixin masthead asheville.jpg;
   }
@@ -80,9 +92,7 @@
   .masthead--about {
     @mixin masthead cogolabs.jpg;
   }
-}
 
-@media (--xlarge-viewport) {
   .masthead--about,
   .masthead--contact,
   .masthead--resume,

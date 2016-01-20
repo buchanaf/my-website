@@ -61,9 +61,14 @@ export default class Home extends Component {
         <div className="masthead__container">
           <Masthead className="masthead--contact"/>
           <div className="center-absolute text-center">
-            <strong className="masthead__title block">
-              Hello.
-            </strong>
+            <div className="masthead__title-wrapper">
+              <strong className="masthead__title block">
+                Hello.
+              </strong>
+              <strong className="masthead__subtitle block">
+                It's me.
+              </strong>
+            </div>
           </div>
         </div>
         <div className="content__subsection text-center clear">
@@ -76,7 +81,7 @@ export default class Home extends Component {
             </h3>
           </div>
           <div className="content__container col-3 left">
-            <h5 className="header5">
+            <h5 className="header5 header5--center bold">
               Personal Information
             </h5>
             <p className="bold">

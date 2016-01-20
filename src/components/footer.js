@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
-export default class PageHeader extends Component {
+export default class Footer extends Component {
   constructor(props) {
     super(props);
   }
@@ -11,9 +11,9 @@ export default class PageHeader extends Component {
       <footer className="footer">
         <div className="footer__banner">
           <ul className="footer__links">
-            <Link className="footer__link" to="/">
+            <IndexLink className="footer__link" to="/">
               Home
-            </Link>
+            </IndexLink>
             <Link className="footer__link" to="/about">
               About
             </Link>
@@ -29,7 +29,7 @@ export default class PageHeader extends Component {
           <div className="footer__wrapper center-absolute">
             <i className="icon icon--logo" />
             <p className="footer__copyright">
-              &copy; 2015 Alex Buchanan. All rights reserved. Front-End Developer
+              2015 Alex Buchanan. All rights reserved. Front-End Developer
             </p>
             <div className="icon__wrapper">
               <i className="icon icon--facebook" />

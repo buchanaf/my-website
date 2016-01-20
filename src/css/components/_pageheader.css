@@ -20,7 +20,7 @@
 }
 
 .header__link.active {
- outline: 3px solid white;
+  border-bottom: 3px solid white;
 }
 
 @media (--xlarge-viewport) {

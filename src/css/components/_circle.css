@@ -111,7 +111,7 @@
   color: var(--grey);
   display: inline-block;
   line-height: normal;
-  margin: 25px;
+  margin: 15px 25px;
   width: 200px;
   vertical-align: top;
 }

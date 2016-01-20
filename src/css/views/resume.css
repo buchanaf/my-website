@@ -18,19 +18,19 @@
 
 .header4 {
   color: var(--grey-dark);
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-family: var(--font-one);
   display: block;
-  line-height: 2.25rem;
+  line-height: 1.75rem;
   text-align: center;
   width: 100%;
 }
 
 .header5 {
   color: var(--grey-dark);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: var(--font-two);
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   text-align: left;
@@ -43,6 +43,13 @@
 @media (--xlarge-viewport) {
   .header4 {
     text-align: left;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  .headers5 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   .header5--center {
