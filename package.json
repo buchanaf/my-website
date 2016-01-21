@@ -90,6 +90,7 @@
     "piping": "^0.3.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
+    "react-ga": "^1.2.0",
     "react-helmet": "^2.3.1",
     "react-motion": "^0.3.1",
     "react-router": "^1.0.2",
