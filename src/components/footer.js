@@ -32,11 +32,11 @@ export default class Footer extends Component {
               2015 Alex Buchanan. All rights reserved. Front-End Developer
             </p>
             <div className="icon__wrapper">
-              <i className="icon icon--facebook" />
-              <i className="icon icon--twitter" />
-              <i className="icon icon--github" />
-              <i className="icon icon--instagram" />
-              <i className="icon icon--linkedin" />
+              <a className="icon icon--facebook" href="https://www.facebook.com/alex.buchanan.9085" />
+              <a className="icon icon--twitter" href="https://twitter.com/ADBuchanan6" />
+              <a className="icon icon--github" href="https://github.com/buchanaf" />
+              <a className="icon icon--instagram" href="https://www.instagram.com/buckdaddy6/" />
+              <a className="icon icon--linkedin" href="https://www.linkedin.com/in/alex-buchanan-625b5942" />
             </div>
           </div>
         </div>
