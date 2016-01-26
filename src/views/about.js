@@ -144,26 +144,8 @@ export default class About extends Component {
           </div>
           <div className="description__wrapper center">
             <p className="content__description center">
-              I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
+              Cogo Labs has been my first web development job. So far, it's been an awesome experience. I've really solidified my skills in Javascript, HTML, and CSS, and really broadened my understanding of build tools, production code optimizations, and server-side code (Python and Node). The free cold brew and Friday launches have also been pretty sweet.
             </p>
-            <div className="circle__job">
-              <img className="circle__figure--job" src={pwc1} />
-              <span className="circle__span">
-                Some random facts about work and what I used to do there. A little extra long.
-              </span>
-            </div>
-            <div className="circle__job">
-              <img className="circle__figure--job" src={pwc2} />
-              <span className="circle__span">
-                Some random facts about work and what I used to do there. A little extra long.
-              </span>
-            </div>
-            <div className="circle__job">
-              <img className="circle__figure--job" src={pwc3} />
-              <span className="circle__span">
-                Some random facts about work and what I used to do there.
-              </span>
-            </div>
           </div>
         </div>
         <div className="masthead__container">
@@ -180,24 +162,24 @@ export default class About extends Component {
           </div>
           <div className="description__wrapper center">
             <p className="content__description center">
-              I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I decided to change things up and learn how to code. So, I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. I then accepted a job from Cogo Labs, a tech incubator, as a web engineer. There, I've further refined my front-end skills with a focus on React.
+              Note that the above picture is not actually mine, but it pretty accurately represents a lot of the audit rooms that I worked in (honestly, who really needs windows?). I started my career doing audit at PwC. My time there included a lot of ups and downs. The best part was definitely the people. I made some of my best friends there. The worst parts definitely being the travel, hours, and menial work.
             </p>
             <div className="circle__job">
               <img className="circle__figure--job" src={pwc1} />
               <span className="circle__span">
-                Some random facts about work and what I used to do there.
+                This photo was taken at 3am in the office on a Sunday night. Luckily, the LL Bean store in Freeport was open 24/7, so you could always stop by and get some cool camping gear.
               </span>
             </div>
             <div className="circle__job">
               <img className="circle__figure--job" src={pwc2} />
               <span className="circle__span">
-                Some random facts about work and what I used to do there.
+                There is my buddy Joe. I always got to work with my buddies at big conference tables like this. It was always kind of fun -- lots of laughs.
               </span>
             </div>
             <div className="circle__job">
               <img className="circle__figure--job" src={pwc3} />
               <span className="circle__span">
-                Some random facts about work and what I used to do there. A little extra long.
+                While travel could be rough, there were some perks like this. The hotel points also came in handy when booking vacations.
               </span>
             </div>
           </div>

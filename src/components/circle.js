@@ -37,7 +37,7 @@ export default class Circle extends Component {
     const { hover } = this.state;
 
     return (
-      <Motion style={{ x: spring(hover ? 180 : 0, [170, 30]) }}>
+      <Motion style={{ x: spring(hover ? 180 : 0, [220, 30]) }}>
         {(style) => {
           return (
             <section className="circle__container" onMouseEnter={this.onToggleEvent} onMouseLeave={this.onToggleEvent} onClick={this.onToggleEvent}>

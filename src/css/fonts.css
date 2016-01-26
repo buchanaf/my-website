@@ -1,8 +1,7 @@
-/*@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans:400,600,300);*/
 @import 'local-fonts';
 
 .font-one {
-  font-family: var(/--font-one);
+  font-family: var(--font-one);
 }
 
 .font-two {

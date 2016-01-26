@@ -24,7 +24,7 @@ export default class Home extends Component {
                 Resume
               </strong>
             </div>
-            <a className="button button--transparent" href="/dist/1a556a1cd058410e4f3a59d0a62fe6ac.jpg" download="1a556a1cd058410e4f3a59d0a62fe6ac.jpg">
+            <a className="button button--transparent" href="/dist/Buchanan_Resume.pdf" download="Buchanan_Resume.pdf">
               Download Resume
             </a>
           </div>
@@ -52,22 +52,19 @@ export default class Home extends Component {
                     Javascript / ES6
                   </li>
                   <li>
-                    Reactjs
+                    React
                   </li>
                   <li>
-                    Flux Architecture
+                    Flux Architecture (Redux)
                   </li>
                   <li>
-                    Webpack
-                  </li>
-                  <li>
-                    Babel
+                    Node.js / Express
                   </li>
                   <li>
                     HTML5 / CSS3
                   </li>
                   <li>
-                    PostCSS
+                    Webpack / Babel / PostCSS
                   </li>
                 </ul>
               </div>
@@ -77,10 +74,13 @@ export default class Home extends Component {
                 </h5>
                 <ul className="resume__list resume__list--inside">
                   <li>
-                    Angular
+                    GIT
                   </li>
                   <li>
-                    Node.js / Express
+                    Nginx
+                  </li>
+                  <li>
+                    Docker
                   </li>
                   <li>
                     Grunt
@@ -89,10 +89,10 @@ export default class Home extends Component {
                     D3.js
                   </li>
                   <li>
-                    Nginx
+                    Angular
                   </li>
                   <li>
-                    Docker
+                    SQL
                   </li>
                 </ul>
               </div>
@@ -112,25 +112,28 @@ export default class Home extends Component {
                 </p>
                 <ul className="resume__list">
                   <li>
-                    Led walkthroughs of major accounting cycles that required dozens of interviews with senior members throughout the client organization
+                    Overhauled site-starter scaffolding with an universal React-Redux architecture on Webpack
                   </li>
                   <li>
-                    Top-performer in PwC's annual performance review for both years at the company; received an 'exceeded expectations' in all performance reviews for individual client engagements for the previous year
+                    Led front-end development for website prototypes, including one app with XXX,XXX users
                   </li>
                   <li>
-                    Assisted with the development of the overall audit approach for revenue and inventory for a multinational sports equipment manufacturer with over $1 billion in sales
+                    Supported social team in implementing A/B tests to maximize new-user signups by reducing page load, manipulating signup-flow, and customizing content via url parameters
                   </li>
                   <li>
-                    Tailored audit procedures procedures to meet changing public accounting standards by incorporating and working with PwC specialists in the areas of journal entries, taxes, and investment valuations
+                    Created a library of composable React components used on a variety of Cogo projects
+                  </li>
+                  <li>
+                    Built complex user-interface tools, including D3 charts and custom tables to support data-analytics for our analysts teams as well as revenue simulations for accounting
                   </li>
                 </ul>
               </div>
               <div className="resume__job">
                 <h5 className="header5">
-                  Web Engineer
+                  Assurance Associate                                                                                  September 2011 – March 2014
                 </h5>
                 <p>
-                  CogoLabs, Cambridge, MA, November 2014 – Present
+                  PwC, Boston, MA, September 2011 – February 2014
                 </p>
                 <ul className="resume__list">
                   <li>
@@ -144,6 +147,9 @@ export default class Home extends Component {
                   </li>
                   <li>
                     Tailored audit procedures procedures to meet changing public accounting standards by incorporating and working with PwC specialists in the areas of journal entries, taxes, and investment valuations
+                  </li>
+                  <li>
+                    First associate in starting class to pass all Certified Public Accountant examinations
                   </li>
                 </ul>
               </div>
