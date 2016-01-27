@@ -24,10 +24,11 @@ export function message(req, res) {
   });
 
   const mailOptions = {
-    from: (firstName || '') + ' ' + (lastName || '') + ' <' + email + '>',
     to: 'buchanaf@gmail.com',
     subject: subject || 'No subject -- website',
-    text: message,
+    text: (firstName || 'NoFirst') + ' ' + (lastName || 'NoLast') + '\n' +
+          ' <' + email + '>:' + '\n' +
+          message
   };
 
    const transporter = nodemailer.createTransport({
