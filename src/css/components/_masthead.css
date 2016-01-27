@@ -20,7 +20,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 300px;
   position: relative;
 }
 
@@ -30,7 +30,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 300px;
   position: relative;
 }
 
@@ -103,6 +103,11 @@
   .masthead--resume,
   .masthead--home {
     height: 40rem;
+  }
+
+  .masthead--pwc,
+  .masthead--cogo {
+    height: 500px;
   }
 
   .masthead__title {

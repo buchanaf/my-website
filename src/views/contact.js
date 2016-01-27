@@ -28,12 +28,29 @@ export default class Home extends Component {
 
   onSendClick = (e) => {
     e.preventDefault();
-    this.setState({ ...{ sending: true }, ...this.getInitState() });
+    this.setState({
+      sending: true,
+      emailError: false,
+      emailSuccess: false,
+    });
     request
       .post('/api/message')
       .send(this.state)
-      .end(() => {
-
+      .end((err) => {
+        if (err) {
+          this.setState({ sending: false, emailError: true });
+        } else {
+          this.setState({
+            ...this.getInitState(),
+            sending: false,
+            emailSuccess: true,
+          });
+          setTimeout(() => {
+            this.setState({
+              emailSuccess: false,
+            });
+          }, 4000);
+        }
       });
   };
 
@@ -44,6 +61,7 @@ export default class Home extends Component {
       email: '',
       subject: '',
       message: '',
+      sending: false,
     };
   };
 
@@ -54,6 +72,9 @@ export default class Home extends Component {
       email,
       subject,
       message,
+      emailError,
+      emailSuccess,
+      sending,
     } = this.state;
 
     return (
@@ -113,16 +134,16 @@ export default class Home extends Component {
           </div>
           <div className="content__container text-left inline-block">
             <form className="col-2">
-              <div className="inline-block">
+              <div className="input__wrapper">
                 <label>
                   First Name:
-                  <Input className="input--medium block" value={firstName} onChange={this.onFormChange('firstName')} />
+                  <Input className="input--half block" value={firstName} onChange={this.onFormChange('firstName')} />
                 </label>
               </div>
               <div className="input__wrapper">
-                <label>
+                <label className="label--half">
                   Last Name:
-                  <Input className="input--medium block" value={lastName} onChange={this.onFormChange('lastName')} />
+                  <Input className="input--half input--lasthalf block" value={lastName} onChange={this.onFormChange('lastName')} />
                 </label>
               </div>
               <label className="block">
@@ -140,6 +161,24 @@ export default class Home extends Component {
               <Button className="button--black" onClick={this.onSendClick}>
                 Send
               </Button>
+              { sending ? (
+                <p className="contact__message">
+                  Sending...
+                </p>
+                ) : null
+              }
+              { emailSuccess ? (
+                <p className="contact__message">
+                  Message sent.
+                </p>
+                ) : null
+              }
+              { emailError ? (
+                <p className="contact__message">
+                  Send failed. Try email.
+                </p>
+                ) : null
+              }
             </form>
             <div className="col-2 content__container relative inline-block">
               <img className="image--boston" src={BostonImg} />

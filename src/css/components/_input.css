@@ -10,29 +10,24 @@
   padding: 0.5rem;
   resize: none;
   vertical-align: middle;
-  max-width: calc(30rem - 1rem);
   width: calc(100% - 1rem);
+  max-width: calc(30rem - 1rem);
 }
 
 .input:focus, .textarea:focus {
   background: var(--grey-xlight);
 }
 
-.input--small {
-  width: 10rem;
-}
-
-.input--medium {
+.input--half {
   display: block;
-  width: 10rem;
-}
-
-.input--large {
-  width: 30rem;
+  width: calc(100%);
+  max-width: calc(30rem - 1rem);
 }
 
 .input__wrapper {
   display: block;
+  text-align: left;
+  width: calc(100% - 1rem);
 }
 
 .textarea {
@@ -40,8 +35,8 @@
   font-family: var(--font-two);
   height: 8.5rem;
   padding: 1rem;
-  max-width: calc(30rem - 2rem);
   width: calc(100% - 2rem);
+  max-width: calc(30rem - 2rem);
 }
 
 label {
@@ -51,6 +46,16 @@ label {
 @media (--xlarge-viewport) {
   .input__wrapper {
     display: inline-block;
-    margin-left: 2rem;
+    width: calc(50%);
   }
+
+  .input--half {
+    width: calc(100% - 2rem);
+  }
+
+  .label--half input,
+  .label--half span {
+    margin-left: 1rem;
+  }
+
 }

@@ -10,7 +10,11 @@ const generator = xoauth2.createXOAuth2Generator({
   accessToken: MAILCONFIG.accessToken
 });
 
-generator.on('token', function(token){
+generator.getToken((token) => {
+  console.log('Get access token');
+});
+
+generator.on('token', function(token) {
   console.log('New token for %s: %s', token.user, token.accessToken);
 });
 
@@ -40,7 +44,7 @@ export function message(req, res) {
   transporter.sendMail(mailOptions, function(error, info){
     if(error) {
         console.log(error);
-        res.json({error: 'error'});
+        res.status(500).send({error: error});
     } else {
         console.log('Message sent: ' + info.response);
         res.json({yo: info.response});

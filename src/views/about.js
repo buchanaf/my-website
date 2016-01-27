@@ -11,6 +11,8 @@ const Tough = require('assets/tough.jpg');
 const Siblings = require('assets/siblings.jpg');
 const College = require('assets/college.jpg');
 const Weddings = require('assets/weddings.jpg');
+const cogolabs2 = require('assets/cogolabs2.jpg');
+const cogolabs3 = require('assets/cogolabs3.jpg');
 const pwc1 = require('assets/pwc1.jpg');
 const pwc2 = require('assets/pwc2.jpg');
 const pwc3 = require('assets/pwc3.jpg');
@@ -146,6 +148,18 @@ export default class About extends Component {
             <p className="content__description center">
               Cogo Labs has been my first web development job. So far, it's been an awesome experience. I've really solidified my skills in Javascript, HTML, and CSS, and really broadened my understanding of build tools, production code optimizations, and server-side code (Python and Node). The free cold brew and Friday launches have also been pretty sweet.
             </p>
+          </div>
+          <div className="circle__job">
+            <img className="circle__figure--job" src={cogolabs2} />
+            <span className="circle__span">
+              At Cogo, we like charts and we like to put them on the walls. Also, not my greatest picture, which is why the designers tossed it out and didn't use it for any of our branding.
+            </span>
+          </div>
+          <div className="circle__job">
+            <img className="circle__figure--job" src={cogolabs3} />
+            <span className="circle__span">
+              Here's my desk. It's a pretty solid spot. You might also notice me testing my code on the larger monitor.
+            </span>
           </div>
         </div>
         <div className="masthead__container">

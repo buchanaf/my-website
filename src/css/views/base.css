@@ -120,6 +120,12 @@
   display: none;
 }
 
+.contact__message {
+  display: inline;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
 @media (--large-viewport) {
   .content__description {
     width: 600px;
