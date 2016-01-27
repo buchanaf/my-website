@@ -3,5 +3,5 @@ export default {
   clientId: 'XXXX',
   clientSecret: 'XXXX',
   refreshToken: 'XXXX',
-  accessToken: 'XXXX',
 }
+

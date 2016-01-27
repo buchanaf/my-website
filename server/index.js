@@ -12,7 +12,7 @@ global.__SERVER__ = true;
 global.isomorphicTools = new isomorphicTools(universalConfig)
   .development()
   .server(rootDir, function() {
-    if (__DEVELOPMENT__) {
+    if (global.__DEVELOPMENT__) {
       if (!require('piping')({
           hook: true,
           ignore: /(\/\.|~$|\.svg|\.jpg|\.png|\.css$)/i

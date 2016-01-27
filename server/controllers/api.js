@@ -2,22 +2,6 @@ import nodemailer from 'nodemailer';
 import MAILCONFIG from '../mail.config.js';
 import xoauth2 from 'xoauth2';
 
-const generator = xoauth2.createXOAuth2Generator({
-  user: MAILCONFIG.user,
-  clientId: MAILCONFIG.clientId,
-  clientSecret: MAILCONFIG.clientSecret,
-  refreshToken: MAILCONFIG.refreshToken,
-  accessToken: MAILCONFIG.accessToken
-});
-
-generator.getToken((token) => {
-  console.log('Get access token');
-});
-
-generator.on('token', function(token) {
-  console.log('New token for %s: %s', token.user, token.accessToken);
-});
-
 export function message(req, res) {
   const {
     firstName,
@@ -26,6 +10,18 @@ export function message(req, res) {
     subject,
     message
   } = req.body;
+
+  const generator = xoauth2.createXOAuth2Generator({
+    user: MAILCONFIG.user,
+    clientId: MAILCONFIG.clientId,
+    clientSecret: MAILCONFIG.clientSecret,
+    refreshToken: MAILCONFIG.refreshToken,
+  });
+
+
+  generator.getToken(function(err, token, accessToken) {
+    console.log(err, token, accessToken);
+  });
 
   const mailOptions = {
     from: (firstName || '') + ' ' + (lastName || '') + ' <' + email + '>',
