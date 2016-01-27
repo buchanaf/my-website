@@ -1,4 +1,7 @@
 export default {
-  USER: 'XXXX',
-  PASSWORD: 'XXXX',
+  user: 'XXXX',
+  clientId: 'XXXX',
+  clientSecret: 'XXXX',
+  refreshToken: 'XXXX',
+  accessToken: 'XXXX',
 }

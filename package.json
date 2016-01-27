@@ -98,6 +98,7 @@
     "serve-favicon": "^2.3.0",
     "superagent": "^1.6.1",
     "url-loader": "^0.5.7",
-    "webpack-isomorphic-tools": "^2.2.24"
+    "webpack-isomorphic-tools": "^2.2.24",
+    "xoauth2": "^1.1.0"
   }
 }

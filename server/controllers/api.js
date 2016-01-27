@@ -1,5 +1,18 @@
 import nodemailer from 'nodemailer';
 import MAILCONFIG from '../mail.config.js';
+import xoauth2 from 'xoauth2';
+
+const generator = xoauth2.createXOAuth2Generator({
+  user: MAILCONFIG.user,
+  clientId: MAILCONFIG.clientId,
+  clientSecret: MAILCONFIG.clientSecret,
+  refreshToken: MAILCONFIG.refreshToken,
+  accessToken: MAILCONFIG.accessToken
+});
+
+generator.on('token', function(token){
+  console.log('New token for %s: %s', token.user, token.accessToken);
+});
 
 export function message(req, res) {
   const {
@@ -20,8 +33,7 @@ export function message(req, res) {
    const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: MAILCONFIG.USER,
-        pass: MAILCONFIG.PASSWORD,
+        xoauth2: generator,
       },
   });
 
