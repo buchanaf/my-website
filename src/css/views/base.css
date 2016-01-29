@@ -27,7 +27,7 @@
   font-size: 0.7rem;
   font-family: var(--font-two);
   line-height: 1.5rem;
-  margin: 1rem auto 0 auto;
+  margin: 3rem auto 2rem auto;
   width: 100%;
 }
 
@@ -117,13 +117,57 @@
 }
 
 .image--boston {
-  display: none;
+  border-radius: 50%;
+  border: 0.5rem solid var(--grey-dark);
+  display: inline-block;
+  object-fit: contain;
+  vertical-align: top;
+  width: calc(350px - 100px)  ;
+}
+
+.contact__subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact__form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__container {
+  margin-top: 1rem;
+  max-width: 22rem;
+  text-align: left;
+}
+
+.contact__form {
+  max-width: calc(30rem - 1rem);
+}
+
+.contact__item  {
+  margin: 0.5rem 0;
 }
 
 .contact__message {
   display: inline;
   font-size: 0.8rem;
   margin-left: 1rem;
+}
+
+.contact__email {
+  color: var(--grey-dark);
+}
+
+.contact__span {
+  display: inline;
+  font-size: 0.7rem;
+  line-height: 1.5rem;
+  vertical-align: bottom;
 }
 
 @media (--large-viewport) {
@@ -213,17 +257,21 @@
     width: 675px;
   }
 
-  .image--boston {
-    display: inline-block;
-    object-fit: contain;
-    margin: 0 50px;
-    vertical-align: top;
-    width: calc(500px - 100px)  ;
-  }
-
   .image--headshot {
     background-size: 300px 300px;
     height: 300px;
     width: 300px;
+  }
+
+  .image--boston {
+    width: 275px;
+  }
+
+  .contact__container {
+    margin-left: 4rem;
+  }
+
+  .contact__subtitle {
+    margin-top: -2rem;
   }
 }

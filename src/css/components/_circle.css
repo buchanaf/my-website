@@ -119,7 +119,7 @@
 .circle__span {
   display: inline-block;;
   font-family: var(--font-two);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.5rem;
 }
 
@@ -135,8 +135,8 @@
 
 .circle:hover .circle__figure--front:after {
   border: 3px dashed var(--grey);
-  top: -2px;
-  left: -2px;
+  top: -3px;
+  left: -3px;
   -webkit-animation: spinAround 9s linear infinite;
   -moz-animation: spinAround 9s linear infinite;
   animation: spinAround 9s linear infinite;
@@ -145,5 +145,9 @@
 @media (--xlarge-viewport) {
   .circle__job {
     margin: 28px;
+  }
+
+  .circle__span {
+    font-size: 0.8rem;
   }
 }

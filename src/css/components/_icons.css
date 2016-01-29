@@ -41,12 +41,34 @@
   background-image: url('../assets/linkedin.svg');
 }
 
+.icon--location {
+  background-image: url('../assets/location2.svg');
+  cursor: none;
+  margin: 0;
+  vertical-align: bottom;
+}
+
+.icon--beer {
+  background-image: url('../assets/beer.svg');
+  cursor: none;
+  margin: 0;
+  vertical-align: bottom;
+}
+
+.icon--mobile {
+  background-image: url('../assets/mobile.svg');
+  cursor: none;
+  margin: 0;
+  vertical-align: bottom;
+}
+
 .icon--logo {
   background-image: url('../assets/adb_white.svg');
   background-position: center top;
   background-size: 8rem;
   height: 6rem;
   width: 8rem;
+  vertical-align: bottom;
 }
 
 .icon--menu {

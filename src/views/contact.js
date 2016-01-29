@@ -7,7 +7,7 @@ import Button from 'components/button';
 import Input from 'components/input';
 import BostonImg from 'assets/boston.jpg';
 
-export default class Home extends Component {
+export default class Contact extends Component {
 
   constructor(props) {
     super(props);
@@ -110,14 +110,14 @@ export default class Home extends Component {
               Alex Buchanan
             </p>
             <p>
-              10A Chauncy St. Apt. 25
+              10A Chauncy St.
             </p>
             <p>
               Cambridge, MA
             </p>
-            <p>
+            <a className="contact__email" href="mailto:buchanaf@gmail.com">
               buchanaf@gmail.com
-            </p>
+            </a>
           </div>
           <div className="content__container col-3 align-top right">
             <div className="image--headshot center" />
@@ -133,7 +133,7 @@ export default class Home extends Component {
             </h3>
           </div>
           <div className="content__container text-left inline-block">
-            <form className="col-2">
+            <form className="col-2 contact__form">
               <div className="input__wrapper">
                 <label>
                   First Name:
@@ -158,7 +158,7 @@ export default class Home extends Component {
                 Message:
                 <textarea className="textarea" value={message} onChange={this.onFormChange('message')} />
               </label>
-              <Button className="button--black" onClick={this.onSendClick}>
+              <Button className="button--black font-two" onClick={this.onSendClick}>
                 Send
               </Button>
               { sending ? (
@@ -180,8 +180,31 @@ export default class Home extends Component {
                 ) : null
               }
             </form>
-            <div className="col-2 content__container relative inline-block">
+            <div className="col-2 content__container relative inline-block text-center">
+              <h2 className="contact__subtitle">
+                Boston
+              </h2>
               <img className="image--boston" src={BostonImg} />
+              <div className="contact__container center">
+                <div className="contact__item">
+                  <i className="icon icon--location" />
+                  <span className="contact__span">
+                    Cambridge, MA (near Harvard Square)
+                  </span>
+                </div>
+                <div className="contact__item">
+                  <i className="icon icon--mobile" />
+                  <span className="contact__span">
+                    404-513-0849
+                  </span>
+                </div>
+                <div className="contact__item">
+                  <i className="icon icon--beer" />
+                  <span className="contact__span">
+                    Find me at Westside Lounge and Cambridge Common
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
