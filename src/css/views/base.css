@@ -140,8 +140,9 @@
 }
 
 .contact__container {
-  margin-top: 1rem;
+  margin-top: 2rem;
   max-width: 22rem;
+  padding-left: 4rem;
   text-align: left;
 }
 

@@ -115,8 +115,8 @@ export default class Contact extends Component {
             <p>
               Cambridge, MA
             </p>
-            <a className="contact__email" href="mailto:buchanaf@gmail.com">
-              buchanaf@gmail.com
+            <a className="contact__email" href="mailto:alexdbuchanan6@gmail.com">
+              alexdbuchanan6@gmail.com
             </a>
           </div>
           <div className="content__container col-3 align-top right">
