@@ -152,13 +152,13 @@ export default class About extends Component {
           <div className="circle__job">
             <img className="circle__figure--job" src={cogolabs2} />
             <span className="circle__span">
-              At Cogo, we like charts and we like to put them on the walls. Also, not my greatest picture, which is why the designers tossed it out and didn't use it for any of our branding.
+              At Cogo, we like charts and we like to put them on the walls.
             </span>
           </div>
           <div className="circle__job">
             <img className="circle__figure--job" src={cogolabs3} />
             <span className="circle__span">
-              Here's my desk. It's a pretty solid spot. You might also notice me testing my code on the larger monitor.
+              Here's my desk. It's a pretty solid spot. As you can see, I sometimes test my code.
             </span>
           </div>
         </div>
@@ -179,15 +179,15 @@ export default class About extends Component {
               Note that the above picture is not actually mine, but it pretty accurately represents a lot of the audit rooms that I worked in (honestly, who really needs windows?). I started my career doing audit at PwC. My time there included a lot of ups and downs. The best part was definitely the people. I made some of my best friends there. The worst parts definitely being the travel, hours, and menial work.
             </p>
             <div className="circle__job">
-              <img className="circle__figure--job" src={pwc1} />
+              <img className="circle__figure--job" src={pwc2} />
               <span className="circle__span">
-                This photo was taken at 3am in the office on a Sunday night. Luckily, the LL Bean store in Freeport was open 24/7, so you could always stop by and get some cool camping gear.
+                There is my buddy Joe. Audit teams were usually between 4-12 people, and we always worked around a big conference table.
               </span>
             </div>
             <div className="circle__job">
-              <img className="circle__figure--job" src={pwc2} />
+              <img className="circle__figure--job" src={pwc1} />
               <span className="circle__span">
-                There is my buddy Joe. I always got to work with my buddies at big conference tables like this. It was always kind of fun -- lots of laughs.
+                This photo was taken at 3am in the office on a Sunday night. 'Nuff said.
               </span>
             </div>
             <div className="circle__job">
