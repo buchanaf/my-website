@@ -904,7 +904,7 @@ function(e,t,n){e.exports=n.p+"cd2cc0df0833aa00406cdcf4a1d75d29.jpg"},/*!*******
 function(e,t,n){e.exports=n.p+"0da619104c6a2cb15b28adf462e14615.jpg"},/*!**********************************!*\
   !*** ./src/assets/cogolabs3.jpg ***!
   \**********************************/
-function(e,t,n){e.exports=n.p+"fe8ea870df67fbaf7336c00cfb0149b5.jpg"},/*!********************************!*\
+function(e,t,n){e.exports=n.p+"6f52c28c703611295e5057798bd4f35f.jpg"},/*!********************************!*\
   !*** ./src/assets/college.jpg ***!
   \********************************/
 function(e,t,n){e.exports=n.p+"07896c5c61f4ff07f06c53616a791806.jpg"},/*!********************************!*\
@@ -941,4 +941,4 @@ function(e,t,n){e.exports=n.p+"0c535c1a4dce5b6b20e08d11ef7934c6.jpg"},/*!*******
   !*** ./src/assets/weddings.jpg ***!
   \*********************************/
 function(e,t,n){e.exports=n.p+"3a8301379a0891d86cf36d7371629037.jpg"}]);
-//# sourceMappingURL=bundle.9c61bdd9058bf969d44e.js.map
+//# sourceMappingURL=bundle.0240eb2172a60e023c12.js.map
