@@ -49,7 +49,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vender', 'vendor.[chunkhash].js'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    new ChunkManifest(),
+    // new ChunkManifest(),
     isomorphicTools,
   ],
   module: {
