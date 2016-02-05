@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('index.css', {
+    new ExtractTextPlugin('index.[chunkhash].css', {
       allChunks: true
     }),
     new webpack.DefinePlugin({
