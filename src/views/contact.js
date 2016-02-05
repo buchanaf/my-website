@@ -49,7 +49,7 @@ export default class Contact extends Component {
             this.setState({
               emailSuccess: false,
             });
-          }, 4000);
+          }, 3000);
         }
       });
   };
