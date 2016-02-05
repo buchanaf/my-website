@@ -67,7 +67,7 @@ export default class Home extends Component {
               </div>
               <div className="content__subsection text-center">
                 <div className="content__title-wrapper">
-                  <h2 className="content__title content__hr">
+                  <h2 className="content__title content__hr content__hr--hide">
                     Alex Buchanan
                   </h2>
                   <h3 className="content__subtitle">

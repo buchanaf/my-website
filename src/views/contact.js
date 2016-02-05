@@ -181,11 +181,8 @@ export default class Contact extends Component {
               }
             </form>
             <div className="col-2 content__container relative inline-block text-center">
-              <h2 className="contact__subtitle">
-                Boston
-              </h2>
               <img className="image--boston" src={BostonImg} />
-              <div className="contact__container center">
+              <div className="contact__container">
                 <div className="contact__item">
                   <i className="icon icon--location" />
                   <span className="contact__span">
