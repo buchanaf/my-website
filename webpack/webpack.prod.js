@@ -31,6 +31,9 @@ module.exports = {
     pathinfo: true,
   },
   plugins: [
+    new ExtractTextPlugin('index.[chunkhash].css', {
+      allChunks: true
+    }),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       __DEVELOPMENT__: false,
@@ -67,7 +70,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader',
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
       },
       {
         test: isomorphicTools.regular_expression('images'),

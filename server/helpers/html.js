@@ -2,7 +2,6 @@ import React, {Component, PropTypes} from 'react';
 import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
 import serialize from 'serialize-javascript';
-import css from '../../src/css/main.css';
 
 export default class html extends Component {
   static propTypes = {
@@ -27,8 +26,6 @@ export default class html extends Component {
           {Object.keys(assets.styles).map((style, i) =>
             <link href={assets.styles[style]} id={i} key={i} media="all"
                   rel="stylesheet" type="text/css"/>)}
-          { <style dangerouslySetInnerHTML={{__html: css }}/> }
-          {/* resolves the initial style flash (flicker) on page load in development mode */}
 
         </head>
 
