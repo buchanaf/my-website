@@ -11,11 +11,7 @@ module.exports = {
     style_modules: {
       extension: 'css',
       filter: function(module, regex, options, log) {
-        if (options.development) {
-          return isomorphicTools.style_loader_filter(module, regex, options, log);
-        } else {
-          return regex.test(module.name);
-        }
+        return isomorphicTools.style_loader_filter(module, regex, options, log);
       },
       path: isomorphicTools.style_loader_path_extractor,
       parser: isomorphicTools.css_loader_parser

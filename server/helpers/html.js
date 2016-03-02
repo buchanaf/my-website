@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
 import serialize from 'serialize-javascript';
-import css from '../../src/css/critical.css';
+import css from '../../src/css/main.css';
 
 export default class html extends Component {
   static propTypes = {
@@ -38,7 +38,6 @@ export default class html extends Component {
           {Object.keys(assets.javascript).map((script, i) =>
             <script src={assets.javascript[script]} key={i}/>
           )}
-          <script dangerouslySetInnerHTML={{__html: `document.getElementById('0').setAttribute('media', 'all')`}} charSet="UTF-8"/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(assets)};`}} charSet="UTF-8"/>
         </body>
       </html>
