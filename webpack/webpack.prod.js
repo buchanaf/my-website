@@ -42,6 +42,9 @@ module.exports = {
       __SERVER__: false,
     }),
     new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
+      },
       compress: {
         warnings: false
       }
@@ -49,7 +52,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vender', 'vendor.[chunkhash].js'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
-    // new ChunkManifest(),
     isomorphicTools,
   ],
   module: {

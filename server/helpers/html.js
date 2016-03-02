@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
 import serialize from 'serialize-javascript';
+import css from '../../src/css/critical.css';
 
 export default class html extends Component {
   static propTypes = {
@@ -24,11 +25,11 @@ export default class html extends Component {
 
           {/* styles (will be present only in production with webpack extract text plugin) */}
           {Object.keys(assets.styles).map((style, i) =>
-            <link href={assets.styles[style]} key={i} media="screen, projection"
+            <link href={assets.styles[style]} id={i} key={i} media="no-media"
                   rel="stylesheet" type="text/css"/>)}
 
           {/* resolves the initial style flash (flicker) on page load in development mode */}
-          { <style dangerouslySetInnerHTML={{__html: require('../../src/css/main.css')}}/>}
+          { <style dangerouslySetInnerHTML={{__html: css }}/>}
 
         </head>
 
@@ -37,6 +38,7 @@ export default class html extends Component {
           {Object.keys(assets.javascript).map((script, i) =>
             <script src={assets.javascript[script]} key={i}/>
           )}
+          <script dangerouslySetInnerHTML={{__html: `document.getElementById('0').setAttribute('media', 'all')`}} charSet="UTF-8"/>
           <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(assets)};`}} charSet="UTF-8"/>
         </body>
       </html>

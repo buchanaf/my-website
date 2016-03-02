@@ -4,18 +4,18 @@ import Helmet from 'react-helmet';
 import Masthead from 'components/masthead';
 import Circle from 'components/circle';
 
-const Cruise = require('assets/cruise.jpg');
-const Dogs = require('assets/dogs.jpg');
-const Snowboarding = require('assets/snowboarding.jpg');
-const Tough = require('assets/tough.jpg');
-const Siblings = require('assets/siblings.jpg');
-const College = require('assets/college.jpg');
-const Weddings = require('assets/weddings.jpg');
-const cogolabs2 = require('assets/cogolabs2.jpg');
-const cogolabs3 = require('assets/cogolabs3.jpg');
-const pwc1 = require('assets/pwc1.jpg');
-const pwc2 = require('assets/pwc2.jpg');
-const pwc3 = require('assets/pwc3.jpg');
+import Cruise from 'assets/cruise.jpg';
+import Dogs from 'assets/dogs.jpg';
+import Snowboarding from 'assets/snowboarding.jpg';
+import Tough from 'assets/tough.jpg';
+import Siblings from 'assets/siblings.jpg';
+import College from 'assets/college.jpg';
+import Weddings from 'assets/weddings.jpg';
+import cogolabs2 from 'assets/cogolabs2.jpg';
+import cogolabs3 from 'assets/cogolabs3.jpg';
+import pwc1 from 'assets/pwc1.jpg';
+import pwc2 from 'assets/pwc2.jpg';
+import pwc3 from 'assets/pwc3.jpg';
 
 export default class About extends Component {
   constructor(props) {
