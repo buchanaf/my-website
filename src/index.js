@@ -5,7 +5,7 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import routes from './routes';
 import GA from 'react-ga';
 
-import main from 'css/main.css';
+require('css/main.css');
 
 function stateUpdate() {
   window.scrollTo(0, 0);

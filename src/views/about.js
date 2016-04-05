@@ -28,17 +28,17 @@ export default class About extends Component {
 
   render() {
     return (
-      <div className="content">
+      <main className="content">
         <Helmet title="About Me"/>
-        <div className="masthead__container">
+        <section className="masthead__container">
           <Masthead className="masthead--about"/>
           <div className="center-absolute text-center">
             <strong className="masthead__title block">
               About me
             </strong>
           </div>
-        </div>
-        <div className="content__subsection text-center">
+        </section>
+        <section className="content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               Interests
@@ -131,11 +131,11 @@ export default class About extends Component {
               </div>
             </div>
           </Circle>
-        </div>
-        <div className="masthead__container">
+        </section>
+        <section className="masthead__container">
           <div className="masthead--cogo" />
-        </div>
-        <div className="content__subsection text-center">
+        </section>
+        <section className="content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               Cogo Labs
@@ -161,11 +161,11 @@ export default class About extends Component {
               Here's my desk. It's a pretty solid spot. As you can see, I sometimes test my code.
             </span>
           </div>
-        </div>
-        <div className="masthead__container">
+        </section>
+        <section className="masthead__container">
           <div className="masthead--pwc" />
-        </div>
-        <div className="content__subsection text-center">
+        </section>
+        <section className="content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               PwC
@@ -197,8 +197,8 @@ export default class About extends Component {
               </span>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }

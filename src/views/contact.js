@@ -8,7 +8,6 @@ import Input from 'components/input';
 import BostonImg from 'assets/boston.jpg';
 
 export default class Contact extends Component {
-
   constructor(props) {
     super(props);
     this.state = { ...this.getInitState() };
@@ -49,7 +48,7 @@ export default class Contact extends Component {
             this.setState({
               emailSuccess: false,
             });
-          }, 3000);
+          }, 2500);
         }
       });
   };
@@ -78,22 +77,22 @@ export default class Contact extends Component {
     } = this.state;
 
     return (
-      <div className="content">
+      <main className="content">
         <Helmet title="Contact"/>
-        <div className="masthead__container">
+        <section className="masthead__container">
           <Masthead className="masthead--contact"/>
           <div className="center-absolute text-center">
-            <div className="masthead__title-wrapper">
+            <h1 className="masthead__title-wrapper">
               <strong className="masthead__title block">
                 Hello.
               </strong>
               <strong className="masthead__subtitle block">
                 It's me.
               </strong>
-            </div>
+            </h1>
           </div>
-        </div>
-        <div className="content__subsection text-center clear">
+        </section>
+        <section className="content__subsection text-center clear">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               Contact
@@ -110,9 +109,6 @@ export default class Contact extends Component {
               Alex Buchanan
             </p>
             <p>
-              10A Chauncy St.
-            </p>
-            <p>
               Cambridge, MA
             </p>
             <a className="contact__email" href="mailto:alexdbuchanan6@gmail.com">
@@ -122,8 +118,8 @@ export default class Contact extends Component {
           <div className="content__container col-3 align-top right">
             <div className="image--headshot center" />
           </div>
-        </div>
-        <div className="content__subsection content text-left clear">
+        </section>
+        <section className="content__subsection content text-left clear">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               Message Me
@@ -186,7 +182,7 @@ export default class Contact extends Component {
                 <div className="contact__item">
                   <i className="icon icon--location" />
                   <span className="contact__span">
-                    Cambridge, MA (near Harvard Square)
+                    Cambridge, MA
                   </span>
                 </div>
                 <div className="contact__item">
@@ -204,8 +200,8 @@ export default class Contact extends Component {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }
