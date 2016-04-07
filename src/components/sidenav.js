@@ -27,10 +27,10 @@ export default class PageHeader extends Component {
     const { sideOpen } = this.props;
 
     return (
-      <div className="sidenav__container">
+      <aside className="sidenav__container">
         <i className="icon icon--menu" onClick={this.onMenuClick}/>
-        <nav className={ cx('sidenav', { 'side-nav--visible': sideOpen }) }>
-          <ul className="sidenav__list">
+        <section className={ cx('sidenav', { 'side-nav--visible': sideOpen }) }>
+          <nav className="sidenav__list">
             <Link className="sidenav__link" to="/" onClick={this.onMenuClick}>
               Home
             </Link>
@@ -46,9 +46,9 @@ export default class PageHeader extends Component {
             <a className="button button--transparent button--resume" href="/dist/Buchanan_Resume.pdf" download="Buchanan_Resume.pdf">
               Download Resume
             </a>
-          </ul>
-        </nav>
-      </div>
+          </nav>
+        </section>
+      </aside>
     );
   }
 }

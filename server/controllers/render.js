@@ -1,11 +1,11 @@
-import React                     from 'react';
-import { renderToString }        from 'react-dom/server'
+import React from 'react';
+import { renderToString } from 'react-dom/server'
 import { RoutingContext, match } from 'react-router';
-import createLocation            from 'history/lib/createLocation';
-import path                      from 'path';
+import createLocation from 'history/lib/createLocation';
+import path from 'path';
 
-import routes                    from '../../src/routes';
-import Html                      from '../helpers/html';
+import routes from '../../src/routes';
+import Html from '../helpers/html';
 
 export default function render(req, res) {
   const location = createLocation(req.url);
@@ -23,7 +23,7 @@ export default function render(req, res) {
       return res.status(404).end('Not found');
     }
 
-    res.setHeader('content-type', 'text/html');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.end(renderView(renderProps))
 
   });

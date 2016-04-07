@@ -9,8 +9,8 @@ export default class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <div className="footer__banner">
-          <ul className="footer__links">
+        <section className="footer__banner">
+          <nav className="footer__links">
             <IndexLink className="footer__link" to="/">
               Home
             </IndexLink>
@@ -23,13 +23,13 @@ export default class Footer extends Component {
             <Link className="footer__link" to="/contact">
               Contact
             </Link>
-          </ul>
-        </div>
-        <div className="footer__base">
+          </nav>
+        </section>
+        <section className="footer__base">
           <div className="footer__wrapper center-absolute">
             <i className="icon icon--logo" />
             <p className="footer__copyright">
-              2015 Alex Buchanan. All rights reserved. Front-End Developer
+              2016 Alex Buchanan. All rights reserved. Front-End Developer
             </p>
             <div className="icon__wrapper">
               <a className="icon icon--facebook" href="https://www.facebook.com/alex.buchanan.9085" />
@@ -39,7 +39,7 @@ export default class Footer extends Component {
               <a className="icon icon--linkedin" href="https://www.linkedin.com/in/alex-buchanan-625b5942" />
             </div>
           </div>
-        </div>
+        </section>
       </footer>
     );
   }

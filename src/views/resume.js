@@ -14,9 +14,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className="content">
+      <main className="content">
         <Helmet title="Resume"/>
-        <div className="masthead__container">
+        <section className="masthead__container">
           <Masthead className="masthead--resume"/>
           <div className="center-absolute text-center">
             <div className="masthead__title-wrapper">
@@ -28,8 +28,8 @@ export default class Home extends Component {
               Download Resume
             </a>
           </div>
-        </div>
-        <div className="resume content__subsection text-center">
+        </section>
+        <section className="resume content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               My Skills
@@ -194,8 +194,8 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }

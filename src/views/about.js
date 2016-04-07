@@ -28,17 +28,17 @@ export default class About extends Component {
 
   render() {
     return (
-      <div className="content">
+      <main className="content">
         <Helmet title="About Me"/>
-        <div className="masthead__container">
+        <section className="masthead__container">
           <Masthead className="masthead--about"/>
           <div className="center-absolute text-center">
             <strong className="masthead__title block">
               About me
             </strong>
           </div>
-        </div>
-        <div className="content__subsection text-center">
+        </section>
+        <section className="content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               Interests
@@ -54,7 +54,7 @@ export default class About extends Component {
                   Traveling
                 </h5>
                 <span className="circle__description">
-                  By virtue of weddings, scattered family, and a girlfriend, I've found myself getting to some pretty cool places.
+                  By virtue of weddings, scattered family, and a girlfriend, I've find myself bopping around a lot.
                 </span>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default class About extends Component {
                   Snowboarding
                 </h5>
                 <span className="circle__description">
-                  I've had a blast snowboarding in Vermont, Maine, and Colorado.
+                  I love getting out to Maine, Vermont, or Colorado as much as possible.
                 </span>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default class About extends Component {
                   Toughmudder
                 </h5>
                 <span className="circle__description">
-                  I don't actual enjoy running, but I had fun completing my first mudder in Vermont.
+                  Honestly, I've only done one Toughmudder but this is a great picture.
                 </span>
               </div>
             </div>
@@ -102,7 +102,7 @@ export default class About extends Component {
                   Siblings
                 </h5>
                 <span className="circle__description">
-                  Hannah and Josh! Living in NYC and Raleigh, respectively. Both coding as well.
+                  Hannah and Josh! 3 developer brothers and sisters spread across Boston, NYC and Raleigh.
                 </span>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default class About extends Component {
                   Boston College
                 </h5>
                 <span className="circle__description">
-                  It's sad how my graduation year keeps getting further and further away.
+                  5 year reunion in June with my old, degenerate roommates.
                 </span>
               </div>
             </div>
@@ -126,16 +126,16 @@ export default class About extends Component {
                   Weddings
                 </h5>
                 <span className="circle__description">
-                  Congrats to those in 2015 and those coming up in 2016! They have been a blast!
+                  These seem to take up enough time to warranty this circle-thingy.
                 </span>
               </div>
             </div>
           </Circle>
-        </div>
-        <div className="masthead__container">
+        </section>
+        <section className="masthead__container">
           <div className="masthead--cogo" />
-        </div>
-        <div className="content__subsection text-center">
+        </section>
+        <section className="content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               Cogo Labs
@@ -146,26 +146,26 @@ export default class About extends Component {
           </div>
           <div className="description__wrapper center">
             <p className="content__description center">
-              Cogo Labs has been my first web development job. So far, it's been an awesome experience. I've really solidified my skills in Javascript, HTML, and CSS, and really broadened my understanding of build tools, production code optimizations, and server-side code (Python and Node). The free cold brew and Friday launches have also been pretty sweet.
+              Cogo Labs has been my first web development job, and it's been great so far. It has truly affirmed my decision to get out of accounting. It's helped to solidify my skills in Javascript, HTML, and CSS while also broadening my understanding of build tools, production code optimizations, and other cool hipster-JS stuff (lookin at you Babel / Webpack / React / Redux). The free cold brew is also a pretty solid perk even though it makes me feel strange after 3 cups.
             </p>
           </div>
           <div className="circle__job">
             <img className="circle__figure--job" src={cogolabs2} />
             <span className="circle__span">
-              At Cogo, we like charts and we like to put them on the walls.
+              This isn't a very good picture, but I don't really like taking pictures so I rolled with it.
             </span>
           </div>
           <div className="circle__job">
             <img className="circle__figure--job" src={cogolabs3} />
             <span className="circle__span">
-              Here's my desk. It's a pretty solid spot. As you can see, I sometimes test my code.
+              Here I am testing some code. I hear that's a good thing to do. I personally just like making all the lights green.
             </span>
           </div>
-        </div>
-        <div className="masthead__container">
+        </section>
+        <section className="masthead__container">
           <div className="masthead--pwc" />
-        </div>
-        <div className="content__subsection text-center">
+        </section>
+        <section className="content__subsection text-center">
           <div className="content__title-wrapper">
             <h2 className="content__title content__hr">
               PwC
@@ -176,29 +176,30 @@ export default class About extends Component {
           </div>
           <div className="description__wrapper center">
             <p className="content__description center">
-              Note that the above picture is not actually mine, but it pretty accurately represents a lot of the audit rooms that I worked in (honestly, who really needs windows?). I started my career doing audit at PwC. My time there included a lot of ups and downs. The best part was definitely the people. I made some of my best friends there. The worst parts definitely being the travel, hours, and menial work.
+              PwC-- the genesis of my career. I started out at PwC Audit working in Utilities and Consumer Industrial Products. Now, I know what you are thinking: there is no way that can be interesting. But, I'm here to tell you that's <em>wrong</em>. There is nothing, nothing, that gets me more jacked up than finding a material misstatement.
+              Just kidding. It's about as boring as it sounds, and in a lot of ways, much worse than it sounds. While the the late nights, weekends worked, and general stress was kind of a bummer, I did get to meet some great people and make some great friends.
             </p>
             <div className="circle__job">
               <img className="circle__figure--job" src={pwc2} />
               <span className="circle__span">
-                There is my buddy Joe. Audit teams were usually between 4-12 people, and we always worked around a big conference table.
+                Here's my buddy Joe. Although we didn't ever have those cool, trendy standing desks, working at a conference table was fun.
               </span>
             </div>
             <div className="circle__job">
               <img className="circle__figure--job" src={pwc1} />
               <span className="circle__span">
-                This photo was taken at 3am in the office on a Sunday night. 'Nuff said.
+                I believe this photo was taken at 3am on a Sunday night. It could have also been a Saturday or Friday. I don't remember.
               </span>
             </div>
             <div className="circle__job">
               <img className="circle__figure--job" src={pwc3} />
               <span className="circle__span">
-                While travel could be rough, there were some perks like this. The hotel points also came in handy when booking vacations.
+                Travel can be rough, but in the end, winning things like "Guest of the Week" make it all worth it in the end.
               </span>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }

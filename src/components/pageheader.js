@@ -9,7 +9,7 @@ export default class PageHeader extends Component {
   render() {
     return (
       <header className="header zindex-2">
-        <ul className="header__list">
+        <nav className="header__list">
           <IndexLink className="header__link" activeClassName="active" to="/">
             Home
           </IndexLink>
@@ -22,7 +22,7 @@ export default class PageHeader extends Component {
           <Link className="header__link" activeClassName="active" to="/contact">
             Contact
           </Link>
-        </ul>
+        </nav>
       </header>
     );
   }
