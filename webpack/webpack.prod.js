@@ -6,6 +6,7 @@ var isomorphicTools = require('webpack-isomorphic-tools/plugin');
 var isomorphicTools = new isomorphicTools(isomorphicConfig);
 var webpackManifest = require('./webpack.manifest')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var rootDir = path.join(__dirname, '..');
 
@@ -14,10 +15,10 @@ module.exports = {
   context: rootDir,
   entry: {
     bundle: [
-     'babel-polyfill',
       path.resolve(rootDir, 'src'),
     ],
     vendor: [
+      'babel-polyfill',
       'react',
       'react-dom',
       'react-router',
@@ -51,6 +52,14 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('vender', 'vendor.[chunkhash].js'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(rootDir, 'nginx', 'favicon.ico'),
+      },
+      {
+        from: path.resolve(rootDir, 'nginx', 'Buchanan_Resume.pdf'),
+      },
+    ]),
     isomorphicTools,
   ],
   module: {
