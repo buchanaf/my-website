@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import config from 'src/config';
 
 import Masthead from 'components/masthead';
 
@@ -15,7 +16,7 @@ export default class Home extends Component {
   render() {
     return (
       <main className="content">
-        <Helmet title="Resume"/>
+        <Helmet {...config.app.resume} />
         <section className="masthead__container">
           <Masthead className="masthead--resume"/>
           <div className="center-absolute text-center">

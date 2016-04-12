@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 import Helmet from 'react-helmet';
+import config from 'src/config';
 
 import Masthead from 'components/masthead';
 import Button from 'components/button';
@@ -78,7 +79,7 @@ export default class Contact extends Component {
 
     return (
       <main className="content">
-        <Helmet title="Contact"/>
+        <Helmet {...config.app.contact} />
         <section className="masthead__container">
           <Masthead className="masthead--contact"/>
           <div className="center-absolute text-center">

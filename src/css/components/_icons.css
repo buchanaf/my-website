@@ -90,7 +90,7 @@
   background-size: 2rem;
   bottom: 3rem;
   height: 2rem;
-  left: calc(50% - 2rem);
+  left: calc(50% - 1.75rem);
   position: absolute;
   transition: bottom 1s;
   width: 2rem;
