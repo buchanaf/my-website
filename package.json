@@ -12,7 +12,7 @@
     "start-prod": "better-npm-run start-prod",
     "build": "NODE_ENV=production webpack --verbose --colors --display-error-details --config webpack/webpack.prod.js",
     "clear-build": "rm -rf nginx/dist",
-    "lint": "eslint -c .eslintrc src"
+    "lint": "eslint -c .eslintrc server"
   },
   "betterScripts": {
     "start-prod": {

@@ -4,7 +4,7 @@ nginx:
     links:
         - node:node
     ports:
-        - "3030:3030"
+        - "80:80"
 node:
     restart: always
     build: .

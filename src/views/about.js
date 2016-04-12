@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import config from 'src/config';
 
 import Masthead from 'components/masthead';
 import Circle from 'components/circle';
@@ -29,7 +30,7 @@ export default class About extends Component {
   render() {
     return (
       <main className="content">
-        <Helmet title="About Me"/>
+        <Helmet {...config.app.about} />
         <section className="masthead__container">
           <Masthead className="masthead--about"/>
           <div className="center-absolute text-center">

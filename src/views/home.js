@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import smoothScroll from 'smoothscroll';
+import config from 'src/config';
 
 import Helmet from 'react-helmet';
 import Dom from 'utils/dom';
@@ -24,7 +25,7 @@ export default class Home extends Component {
   render() {
     return (
       <main className="content">
-        <Helmet title="Front-end Developer"/>
+        <Helmet {...config.app.home} />
         <section className="masthead__container masthead__container--animate">
           <Masthead className="masthead--home"/>
           <div className="center-absolute text-center">
