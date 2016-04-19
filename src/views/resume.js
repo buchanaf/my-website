@@ -75,7 +75,7 @@ export default class Home extends Component {
                 </h5>
                 <ul className="resume__list resume__list--inside">
                   <li>
-                    GIT
+                    Git
                   </li>
                   <li>
                     Nginx
@@ -84,13 +84,16 @@ export default class Home extends Component {
                     Docker
                   </li>
                   <li>
-                    Grunt
+                    Grunt / Gulp
                   </li>
                   <li>
                     D3.js
                   </li>
                   <li>
                     Angular
+                  </li>
+                  <li>
+                    MongoDB
                   </li>
                   <li>
                     SQL
@@ -101,7 +104,7 @@ export default class Home extends Component {
           </div>
           <div className="content__container text-left border-bottom">
             <h4 className="header4">
-              Experience
+              Work Experience
             </h4>
             <div className="col-4-3 right align-top">
               <div className="resume__job">
@@ -113,44 +116,47 @@ export default class Home extends Component {
                 </p>
                 <ul className="resume__list">
                   <li>
-                    Overhauled site-starter scaffolding with an universal React-Redux architecture on Webpack
+                    Led front-end development for website prototypes, including one app with over 60k users; overall, assisted or led front-end development on 7 new, public-facing sites
                   </li>
                   <li>
-                    Led front-end development for website prototypes, including one app with XXX,XXX users
+                    Collaborated with product managers and designers to implement A/B tests and increase site performance driving a 2x increase in user conversion rates on social sites
                   </li>
                   <li>
-                    Supported social team in implementing A/B tests to maximize new-user signups by reducing page load, manipulating signup-flow, and customizing content via url parameters
+                    Overhauled site-starter scaffolding with an isomorphic React-Redux-Webpack kit
                   </li>
                   <li>
-                    Created a library of composable React components used on a variety of Cogo projects
+                    Developed the first isomorphic web application that was used in a production environment
                   </li>
                   <li>
-                    Built complex user-interface tools, including D3 charts and custom tables to support data-analytics for our analysts teams as well as revenue simulations for accounting
+                    Created an internal npm library of React components used on a variety of Cogo projects
+                  </li>
+                  <li>
+                    Built complex user-interface tools featuring D3 charts, cached API calls in local storage, drag and drop, and custom sortable tables to support data-analytics for our analysts teams
                   </li>
                 </ul>
               </div>
               <div className="resume__job">
                 <h5 className="header5">
-                  Assurance Associate                                                                                  September 2011 – March 2014
+                  Assurance Associate, CPA                                                                                  September 2011 – March 2014
                 </h5>
                 <p>
                   PwC, Boston, MA, September 2011 – February 2014
                 </p>
                 <ul className="resume__list">
                   <li>
-                    Led walkthroughs of major accounting cycles that required dozens of interviews with senior members throughout the client organization
+                    First associate in starting class to pass all Certified Public Accountant examinations; passed Level I of the Chartered Financial Analyst Program for personal development
                   </li>
                   <li>
-                    Top-performer in PwC's annual performance review for both years at the company; received an 'exceeded expectations' in all performance reviews for individual client engagements for the previous year
+                    Top-performer in PwC's annual performance review for both years at the company;  received an exceeded expectations in all performance reviews for engagements in 2014 fiscal year
+                  </li>
+                  <li>
+                    Led walkthroughs of major accounting cycles that required dozens of interviews with senior members throughout the client organization
                   </li>
                   <li>
                     Assisted with the development of the overall audit approach for revenue and inventory for a multinational sports equipment manufacturer with over $1 billion in sales
                   </li>
                   <li>
-                    Tailored audit procedures procedures to meet changing public accounting standards by incorporating and working with PwC specialists in the areas of journal entries, taxes, and investment valuations
-                  </li>
-                  <li>
-                    First associate in starting class to pass all Certified Public Accountant examinations
+                    Tailored audit procedures procedures to meet changing public accounting standards by working with PwC specialists in the areas of journal entries, taxes, and investment valuations
                   </li>
                 </ul>
               </div>
@@ -161,6 +167,19 @@ export default class Home extends Component {
               Education
             </h4>
             <div className="col-4-3 right align-top">
+              <div className="resume__job">
+                <h5 className="header5">
+                  Fullstack Academy of Code
+                </h5>
+                <p className="italic">
+                  Web Development Immsersive Program
+                </p>
+                <ul className="resume__list">
+                  <li>
+                    A full-time immersive Software Development program focused on full-stack JavaScript including Node.js/Express, Angular.js, MongoDB, HTML5/CSS3, SQL. Class of 18 students selected from 200+ applicants after technical challenge and multiple interviews.
+                  </li>
+                </ul>
+              </div>
               <div className="resume__job">
                 <h5 className="header5">
                   Boston College, Carroll School of Management
@@ -177,19 +196,6 @@ export default class Home extends Component {
                   </li>
                   <li>
                     Semester abroad: University of Glasgow
-                  </li>
-                </ul>
-              </div>
-              <div className="resume__job">
-                <h5 className="header5">
-                  Fullstack Academy of Code
-                </h5>
-                <p className="italic">
-                  Web Development Immsersive Program
-                </p>
-                <ul className="resume__list">
-                  <li>
-                    A full-time immersive Software Development program focused on full-stack JavaScript including Node.js/Express, Angular.js, MongoDB, HTML5/CSS3, SQL. Class of 18 students selected from 200+ applicants after technical challenge and multiple interviews.
                   </li>
                 </ul>
               </div>
