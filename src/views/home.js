@@ -57,7 +57,7 @@ export default class Home extends Component {
           </div>
           <div className="image--headshot"/>
           <p className="content__description">
-            I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I realized that I really wanted to do something else. I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. From there, I accepted a job working at Cogo Labs, a tech incubator, as a web engineer. At Cogo, I've continued to refine my front-end skills with a focus on React. Coding is pretty fun.
+            I graduated from Boston College in 2011 with a degree in accounting in information systems. After working at PwC for 2 and 1/2 years, I realized that I really wanted to do something different. I applied and was accepted into Fullstack Academy and learned the fundamentals of web development. From there, I accepted a job working at Cogo Labs, a tech incubator, as a web engineer. I've continued to refine my front-end skills with a focus on React.
           </p>
         </section>
       </main>
