@@ -84,6 +84,11 @@
   width: 1.5rem;
 }
 
+.icon--active {
+  background-color: var(--grey);
+  color: white;
+}
+
 .icon--angle-down {
   animation: fadein 1.5s;
   background-image: url('../assets/angle-down.svg');
@@ -101,13 +106,15 @@
 }
 
 .icon:after {
+  border-radius: 50%;
+  box-sizing: content-box;
+  content: '';
+  height: 100%;
+  left: 0;
   pointer-events: none;
   position: absolute;
+  top: 0;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  content: '';
-  box-sizing: content-box;
 }
 
 .icon__wrapper .icon {

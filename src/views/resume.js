@@ -104,7 +104,7 @@ export default class Home extends Component {
           </div>
           <div className="content__container text-left border-bottom">
             <h4 className="header4">
-              WORK EXPERIENCE
+              Work Experience
             </h4>
             <div className="col-4-3 right align-top">
               <div className="resume__job">
@@ -116,16 +116,16 @@ export default class Home extends Component {
                 </p>
                 <ul className="resume__list">
                   <li>
-                    Led front-end development for website prototypes, including one app with over 60k users; overall, assisted or led front-end development on 7 new sites, excluding internal sites
+                    Led front-end development for website prototypes, including one app with over 60k users; overall, assisted or led front-end development on 7 new, public-facing sites
                   </li>
                   <li>
-                    Collaborated with product managers and designers to implement A/B tests and increase site performance leading to a 2x increase in user conversion rates on social sites
+                    Collaborated with product managers and designers to implement A/B tests and increase site performance driving a 2x increase in user conversion rates on social sites
                   </li>
                   <li>
                     Overhauled site-starter scaffolding with an isomorphic React-Redux-Webpack kit
                   </li>
                   <li>
-                    Created the first isomorphic web application that was used in a production environment
+                    Developed the first isomorphic web application that was used in a production environment
                   </li>
                   <li>
                     Created an internal npm library of React components used on a variety of Cogo projects
@@ -156,7 +156,7 @@ export default class Home extends Component {
                     Assisted with the development of the overall audit approach for revenue and inventory for a multinational sports equipment manufacturer with over $1 billion in sales
                   </li>
                   <li>
-                    Tailored audit procedures procedures to meet changing public accounting standards by incorporating and working with PwC specialists in the areas of journal entries, taxes, and investment valuations
+                    Tailored audit procedures procedures to meet changing public accounting standards by working with PwC specialists in the areas of journal entries, taxes, and investment valuations
                   </li>
                 </ul>
               </div>
@@ -164,7 +164,7 @@ export default class Home extends Component {
           </div>
           <div className="content__container text-left">
             <h4 className="header4">
-              EDUCATION
+              Education
             </h4>
             <div className="col-4-3 right align-top">
               <div className="resume__job">

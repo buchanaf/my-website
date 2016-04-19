@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import cx from 'classnames';
 import setClass from'element-class';
 
-
 export default class PageHeader extends Component {
   static propTypes = {
     sideOpen: PropTypes.bool,
@@ -12,6 +11,9 @@ export default class PageHeader extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      isMenuActive: false,
+    };
   }
 
   onMenuClick = () => {
@@ -23,12 +25,20 @@ export default class PageHeader extends Component {
     }
   };
 
+  onTouchHandler = (isMenuActive) => () => this.setState({ isMenuActive });
+
   render() {
     const { sideOpen } = this.props;
+    const { isMenuActive } = this.state;
+
 
     return (
       <aside className="sidenav__container">
-        <i className="icon icon--menu" onClick={this.onMenuClick}/>
+        <i className={cx('icon icon--menu', { 'icon--active': isMenuActive })}
+          onTouchStart={this.onTouchHandler(true)}
+          onTouchEnd={this.onTouchHandler(false)}
+          onClick={this.onMenuClick}
+        />
         <section className={ cx('sidenav', { 'side-nav--visible': sideOpen }) }>
           <nav className="sidenav__list">
             <Link className="sidenav__link" to="/" onClick={this.onMenuClick}>
