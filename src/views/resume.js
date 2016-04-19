@@ -137,7 +137,7 @@ export default class Home extends Component {
               </div>
               <div className="resume__job">
                 <h5 className="header5">
-                  Assurance Associate, CPA                                                                                  September 2011 – March 2014
+                  Assurance Associate, CPA
                 </h5>
                 <p>
                   PwC, Boston, MA, September 2011 – February 2014
