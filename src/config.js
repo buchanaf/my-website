@@ -29,7 +29,7 @@ module.exports = Object.assign({
     contact: {
       title: 'Contact',
       meta: [
-        { name: 'description', content: 'Feel free to reach out to me. My preferred method of contact is email, alexbuchanan6@gamil.com, and I will get back to you as soon as possible' },
+        { name: 'description', content: 'Feel free to reach out to me. My preferred method of contact is email, alexbuchanan6@gmail.com, and I will get back to you as soon as possible' },
       ],
       link: [
         { rel: 'canonical', href: 'http://alexdbuchanan.com/contact' },
